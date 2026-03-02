@@ -203,7 +203,7 @@ const Hero = () => {
                 ></textarea>
 
                 <ReCAPTCHA
-                  sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                  sitekey="6Lcb_HEsAAAAAJESdQwpfYltspCpspxJPbCyM58Z"
                   ref={recaptchaRef}
                 />
 
