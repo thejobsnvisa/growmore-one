@@ -398,6 +398,13 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          <Link
+            to="/book-consultation"
+            onClick={closeAll}
+            className="block w-full text-center bg-black text-white px-5 py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-[#6dc7d1] transition duration-300"
+          >
+            Book Consultation →
+          </Link>
         </div>
       )}
     </nav>

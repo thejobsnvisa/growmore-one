@@ -4,7 +4,9 @@ body{
   background:#f4f7f8;
   margin:0;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 .calculator-container{
   display:flex;
   gap:30px;
