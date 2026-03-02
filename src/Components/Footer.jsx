@@ -13,19 +13,22 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#28535B] text-white">
+    <footer className="bg-[#28535B] text-white overflow-hidden">
+      
       {/* ================= CTA SECTION ================= */}
       <div className="border-b border-white/20 py-8 px-4 sm:px-6">
-        <div className="w-[1350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left w-[1400px]">
-            <div className="bg-[#6dc7d1] rounded-full p-2">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left">
+            <div className="bg-[#6dc7d1] rounded-full p-3">
               <img
                 src="/assets/img1.svg"
                 alt="phone"
                 className="h-12 w-12 sm:h-14 sm:w-14"
               />
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug">
+
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold leading-snug">
               Need An Expert Advice <br className="hidden md:block" />
               For Your Visa?
             </h2>
@@ -47,12 +50,8 @@ const Footer = () => {
       </div>
 
       {/* ================= MAIN FOOTER ================= */}
-      <div
-        className="w-[1400px] mx-auto py-12 px-4 sm:px-6 
-                      grid grid-cols-1 sm:grid-cols-2 
-                      md:grid-cols-3 lg:grid-cols-5 
-                      gap-10"
-      >
+      <div className="lg:w-[1350px] mx-auto py-12 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+        
         {/* Logo & About */}
         <div>
           <img src="/assets/logo1.png" alt="Growmore" className="h-12 mb-6" />
@@ -70,15 +69,12 @@ const Footer = () => {
                   key={i}
                   className="hover:text-gray-400 cursor-pointer transition"
                 />
-              ),
+              )
             )}
           </div>
 
           <Link to="/brochures">
-            <button
-              className="bg-[#6dc7d1] px-5 py-3 rounded-full 
-                               font-medium hover:bg-black transition"
-            >
+            <button className="bg-[#6dc7d1] px-5 py-3 rounded-full font-medium hover:bg-black transition">
               Download Brochures →
             </button>
           </Link>
