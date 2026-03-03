@@ -24,6 +24,7 @@ import Brochures from './Pages/Brochures'
 
 import Checklist from './Components/Checklist'
 import Checklistgsm from './Components/Checklistgsm'
+import Checklistlabour from './Components/Checklistlabour'
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
         <Route
           path="/checklist-for-gsm-general-skilled-migration"
           element={<Checklistgsm />}
+        /><Route
+          path="/checklist-for-labour-agreement"
+          element={<Checklistlabour />}
         />
       </Routes>
       <Footer />

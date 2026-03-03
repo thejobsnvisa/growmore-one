@@ -70,7 +70,7 @@ const LabourAgreement = () => {
             in, make sure that you are actually ready. So, check your
             eligibility and get to know where you actually stand.
           </p>
-                     <Link to="/Checklist-for-dama">
+                     <Link to="/checklist-for-labour-agreement">
             <button className="bg-[#6dc7d1] text-white  rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
             Checklist Form
           </button>
