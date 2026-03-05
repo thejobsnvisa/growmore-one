@@ -63,7 +63,7 @@ Student Visa Australia
           <div className="md:col-span-2 md:pl-12 lg:pl-20">
             <div>
              <h1 className="text-3xl sm:text-xl font-semibold text-[#28535B] -mt-3">
-                  Student Visa UK
+                  Student Visa Australia
                 </h1>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#28535B] mt-3 mb-2">
                 Transform Your Dreams into Reality With Australian Education
