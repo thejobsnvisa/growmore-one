@@ -2,20 +2,19 @@ import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const EmployerVisa = () => {
+const EmployerVisaTraining = () => {
   return (
     <div>
-      {/* Hero Section */}
       <section className="bg-[#28535B] py-12 sm:py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
-            Employer Sponsored Visa
+            Training Visa (Subclass 407)
           </h1>
 
           <p className="text-white font-medium mt-3 text-sm sm:text-base">
             Home &gt; <span className=" cursor-pointer">Employers</span> &gt;{" "}
             <span className=" cursor-pointer">
-              Employer Sponsored Visa Australia Requirements
+              Training Visa Subclass 407 Eligibility Criteria & Requirements
             </span>
           </p>
         </div>
@@ -97,80 +96,42 @@ const EmployerVisa = () => {
           {/* Right Column */}
           <div className="md:col-span-2 pl-6 sm:pl-16 lg:pl-26">
             {" "}
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] mt-6">
-              Employer Sponsored Visa Australia Requirements
+            <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] ">
+              Training Visa Subclass 407 Eligibility Criteria &
+              Requirements{" "}
             </h3>
-            <p className="text-gray-600 mt-6 leading-relaxed text-justify text-sm sm:text-base">
-              The Employer Sponsored visa category allows Australian employers
-              to sponsor foreign workers to fill skill shortages in their
-              businesses. These visas are designed for individuals with highly
-              specialized skills or those who are unable to find suitable
-              employees within the{" "}
-              <Link to="/our-services/employers/labour-agreement/">
-                <span className="text-blue-500 ">Australian labor market</span>
-              </Link>
-              .
-            </p>
-            <p className="text-gray-600 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-              To be eligible for this type of visa, applicants must have an
-              employer who is willing to sponsor them and they must meet the
-              specific requirements of the position they are applying for.
-            </p>
-            <p className="text-gray-600 mt-6 leading-relaxed text-justify  text-sm sm:text-base">
-              The eligibility criteria for an Employer Sponsored visa can vary
-              greatly depending on the type of visa and the specific occupation,
-              so it is important to carefully review the requirements before
-              applying.
-            </p>
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B]">
-                An Employer May Sponsor a Visa Applicant For a Number of
-                Reasons, Including:{" "}
-              </h3>
-
-              <ul className="list-disc pl-6 mt-6 space-y-4 text-gray-600 text-sm sm:text-base">
+              <h1 className="text-2xl sm:text-3xl font-semibold text-black mt-6">
+                What We Offer:{" "}
+              </h1>
+              <ul className=" list-disc pl-6 mt-2 text-gray-500 text-sm sm:text-base">
                 <li>
-                  <strong>To fill a skill shortage: </strong> An employer may
-                  sponsor a foreign worker if they are unable to find a suitable
-                  candidate locally to fill a skilled position.
+                  The SC407 Training Visa is designed for businesses aiming to
+                  upskill their staff or provide structured workplace-based
+                  training to international employees.
                 </li>
-
+                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
+                  At <span className="text-blue-500">Growmore Immigration</span>, we craft detailed and
+                  customized training plans that meet the specific requirements
+                  of this visa category. This includes:
+                </p>
                 <li>
-                  <strong>Access to a global talent pool:</strong> Employer
-                  sponsorship allows companies to access a wider pool of talent
-                  from around the world, increasing their ability to find the
-                  best candidate for the job.
+                  Setting measurable goals to track the trainee’s progress and
+                  ensure they acquire the required skills.
                 </li>
-
                 <li>
-                  <strong>Retention of valuable employees:</strong> Sponsoring a
-                  valued employee for a visa can help to retain them, as it
-                  shows the company’s commitment to their role and their future
-                  in the company.
-                </li>
-
-                <li>
-                  <strong>Meeting business needs:</strong> Employer sponsorship
-                  can enable a company to meet its business needs by bringing in
-                  foreign workers with specific skills and knowledge that are
-                  required to support the business.
-                </li>
-
-                <li>
-                  <strong> Compliance with immigration laws:</strong> Employer
-                  sponsorship can help companies comply with immigration laws by
-                  ensuring that their foreign employees are in Australia legally
-                  and have the necessary visas to work.
-                </li>
-
-                <li>
-                  <strong>Positive impact on company culture:</strong>Employer
-                  sponsorship can bring a positive impact on company culture by
-                  creating a diverse and inclusive workplace, where employees
-                  from different backgrounds can collaborate and share their
-                  experiences and skills.
+                  Demonstrating how the training program aligns with industry
+                  standards and benefits both the employee and the business.
                 </li>
               </ul>
+              <h1 className="text-2xl sm:text-3xl font-semibold text-black mt-6">
+                How It Helps:
+              </h1>
+              <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
+                Our training plans not only meet visa requirements but also
+                ensure that your business builds a skilled and qualified
+                workforce to drive operational excellence.
+              </p>
             </div>
             <Link to="/book-consultation">
               <button className="bg-[#6dc7d1] text-white  mt-6 rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
@@ -184,4 +145,4 @@ const EmployerVisa = () => {
   );
 };
 
-export default EmployerVisa;
+export default EmployerVisaTraining;
