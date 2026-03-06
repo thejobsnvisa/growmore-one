@@ -27,7 +27,7 @@ const IndividualVisa = () => {
             {/* Left Column */}
              <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
                          <div className="space-y-5">
-                           <Link to="/our-services/employers/standard-business-sponsorship/">
+                           <Link to="/our-services/individual/employer-sponsored-visa/">
                              <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                                <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
                                  Employer Sponsored Visa Australia Requirements
