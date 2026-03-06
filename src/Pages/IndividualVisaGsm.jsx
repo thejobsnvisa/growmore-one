@@ -2,20 +2,20 @@ import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const IndividualVisa = () => {
+const IndividualVisaGsm = () => {
   return (
     <div>
       <div>
         <section className="bg-[#28535B] py-12 sm:py-16">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
-              Individual Sponsored Visa Services
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-white">
+              General Skilled Migration (GSM) Visa Australia
             </h1>
 
             <p className="text-white font-medium mt-3 text-sm sm:text-base">
-              Home &gt; <span className=" cursor-pointer">Employers</span> &gt;{" "}
+              Home &gt; <span className=" cursor-pointer">Individual</span> &gt;{" "}
               <span className=" cursor-pointer">
-                Individual Sponsored Visa Services
+               General Skilled Migration Visa (GSM Visa) & Skilled Worker Visa Australia
               </span>
             </p>
           </div>
@@ -27,7 +27,7 @@ const IndividualVisa = () => {
             {/* Left Column */}
             <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
               <div className="space-y-5">
-                <Link to="/our-services/employers/standard-business-sponsorship/">
+                <Link to="/our-services/individual/employer-sponsored-visa/">
                   <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                     <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
                       Employer Sponsored Visa Australia Requirements
@@ -122,125 +122,98 @@ const IndividualVisa = () => {
             <div className="md:col-span-2 pl-6 sm:pl-16 lg:pl-26">
               {" "}
               <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] ">
-                Individual Journey with Expert Immigration Support{" "}
+                General Skilled Migration Visa (GSM Visa) & Skilled Worker Visa
+                Australia{" "}
               </h3>
               <div>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Introduction:{" "}
-                </h2>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  In a move to safeguard the integrity of Australia’s
-                  international education sector and protect genuine
-                  international students, the Albanese Government has announced
-                  a comprehensive package of measures.
+                <p className="text-gray-600 mt-4 leading-relaxed text-sm sm:text-base">
+                  Australian General Skilled Migration visa allows skilled
+                  individuals to migrate to Australia and contribute to the
+                  country’s economy. There are three main streams under this
+                  visa category, including:
                 </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  As the fourth-largest export industry for the nation,
-                  international education plays a vital role in the economy and
-                  regional relationships. This initiative aims to address
-                  loopholes, prevent misuse, and enhance the overall quality of
-                  the sector
-                </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Closing the Loophole:
-                </h2>
+
+                <ol className="list-decimal pl-6 mt-6 space-y-4 text-gray-600 text-sm sm:text-base">
+                  <li>
+                    <strong>
+                      {" "}
+                      <b className="text-black">
+                        Skilled Independent visa (subclass 189):
+                      </b>
+                    </strong>{" "}
+                    This is a permanent visa that allows highly skilled
+                    individuals to work and live anywhere in Australia. To be
+                    eligible for this visa, you need to score a minimum points
+                    on the point-based assessment system and also meet the
+                    English language requirements.
+                  </li>
+                  <li>
+                    <strong>
+                      <b className="text-black">
+                        Skilled Nominated visa (subclass 190):
+                      </b>
+                    </strong>
+                    his is a permanent visa that requires the applicants to be
+                    nominated by an Australian state or territory government.
+                    The eligibility criteria for this visa are similar to the
+                    Skilled Independent visa, with the addition of having a
+                    nomination from an Australian state or territory government.
+                  </li>
+                  <li>
+                    <strong>
+                      <b className="text-black">
+                        Skilled Work Regional (Provisional) visa (subclass 491):
+                      </b>
+                    </strong>{" "}
+                    This is a provisional visa that allows skilled workers to
+                    live and work in a specified regional area of Australia for
+                    up to five years. To be eligible for this visa, you need to
+                    have a positive skills assessment in an occupation listed on
+                    the relevant skilled occupation list and meet the
+                    point-based criteria. You also need to be sponsored by an
+                    eligible family member or nominated by a state or territory
+                    government.
+                  </li>
+                  <li>
+                    <strong>
+                      <b className="text-black">
+                        {" "}
+                        The Permanent Residence (Skilled Regional) visa
+                        (subclass 191):
+                      </b>
+                    </strong>
+                    This is for skilled individuals who want to live and work
+                    permanently in regional Australia. This visa is for
+                    individuals who have lived and worked in regional Australia
+                    on a provisional visa for three years, and have met the
+                    requirements of their visa.
+                  </li>
+                </ol>
 
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  One of the key measures is the closure of a loophole that
-                  allowed education providers to transition
-                  internationalstudents, present in Australia for less than six
-                  months, fromlegitimate study to anangements facilitating work
-                  access.
+                  Eligibility criteria for this visa include holding a relevant
+                  provisional visa, having lived and worked in regional
+                  Australia for at least three years, meeting the health and
+                  character requirements, and having an occupation listed on the{" "}
+                  <b className="text-black">Skilled Occupation List</b>.
                 </p>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  This change, effective immediately, prevents second providers
-                  from enrolling students before they have completed the
-                  required six months of study at ther Initial institution. This
-                  step is vital to maintain the sector’s credibility and prevent
-                  predatory operators from taking advantage of vulnerable
-                  students
-                </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Financial Requirements Update:
-                </h2>
-
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  To ensure that international students can support themselves
-                  and avoid exploitation due to financial constraints, the
-                  government has revised the financial requirement for obtaining
-                  a student visa, effective October 1, 2023.
-                </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  Prospective students will need to demonstrate evidence of
-                  $24,505 in savings. reflecting a 17% increase from previous
-                  levels to accommodate rising living expenses. This change
-                  underscores the government’s commitment to ensuring students’
-                  well-being while{" "}
-                  <span className="text-blue-500">studying in Australia</span>
-                </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Increased Scrutiny and Fraud Prevention:{" "}
-                </h2>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  Recognizing the need for stringent measures to prevent fraud,
-                  the government willintensify scrutiny of high-risk student
-                  cohorts and request additional documentation during the
-                  application process. This step is aimed at identifying
-                  potential fraudulent activities and maintaining the sector’s
-                  credibility
-                </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Using Government Powers:{" "}
-                </h2>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  In a landmark move, the Albanese Government is considering
-                  employing its powers under Section 97 of the Education
-                  Services for Overseas Students Act (ESOS Act) to issue
-                  suspension certificates to high-risk education providers. This
-                  action would prevent these providers from recruiting
-                  international students.
-                </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  Clear criteria for issuing suspension certificates, such as
-                  application rates involving fraudulent documents and provider
-                  refusal rates, will be outlined through consultations. This
-                  proactive approach demonstrates the government’s commitment to
-                  tackling substandard providers head-on.
-                </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Future Measures and Migration Strategy:{" "}
-                </h2>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  The government’s dedication to upholding the integrity of the
-                  international education system doesn’t stophere As part of the
-                  upcoming Migration Strategy, due later this year, additional
-                  measures will be explored to further strengthen the sector’s
-                  integrity
-                </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Conclusion:{" "}
-                </h2>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  The Albanese Government’s commitment to preserving the quality
-                  and integrity of{" "}
+                 <b>Note:{" "}</b> eligibility criteria and requirements for each stream are
+                  subject to change, and it is always advisable to consult a
+                  registered migration agent to understand the latest
+                  immigration requirements. You can also check DHA website{" "}
                   <span className="text-blue-500">
-                    Australia’s international education{" "}
+                    https://immi.homeaffairs.gov.au/visas{" "}
                   </span>
-                  sector is evident through the comprehensive package of
-                  measures announced.
+                  to know about any of the mentioned visas.
                 </p>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  By closing loopholes, revising financial requirements,
-                  increasing scrutiny, and exploring the use of suspension
-                  certificates for high-risk providers, the government aims to
-                  protect genuine students, maintain the sector’s global
-                  reputation, and contribute to a skilled workforce for the
-                  future.
-                </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  These measures align with the government’s determination to
-                  create a fair and secure environment for internationalstudents
-                  pursuing their educational dreams in Australia
+                  Our migration agent at{" "}
+                  <span className="text-blue-500">Growmore Immigration </span>
+                  can help you with the latest information and requirements for
+                  the Business Innovation and Investment (Provisional) visa, and
+                  guide you through the entire visa application process. Book a
+                  consultation with us today to learn more.
                 </p>
               </div>
               <Link to="/book-consultation">
@@ -256,4 +229,4 @@ const IndividualVisa = () => {
   );
 };
 
-export default IndividualVisa;
+export default IndividualVisaGsm;

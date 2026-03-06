@@ -36,6 +36,10 @@ import EmployerVisaStrategic from "./Pages/EmployerVisaStrategic";
 import EmployerVisaTraining from "./Pages/EmployerVisaTraining";
 import EmployerVisaLMT from "./Pages/EmployerVisaLMT";
 import IndividualVisaEmployer from "./Pages/IndividualVisaEmployer";
+import IndividualVisaGsm from "./Pages/IndividualVisaGsm";
+import IndividualVisaFamily from "./Pages/IndividualVisaFamily";
+import IndividualVisaWork from "./Pages/IndividualVisaWork";
+import IndividualVisaGlobal from "./Pages/IndividualVisaGlobal";
 
 
 function App() {
@@ -118,6 +122,22 @@ function App() {
         <Route
           path="/our-services/individual/employer-sponsored-visa/"
           element={< IndividualVisaEmployer />}
+        />
+           <Route
+          path="/our-services/individual/general-skilled-visa/"
+          element={< IndividualVisaGsm />}
+        />
+            <Route
+          path="/our-services/individual/family-visa/"
+          element={< IndividualVisaFamily />}
+        />
+          <Route
+          path="/our-services/individual/temporary-work-short-stay-visa/"
+          element={< IndividualVisaWork />}
+        />
+          <Route
+          path="/our-services/individual/global-talent-visa/"
+          element={< IndividualVisaGlobal />}
         />
       </Routes>
       <Footer />

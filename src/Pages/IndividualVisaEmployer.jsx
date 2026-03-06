@@ -36,7 +36,7 @@ const IndividualVisaEmployer = () => {
                   </div>
                 </Link>
 
-                <Link to="/our-services/employers/labour-agreement/">
+                <Link to="/our-services/individual/general-skilled-visa/">
                   <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                     <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
                       General Skilled Migration Visa (GSM Visa) & Skilled Worker
@@ -55,7 +55,7 @@ const IndividualVisaEmployer = () => {
                   </div>
                 </Link>
 
-                <Link to="/our-services/employers/regional-certifying-body-approval/">
+                <Link to="/our-services/individual/family-visa/">
                   {" "}
                   <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                     <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
@@ -65,7 +65,7 @@ const IndividualVisaEmployer = () => {
                   </div>
                 </Link>
 
-                <Link to="/our-services/employers/business-case-preparation/">
+                <Link to="/our-services/individual/temporary-work-short-stay-visa/">
                   <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                     <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
                       Temporary Work Visa (Subclass 400) and Short Stay Visa
@@ -75,7 +75,7 @@ const IndividualVisaEmployer = () => {
                   </div>
                 </Link>
 
-                <Link to="/our-services/employers/training-plan/">
+                <Link to="/our-services/individual/global-talent-visa/">
                   <div className="group flex  mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                     <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
                       Apply For the Global Talent Visa
@@ -191,11 +191,8 @@ const IndividualVisaEmployer = () => {
                   certain criteria including age, English language proficiency,
                   and qualifications relevant to the nominated position.
                 </p>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Note:{" "}
-                </h2>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  eligibility criteria and requirements for each stream are
+               <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
+                 <b>Note:{" "}</b> eligibility criteria and requirements for each stream are
                   subject to change, and it is always advisable to consult a
                   registered migration agent to understand the latest
                   immigration requirements. You can also check DHA website{" "}
