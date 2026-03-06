@@ -2,20 +2,20 @@ import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const IndividualVisa = () => {
+const IndividualVisaEmployer = () => {
   return (
     <div>
       <div>
         <section className="bg-[#28535B] py-12 sm:py-16">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
-              Individual Sponsored Visa Services
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-white">
+              Employer Sponsored Visas
             </h1>
 
             <p className="text-white font-medium mt-3 text-sm sm:text-base">
               Home &gt; <span className=" cursor-pointer">Employers</span> &gt;{" "}
               <span className=" cursor-pointer">
-                Individual Sponsored Visa Services
+                Employer Sponsored Visa Australia Requirements
               </span>
             </p>
           </div>
@@ -27,7 +27,7 @@ const IndividualVisa = () => {
             {/* Left Column */}
             <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
               <div className="space-y-5">
-                <Link to="/our-services/employers/standard-business-sponsorship/">
+                <Link to="/our-services/individual/employer-sponsored-visa/">
                   <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
                     <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
                       Employer Sponsored Visa Australia Requirements
@@ -122,72 +122,53 @@ const IndividualVisa = () => {
             <div className="md:col-span-2 pl-6 sm:pl-16 lg:pl-26">
               {" "}
               <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] ">
-                Individual Journey with Expert Immigration Support{" "}
+                Employer Sponsored Visa Australia Requirements{" "}
               </h3>
               <div>
-                <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Introduction:{" "}
-                </h2>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  In a move to safeguard the integrity of Australia’s
-                  international education sector and protect genuine
-                  international students, the Albanese Government has announced
-                  a comprehensive package of measures.
+                  The Australian Employer Sponsored Visas are a range of visa
+                  options for skilled workers seeking to work in Australia under
+                  sponsorship from an Australian employer.
                 </p>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  As the fourth-largest export industry for the nation,
-                  international education plays a vital role in the economy and
-                  regional relationships. This initiative aims to address
-                  loopholes, prevent misuse, and enhance the overall quality of
-                  the sector
+                  The three main visa subclasses in this category are the
+                  Subclass 407 Training Visa, the Subclass 482 Skills in Demand
+                  Visa (SID) Visa, and the Subclass 186 Employer Nomination
+                  Scheme (ENS) visa.
                 </p>
                 <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Closing the Loophole:
+                  Subclass 407 Training Visa:
                 </h2>
 
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  One of the key measures is the closure of a loophole that
-                  allowed education providers to transition
-                  internationalstudents, present in Australia for less than six
-                  months, fromlegitimate study to anangements facilitating work
-                  access.
+                  This visa is for individuals who are sponsored by their
+                  employer to undertake structured training in their field in
+                  Australia. This visa is valid for up to two years.
                 </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  This change, effective immediately, prevents second providers
-                  from enrolling students before they have completed the
-                  required six months of study at ther Initial institution. This
-                  step is vital to maintain the sector’s credibility and prevent
-                  predatory operators from taking advantage of vulnerable
-                  students
-                </p>
+
                 <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Financial Requirements Update:
+                  Skills in Demand Visa (subclass 482):
                 </h2>
 
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  To ensure that international students can support themselves
-                  and avoid exploitation due to financial constraints, the
-                  government has revised the financial requirement for obtaining
-                  a student visa, effective October 1, 2023.
+                  The Skills in Demand Visa (Subclass 482) under the Core Skills
+                  Stream is designed to address labor shortages in Australia by
+                  allowing employers to sponsor skilled workers in occupations
+                  listed on the Medium and Long-term Strategic Skills List
+                  (MLTSSL). This temporary visa enables individuals to work in
+                  Australia for up to four years, with a pathway to permanent
+                  residency for eligible applicants.
                 </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  Prospective students will need to demonstrate evidence of
-                  $24,505 in savings. reflecting a 17% increase from previous
-                  levels to accommodate rising living expenses. This change
-                  underscores the government’s commitment to ensuring students’
-                  well-being while{" "}
-                  <span className="text-blue-500">studying in Australia</span>
-                </p>
+
                 <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Increased Scrutiny and Fraud Prevention:{" "}
+                  Skilled Employer Sponsored Regional (provisional) visa
+                  (subclass 494):{" "}
                 </h2>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  Recognizing the need for stringent measures to prevent fraud,
-                  the government willintensify scrutiny of high-risk student
-                  cohorts and request additional documentation during the
-                  application process. This step is aimed at identifying
-                  potential fraudulent activities and maintaining the sector’s
-                  credibility
+                  This visa is for individuals who are sponsored by an eligible
+                  employer in a designated regional area of Australia. The
+                  applicants must have a relevant skills assessment and meet the
+                  English language requirements.
                 </p>
                 <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
                   Using Government Powers:{" "}
@@ -200,47 +181,35 @@ const IndividualVisa = () => {
                   action would prevent these providers from recruiting
                   international students.
                 </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  Clear criteria for issuing suspension certificates, such as
-                  application rates involving fraudulent documents and provider
-                  refusal rates, will be outlined through consultations. This
-                  proactive approach demonstrates the government’s commitment to
-                  tackling substandard providers head-on.
-                </p>
                 <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Future Measures and Migration Strategy:{" "}
+                  Subclass 186 Employer Nomination Scheme (ENS) Visa:{" "}
                 </h2>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  The government’s dedication to upholding the integrity of the
-                  international education system doesn’t stophere As part of the
-                  upcoming Migration Strategy, due later this year, additional
-                  measures will be explored to further strengthen the sector’s
-                  integrity
+                  This is a permanent visa option for skilled workers who are
+                  sponsored by an Australian employer and nominated for a
+                  permanent position in Australia. The applicant must meet
+                  certain criteria including age, English language proficiency,
+                  and qualifications relevant to the nominated position.
                 </p>
                 <h2 className="text-2xl sm:text-2xl font-semibold text-black mt-6">
-                  Conclusion:{" "}
+                  Note:{" "}
                 </h2>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  The Albanese Government’s commitment to preserving the quality
-                  and integrity of{" "}
+                  eligibility criteria and requirements for each stream are
+                  subject to change, and it is always advisable to consult a
+                  registered migration agent to understand the latest
+                  immigration requirements. You can also check DHA website{" "}
                   <span className="text-blue-500">
-                    Australia’s international education{" "}
+                    https://immi.homeaffairs.gov.au/visas{" "}
                   </span>
-                  sector is evident through the comprehensive package of
-                  measures announced.
+                  to know about any of the mentioned visas.
                 </p>
                 <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  By closing loopholes, revising financial requirements,
-                  increasing scrutiny, and exploring the use of suspension
-                  certificates for high-risk providers, the government aims to
-                  protect genuine students, maintain the sector’s global
-                  reputation, and contribute to a skilled workforce for the
-                  future.
-                </p>
-                <p className="text-gray-500 mt-6 leading-relaxed  text-justify text-sm sm:text-base">
-                  These measures align with the government’s determination to
-                  create a fair and secure environment for internationalstudents
-                  pursuing their educational dreams in Australia
+                  Our migration agent at <span className="text-blue-500">Growmore Immigration </span>can help you with
+                  the latest information and requirements for the Business
+                  Innovation and Investment (Provisional) visa, and guide you
+                  through the entire visa application process. Book a
+                  consultation with us today to learn more.
                 </p>
               </div>
               <Link to="/book-consultation">
@@ -256,4 +225,4 @@ const IndividualVisa = () => {
   );
 };
 
-export default IndividualVisa;
+export default IndividualVisaEmployer;

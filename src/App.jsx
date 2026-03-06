@@ -35,6 +35,7 @@ import EmployerVisaRegional from "./Pages/EmployerVisaRegional";
 import EmployerVisaStrategic from "./Pages/EmployerVisaStrategic";
 import EmployerVisaTraining from "./Pages/EmployerVisaTraining";
 import EmployerVisaLMT from "./Pages/EmployerVisaLMT";
+import IndividualVisaEmployer from "./Pages/IndividualVisaEmployer";
 
 
 function App() {
@@ -113,6 +114,10 @@ function App() {
           <Route
           path="/our-services/employers/labour-market-testing-lmt-for-sc494-and-sc482-visas/"
           element={<EmployerVisaLMT />}
+        />
+        <Route
+          path="/our-services/individual/employer-sponsored-visa/"
+          element={< IndividualVisaEmployer />}
         />
       </Routes>
       <Footer />
