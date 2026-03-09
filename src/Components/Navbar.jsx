@@ -37,12 +37,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center space-x-8 text-[16px] font-medium text-green-800">
+          <ul className="hidden lg:flex items-center space-x-8 text-[16px] font-medium text-[#1F4E55]">
             <li>
               <Link
                 to="/"
                 onClick={closeAll}
-                className="hover:text-green-600 transition"
+                className="hover:text-[#8FD07D]"
               >
                 Home
               </Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("about")}
-                className="flex items-center gap-1 hover:text-green-600 transition cursor-pointer"
+                className="flex items-center gap-1 hover:text-[#8FD07D] transition cursor-pointer"
               >
                 About Us
                 <ChevronDown
@@ -73,14 +73,14 @@ const Navbar = () => {
                 <Link
                   to="/who-we-are"
                   onClick={closeAll}
-                  className="block px-4 py-2 hover:bg-gray-100 hover:text-green-600"
+                  className="block px-4 py-2  hover:text-[#8FD07D]"
                 >
                   Who We Are
                 </Link>
                 <Link
                   to="/who-we-are#teams"
                   onClick={closeAll}
-                  className="block px-4 py-2 hover:bg-gray-100 hover:text-green-600"
+                  className="block px-4 py-2  hover:text-[#8FD07D]"
                 >
                   Teams
                 </Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <Link
                 to="/migrate-to-australia"
                 onClick={closeAll}
-                className="hover:text-green-600 transition"
+                className="hover:text-[#8FD07D] transition"
               >
                 Migrate to Australia
               </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("services")}
-                className="flex items-center gap-2 hover:text-green-600 transition cursor-pointer"
+                className="flex items-center gap-2 hover:text-[#8FD07D] transition cursor-pointer"
               >
                 Services
                 <ChevronDown
@@ -144,7 +144,7 @@ const Navbar = () => {
                     <Link
                       to={item.to}
                       onClick={closeAll}
-                      className="block px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition"
+                      className="block px-4 py-2  hover:text-[#8FD07D] transition"
                     >
                       {item.label}
                     </Link>
@@ -156,7 +156,7 @@ const Navbar = () => {
               <Link
                 to="/points-calculator"
                 onClick={closeAll}
-                className="hover:text-green-600 transition"
+                className="hover:text-[#8FD07D] transition"
               >
                 Points Calculator
               </Link>
@@ -165,7 +165,7 @@ const Navbar = () => {
             <li className="relative">
               <button
                 onClick={() => toggleMenu("updates")}
-                className="flex items-center gap-2 hover:text-green-600 transition cursor-pointer"
+                className="flex items-center gap-2 hover:text-[#8FD07D] transition cursor-pointer"
               >
                 Latest Updates
                 <ChevronDown
@@ -188,7 +188,7 @@ const Navbar = () => {
                   <Link
                     to="/videos"
                     onClick={closeAll}
-                    className="block px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition"
+                    className="block px-4 py-2  hover:text-[#8FD07D] transition"
                   >
                     Videos
                   </Link>
@@ -198,7 +198,7 @@ const Navbar = () => {
                   <Link
                     to="/news"
                     onClick={closeAll}
-                    className="block px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition"
+                    className="block px-4 py-2  hover:text-[#8FD07D] transition"
                   >
                     News
                   </Link>
@@ -208,7 +208,7 @@ const Navbar = () => {
                   <Link
                     to="/blogs"
                     onClick={closeAll}
-                    className="block px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition"
+                    className="block px-4 py-2  hover:text-[#8FD07D] transition"
                   >
                     Blogs
                   </Link>
@@ -219,7 +219,7 @@ const Navbar = () => {
               <Link
                 to="/contact-us"
                 onClick={closeAll}
-                className="hover:text-green-600 transition"
+                className="hover:text-[#8FD07D] transition"
               >
                 Contact Us
               </Link>
@@ -250,7 +250,7 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={closeAll}
-            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
           >
             Home
           </Link>
@@ -259,7 +259,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => toggleMenu("mobileAbout")}
-              className="flex items-center justify-between w-full px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+              className="flex items-center justify-between w-full px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
             >
               About Us
               <ChevronDown
@@ -275,14 +275,14 @@ const Navbar = () => {
                 <Link
                   to="/who-we-are"
                   onClick={closeAll}
-                  className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+                  className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
                 >
                   Who We Are
                 </Link>
                 <Link
                   to="/who-we-are#teams"
                   onClick={closeAll}
-                  className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+                  className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
                 >
                   Teams
                 </Link>
@@ -293,7 +293,7 @@ const Navbar = () => {
           <Link
             to="/migrate-to-australia"
             onClick={closeAll}
-            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
           >
             Migrate to Australia
           </Link>
@@ -302,7 +302,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => toggleMenu("mobileServices")}
-              className="flex items-center justify-between w-full px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+              className="flex items-center justify-between w-full px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
             >
               Services
               <ChevronDown
@@ -339,7 +339,7 @@ const Navbar = () => {
                     key={index}
                     to={item.to}
                     onClick={closeAll}
-                    className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+                    className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -352,7 +352,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => toggleMenu("mobileUpdates")}
-              className="flex items-center justify-between w-full px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+              className="flex items-center justify-between w-full px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
             >
               Latest Updates
               <ChevronDown
@@ -374,7 +374,7 @@ const Navbar = () => {
                     key={index}
                     to={item.to}
                     onClick={closeAll}
-                    className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+                    className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -386,7 +386,7 @@ const Navbar = () => {
           <Link
             to="/points-calculator"
             onClick={closeAll}
-            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
           >
             Points Calculator
           </Link>
@@ -394,7 +394,7 @@ const Navbar = () => {
           <Link
             to="/contact-us"
             onClick={closeAll}
-            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-green-600 hover:text-white"
+            className="block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#8FD07D] hover:text-white"
           >
             Contact Us
           </Link>

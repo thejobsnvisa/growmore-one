@@ -127,7 +127,7 @@ const Hero = () => {
 
           <h3 className="text-[#8fd07c] font-bold text-xl sm:text-2xl mb-8 min-h-[40px]">
             {displayText}
-            <span className="border-r-2 border-[#8fd07c] animate-pulse ml-1"></span>
+            <span className="border-r- border-[#8fd07c] animate-pulse ml-1"></span>
           </h3>
 
           <div>
@@ -143,7 +143,7 @@ const Hero = () => {
         {/* RIGHT FORM */}
         <div className="flex justify-center lg:justify-end">
           <div className="bg-black rounded-3xl shadow-2xl w-[480px]">
-            <div className="h-6 bg-[#6dc7d1] rounded-t-3xl"></div>
+            <div className="h-4 bg-[#6dc7d1] rounded-t-3xl"></div>
 
             <div className="p-6 sm:p-8">
               <p className="text-[#6dc7d1] text-sm tracking-widest mb-2 font-bold">

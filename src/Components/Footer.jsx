@@ -13,14 +13,29 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#28535B] text-white overflow-hidden">
+    // Parent footer defines the color for the ENTIRE section
+    <footer className="bg-[#1F4E55] text-white overflow-hidden relative">
       
+      {/* ================= BACKGROUND OVERLAY ================= */}
+      <div 
+        className="absolute inset-0 z-0  pointer-events-none"
+      style={{
+          backgroundImage: `url('/assets/footer.jpg')`, // Your skyline pattern
+          backgroundPosition: 'bottom center', // Shifts buildings to the bottom
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover', // Ensures the image spans the full width
+          backgroundBlendMode: 'luminosity', 
+          opacity: '0.08', // Low opacity matches the subtle live design
+        }}
+      ></div>
+
       {/* ================= CTA SECTION ================= */}
-      <div className="border-b border-white/20 py-8 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      {/* Removed bg-transparent or any bg colors to ensure it uses the parent footer color */}
+      <div className="border-b border-white/20 py-8 px-4 sm:px-6 relative z-10">
+        <div className="max-w-[1350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
-          <div className="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left">
-            <div className="bg-[#6dc7d1] rounded-full ">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left bg-#28535B">
+            <div className="bg-[#6dc7d1] rounded-full">
               <img
                 src="/assets/img1.svg"
                 alt="phone"
@@ -50,29 +65,22 @@ const Footer = () => {
       </div>
 
       {/* ================= MAIN FOOTER ================= */}
-      <div className="lg:w-[1350px] mx-auto py-12 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+      {/* Keeping your width and spacing exactly as requested */}
+      <div className="lg:w-[1400px] mx-auto py-12 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 relative z-10">
         
         {/* Logo & About */}
         <div>
           <img src="/assets/logo1.png" alt="Growmore" className="h-12 mb-6" />
-
           <p className="text-gray-200 text-sm leading-relaxed mb-6 max-w-sm text-justify">
             We are specialised in providing seamless visa solutions for
             individuals, students, and employers looking to make Australia their
             home.
           </p>
-
           <div className="flex gap-4 mb-6 text-lg">
-            {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube].map(
-              (Icon, i) => (
-                <Icon
-                  key={i}
-                  className="hover:text-gray-400 cursor-pointer transition"
-                />
-              )
-            )}
+            {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube].map((Icon, i) => (
+              <Icon key={i} className="hover:text-gray-400 cursor-pointer transition" />
+            ))}
           </div>
-
           <Link to="/brochures">
             <button className="bg-[#6dc7d1] px-5 py-3 rounded-full font-medium hover:bg-black transition">
               Download Brochures →
@@ -84,22 +92,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-6">Services</h3>
           <ul className="space-y-3 text-sm text-gray-200">
-            <li>
-              <Link
-                to="/our-services/individuals"
-                className="hover:text-gray-400 transition"
-              >
-                ✓ For Individuals
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/our-services/employers"
-                className="hover:text-gray-400 transition"
-              >
-                ✓ For Employers
-              </Link>
-            </li>
+            <li><Link to="/our-services/individuals" className="hover:text-gray-400 transition">✓ For Individuals</Link></li>
+            <li><Link to="/our-services/employers" className="hover:text-gray-400 transition">✓ For Employers</Link></li>
           </ul>
         </div>
 
@@ -107,29 +101,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
           <ul className="space-y-3 text-sm text-gray-200">
-            <li>
-              <Link
-                to="/points-calculator"
-                className="hover:text-gray-400 transition"
-              >
-                › Points Calculator
-              </Link>
-            </li>
-            <li>
-              <Link to="/blogs" className="hover:text-gray-400 transition">
-                › Insights
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact-us" className="hover:text-gray-400 transition">
-                › Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/youtube" className="hover:text-gray-400 transition">
-                › YouTube Channel
-              </Link>
-            </li>
+            <li><Link to="/points-calculator" className="hover:text-gray-400 transition">› Points Calculator</Link></li>
+            <li><Link to="/blogs" className="hover:text-gray-400 transition">› Insights</Link></li>
+            <li><Link to="/contact-us" className="hover:text-gray-400 transition">› Contact Us</Link></li>
+            <li><Link to="/youtube" className="hover:text-gray-400 transition">› YouTube Channel</Link></li>
           </ul>
         </div>
 
@@ -137,26 +112,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-6">Useful Links</h3>
           <ul className="space-y-3 text-sm text-gray-200">
-            <li>
-              <Link to="#" className="hover:text-gray-400 transition">
-                Terms & Services
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="hover:text-gray-400 transition">
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="hover:text-gray-400 transition">
-                Code of Conduct
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="hover:text-gray-400 transition">
-                Cancellation & Refund Policy
-              </Link>
-            </li>
+            <li><Link to="#" className="hover:text-gray-400 transition">Terms & Services</Link></li>
+            <li><Link to="#" className="hover:text-gray-400 transition">Privacy Policy</Link></li>
+            <li><Link to="#" className="hover:text-gray-400 transition">Code of Conduct</Link></li>
+            <li><Link to="#" className="hover:text-gray-400 transition">Cancellation & Refund Policy</Link></li>
           </ul>
         </div>
 
@@ -171,7 +130,7 @@ const Footer = () => {
       </div>
 
       {/* ================= COPYRIGHT ================= */}
-      <div className="border-t border-white/20 py-6 text-center text-xs text-gray-300 px-4">
+      <div className="border-t border-white/20 py-6 text-center text-xs text-gray-300 px-4 relative z-10">
         © {new Date().getFullYear()} Growmore Immigration | All Rights Reserved
       </div>
     </footer>
