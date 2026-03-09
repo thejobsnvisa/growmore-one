@@ -6,7 +6,17 @@ const WhyChooseUs = () => {
       {/* Rounded Background Container */}
       <div className="max-w-8xl mx-auto bg-[#EFF9FB] rounded-[40px] md:rounded-[60px] px-6 md:px-16 py-16 md:py-20 relative overflow-hidden">
         {/* ===== Top Content ===== */}
+         {/* Background Image */}
+        <img
+          src="/assets/wave2.jpg"
+          alt="wave background"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        />
+
+        {/* Content Wrapper */}
+        <div className="relative z-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center mb-14">
+
           {/* LEFT */}
           <div>
             <p className="text-[#7CC576] text-sm font-semibold tracking-widest mb-3">
@@ -88,6 +98,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

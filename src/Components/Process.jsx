@@ -51,7 +51,7 @@ export default function ProcessSection() {
     >
       {/* Background */}
       <img
-        src="/assets/wave.jpg"
+        src="/assets/wave2.jpg"
         alt="wave background"
         className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
       />

@@ -62,7 +62,7 @@ export default function Testimonials() {
   return (
     <section className="relative py-20 px-4 bg-[#eff9fb] overflow-hidden rounded-[60px] m-3">
       {/* Background */}
-      <div className="absolute inset-0 opacity-20 bg-[url('/assets/wave.jpg')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/assets/wave2.jpg')] bg-cover bg-center"></div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto">
         {/* Heading */}

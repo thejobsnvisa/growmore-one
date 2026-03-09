@@ -143,6 +143,12 @@ const Migrate = () => {
           {/* ===== Top Content ===== */}
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
             {/* LEFT */}
+            <img
+          src="/assets/wave2.jpg"
+          alt="wave background"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        />
+
             <div>
               <h2 className="text-2xl md:text-3xl font-semibold text-white leading-tight">
                 Australia’s Migration <br />

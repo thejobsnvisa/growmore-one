@@ -58,8 +58,8 @@ const Teams = () => {
         {/* Stack on mobile, row only on lg */}
         <div className="bg-[#1E4E54] rounded-[28px] p-6 md:p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10">
           {/* LEFT CARD */}
-          <div className="bg-white rounded-2xl p-6 md:p-8 w-full lg:w-3/4">
-            <h3 className="text-2xl lg:text-3xl font-semibold text-[#2CA6B0] mb-4">
+          <div className="bg-white rounded-2xl p-8 md:p-8 w-full lg:w-3/4 h-[320px] ">
+            <h3 className="text-2xl lg:text-3xl font-semibold text-[#2CA6B0] mb-4 mt-12">
               Community
             </h3>
 
@@ -93,7 +93,7 @@ const Teams = () => {
             <img
               src="/assets/c.png"
               alt="community"
-              className="rounded-2xl w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px] object-cover"
+              className="rounded-2xl w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] object-cover lg:ml-[-60px]  mb-2"
             />
           </div>
         </div>
