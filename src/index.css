@@ -4,7 +4,11 @@
 }
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 /* circle label inside */
 .circle {

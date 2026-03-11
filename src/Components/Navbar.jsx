@@ -37,7 +37,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center space-x-8 text-[16px] font-medium text-[#1F4E55]">
+          <ul className="hidden lg:flex items-center space-x-8 text-[16px] font-jakarta font-medium text-[#1F4E55]">
             <li>
               <Link
                 to="/"
@@ -58,7 +58,7 @@ const Navbar = () => {
                 <ChevronDown
                   size={16}
                   className={`transition-transform duration-200 ${
-                    openMenu === "about" ? "rotate-180" : ""
+                    openMenu === "about" ? "hover:text-[#8FD07D]": ""
                   }`}
                 />
               </button>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <ChevronDown
                   size={16}
                   className={`transition-transform duration-200 ${
-                    openMenu === "services" ? "rotate-180" : ""
+                    openMenu === "services" ? "" : ""
                   }`}
                 />
               </button>
