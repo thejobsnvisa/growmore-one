@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   try {
 
     const response = await fetch(
-      "https://case.growmore.one/admin/",
+      "https://leads.growmore.one/api/website-form",
       {
         method: "POST",
         headers: {
@@ -22,11 +22,7 @@ export default async function handler(req, res) {
       }
     );
 
-    console.log("Status:", response.status);
-
-    const data = await response.text();
-
-    console.log("Response:", data);
+    const data = await response.json();
 
     return res.status(200).json({
       success: true,
