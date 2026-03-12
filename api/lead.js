@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 export default async function handler(req, res) {
+  // Allow only POST requests
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -11,6 +13,7 @@ export default async function handler(req, res) {
   try {
     const { name, email, phone, visaType, message, source } = req.body;
 
+    // Validate required fields
     if (!name || !email || !phone) {
       return res.status(400).json({
         success: false,
@@ -18,11 +21,16 @@ export default async function handler(req, res) {
       });
     }
 
-    // Clean phone and extract country code (1–3 digits)
-    const cleanPhone = phone.replace(/\D/g, ""); // remove all non-digit characters
-    const countryCodeMatch = cleanPhone.match(/^\d{1,3}/);
-    const countryCode = countryCodeMatch ? countryCodeMatch[0] : "";
-    const phoneNumber = cleanPhone.replace(countryCode, "");
+    // Parse phone using libphonenumber-js
+    const phoneNumberObj = parsePhoneNumberFromString(phone);
+    if (!phoneNumberObj || !phoneNumberObj.isValid()) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid phone number",
+      });
+    }
+    const countryCode = phoneNumberObj.countryCallingCode;
+    const phoneNumber = phoneNumberObj.nationalNumber;
 
     // Prepare data for CRM webhook
     const body = new URLSearchParams({
@@ -35,6 +43,7 @@ export default async function handler(req, res) {
       Message: message || "",
     });
 
+    // Send data to CRM
     const crmResponse = await fetch(
       "https://case.growmore.one/api/webhooks/website-form",
       {
@@ -43,32 +52,42 @@ export default async function handler(req, res) {
         body: body.toString(),
       }
     );
+
+    if (!crmResponse.ok) {
+      throw new Error(`CRM responded with status ${crmResponse.status}`);
+    }
+
     const crmData = await crmResponse.json();
 
-    // Setup email transporter using environment variables
+    // Setup Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // Gmail address
-        pass: process.env.EMAIL_PASS, // App password
+        user: "upadhyayriddhi445@gmail.com",
+        pass: "dipvarsa",
       },
     });
 
-    // Send email
-    await transporter.sendMail({
-      from: `"Website Form" <${process.env.EMAIL_USER}>`,
-      to: "info@growmore.one",
-      subject: "New Website Inquiry",
-      html: `
-        <h2>New Website Lead</h2>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> +${countryCode} ${phoneNumber}</p>
-        <p><b>Visa Type:</b> ${visaType || "General Inquiry"}</p>
-        <p><b>Message:</b> ${message || "N/A"}</p>
-      `,
-    });
+    // Send email (async, but we won't block CRM success if it fails)
+    try {
+      await transporter.sendMail({
+        from: `"Website Form" <${"upadhyayriddhi445@gmail.com"}>`,
+        to: "info@growmore.one",
+        subject: "New Website Inquiry",
+        html: `
+          <h2>New Website Lead</h2>
+          <p><b>Name:</b> ${name}</p>
+          <p><b>Email:</b> ${email}</p>
+          <p><b>Phone:</b> +${countryCode} ${phoneNumber}</p>
+          <p><b>Visa Type:</b> ${visaType || "General Inquiry"}</p>
+          <p><b>Message:</b> ${message || "N/A"}</p>
+        `,
+      });
+    } catch (emailError) {
+      console.error("Email sending failed:", emailError);
+    }
 
+    // Success response
     return res.status(200).json({
       success: true,
       crmResponse: crmData,
