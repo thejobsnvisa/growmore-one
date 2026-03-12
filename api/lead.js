@@ -1,69 +1,91 @@
-export default async function handler(req, res) {
+import nodemailer from "nodemailer";
 
+export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
-      message: "Method not allowed"
+      message: "Method not allowed",
     });
   }
 
   try {
+    const { name, email, phone, visaType, message, source } = req.body;
 
-    if (!req.body.name || !req.body.email || !req.body.phone) {
+    if (!name || !email || !phone) {
       return res.status(400).json({
         success: false,
-        message: "Name, email and phone are required"
+        message: "Name, email and phone are required",
       });
     }
 
-    const phone = req.body.phone || "";
-
-    // remove +
+    // Clean phone number
     const cleanPhone = phone.replace("+", "");
-
-    // extract country code (1–3 digits)
-    const countryCodeMatch = cleanPhone.match(/^\d{1,2}/);
+    const countryCodeMatch = cleanPhone.match(/^\d{1,3}/); // 1–3 digits
     const countryCode = countryCodeMatch ? countryCodeMatch[0] : "";
-
-    // remove country code from phone
     const phoneNumber = cleanPhone.replace(countryCode, "");
 
+    // Prepare CRM payload
     const body = new URLSearchParams({
-      Name: req.body.name || "",
-      Email: req.body.email || "",
+      Name: name,
+      Email: email,
       Phone: phoneNumber,
       Country_Code: countryCode,
-      Inquiries: req.body.visaType || "General Inquiry",
-      Source: req.body.source || "Website Form",
-      Message: req.body.message || ""
+      Inquiries: visaType || "General Inquiry",
+      Source: source || "Website Form",
+      Message: message || "",
     });
 
+    // Send to CRM
     const response = await fetch(
       "https://case.growmore.one/api/webhooks/website-form",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body.toString(),
       }
     );
 
-    const data = await response.json();
+    const crmData = await response.json();
+
+    // Setup Nodemailer transporter (hardcoded credentials)
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "upadhyayriddhi445@gmail.com", // your Gmail
+        pass: "dipvarsa", // Gmail App Password
+      },
+    });
+
+    // Send email (wrap in try/catch so server won’t fail)
+    try {
+      await transporter.sendMail({
+        from: `"Website Form" <upadhyayriddhi445@gmail.com>`,
+        to: "info@growmore.one",
+        subject: "New Website Inquiry",
+        html: `
+          <h2>New Website Lead</h2>
+          <p><b>Name:</b> ${name}</p>
+          <p><b>Email:</b> ${email}</p>
+          <p><b>Phone:</b> +${countryCode} ${phoneNumber}</p>
+          <p><b>Visa Type:</b> ${visaType || "General Inquiry"}</p>
+          <p><b>Message:</b> ${message || "N/A"}</p>
+          <p><b>Source:</b> ${source || "Website Form"}</p>
+        `,
+      });
+    } catch (emailError) {
+      console.error("Email sending failed:", emailError);
+    }
 
     return res.status(200).json({
       success: true,
-      crmResponse: data
+      crmResponse: crmData,
+      message: "Lead submitted and email sent successfully",
     });
-
-  } catch (error) { 
-
-    console.error("Webhook error:", error);
-
+  } catch (error) {
+    console.error("Webhook / Email error:", error);
     return res.status(500).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
-
   }
 }
