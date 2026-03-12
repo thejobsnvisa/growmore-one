@@ -13,7 +13,9 @@ import {
 
 const Footer = () => {
   return (
-<footer className="bg-[#154C54] text-white overflow-hidden relative">      {/* BACKGROUND OVERLAY */}
+    <footer className="bg-[#154C54] text-white overflow-hidden relative">
+      {" "}
+      {/* BACKGROUND OVERLAY */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
@@ -25,7 +27,6 @@ const Footer = () => {
           opacity: 0.08,
         }}
       ></div>
-
       {/* CTA SECTION */}
       <div className="border-b border-white/20 py-8 px-4 sm:px-6 relative z-10">
         <div className="max-w-[1350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -56,7 +57,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       {/* MAIN FOOTER */}
       <div className="max-w-[1400px] mx-auto py-12 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 relative z-10">
         {/* Logo & About */}
@@ -99,7 +99,8 @@ const Footer = () => {
                 to="/our-services/individual"
                 className="hover:text-gray-400 transition"
               >
-                <span className="text-white font-semibold">✓</span> For Individuals
+                <span className="text-white font-semibold">✓</span> For
+                Individuals
               </Link>
             </li>
             <li>
@@ -107,7 +108,8 @@ const Footer = () => {
                 to="/our-services/employers"
                 className="hover:text-gray-400 transition"
               >
-                <span className="text-white font-semibold">✓</span> For Employers
+                <span className="text-white font-semibold">✓</span> For
+                Employers
               </Link>
             </li>
           </ul>
@@ -124,7 +126,8 @@ const Footer = () => {
                 to="/points-calculator"
                 className="hover:text-gray-400 transition"
               >
-                <span className="text-white font-semibold">›</span> Points Calculator
+                <span className="text-white font-semibold">›</span> Points
+                Calculator
               </Link>
             </li>
             <li>
@@ -138,9 +141,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-                <span className="text-white font-semibold ">›</span> YouTube Channel
-              <Link to="/youtube" className="hover:text-gray-400 transition">
-              </Link>
+              <span className="text-white font-semibold ">›</span> YouTube
+              Channel
+              <Link
+                to="/youtube"
+                className="hover:text-gray-400 transition"
+              ></Link>
             </li>
           </ul>
         </div>
@@ -183,7 +189,6 @@ const Footer = () => {
           />
         </div>
       </div>
-
       {/* COPYRIGHT */}
       <div className="border-t border-white/20 py-6 text-center text-[16px] text-white px-4 relative z-10">
         © {new Date().getFullYear()} Growmore Immigration | All Rights Reserved
