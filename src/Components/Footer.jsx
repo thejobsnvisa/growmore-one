@@ -96,7 +96,7 @@ const Footer = () => {
           <ul className="space-y-2 sm:space-y-3 text-[16px] text-white">
             <li>
               <Link
-                to="/our-services/individuals"
+                to="/our-services/individual"
                 className="hover:text-gray-400 transition"
               >
                 <span className="text-white font-semibold">✓</span> For Individuals
