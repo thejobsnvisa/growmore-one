@@ -37,7 +37,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center space-x-8 text-base font-semibold font-jakarta text-[#1F4E55]">
+          <ul className="hidden lg:flex items-center space-x-8 text-base font-medium font-jakarta text-[#1F4E55]">
             {" "}
             <li>
               <Link to="/" onClick={closeAll} className="hover:text-[#8FD07D]">
