@@ -61,7 +61,7 @@ export default async function handler(req, res) {
     // Send Email
     await transporter.sendMail({
       from: `"Website Form" <upadhyayriddhi445@gmail.com>`,
-      to: "upadhyayriddhi2110@gmail.com",
+      to: "info@growmore.one",
       subject: "New Website Inquiry",
       html: `
         <h2>New Website Lead</h2>
