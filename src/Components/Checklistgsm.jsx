@@ -6,10 +6,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const Checklistgsm = () => {
   const recaptchaRef = useRef(null);
-  const [loading, setLoading] = useState(false);
-
-  const [dialCode, setDialCode] = useState("91");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  
+    const [dialCode, setDialCode] = useState("91");
+    const [phoneNumber, setPhoneNumber] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -31,7 +30,6 @@ const Checklistgsm = () => {
     comments: "",
     resume: null,
   });
-  setLoading(true);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -43,41 +41,39 @@ const Checklistgsm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const captchaValue = recaptchaRef.current.getValue();
-    if (!captchaValue) {
-      alert("Please verify reCAPTCHA");
-      return;
-    }
+  const captchaValue = recaptchaRef.current.getValue();
+  if (!captchaValue) {
+    alert("Please verify reCAPTCHA");
+    return;
+  }
 
-    const formPayload = new FormData();
+  const formPayload = new FormData();
 
-    Object.keys(formData).forEach((key) => {
-      formPayload.append(key, formData[key]);
+  Object.keys(formData).forEach((key) => {
+    formPayload.append(key, formData[key]);
+  });
+
+  formPayload.append("phone", `+${dialCode}${phoneNumber}`);
+
+  try {
+    const response = await fetch("/api/gsm", {
+      method: "POST",
+      body: formPayload,
     });
 
-    formPayload.append("phone", `+${dialCode}${phoneNumber}`);
+    const data = await response.json();
 
-    try {
-      const response = await fetch("/api/Gsm", {
-        method: "POST",
-        body: formPayload,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        alert("Form submitted successfully!");
-      } else {
-        alert("Something went wrong");
-      }
-    } catch (error) {
-      console.error(error);
-    }finally {
-    setLoading(false);
+    if (data.success) {
+      alert("Form submitted successfully!");
+    } else {
+      alert("Something went wrong");
+    }
+  } catch (error) {
+    console.error(error);
   }
-  };
+};
   return (
     <div>
       <section className="bg-[#28535B] py-16 md:py-20">
@@ -212,62 +208,62 @@ const Checklistgsm = () => {
               />
             </div>
             {/* Qualification */}
-            <div>
-              <p className="label">Do you have a valid Skills Assessment?</p>
-              <div className="flex gap-6 mt-2">
-                {["Yes", "No", "In Process"].map((item) => (
-                  <label key={item}>
-                    <input
-                      type="radio"
-                      name="skillsAssessment"
-                      value={item}
-                      onChange={handleChange}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
-              </div>
-            </div>
+        <div>
+  <p className="label">Do you have a valid Skills Assessment?</p>
+  <div className="flex gap-6 mt-2">
+    {["Yes", "No", "In Process"].map((item) => (
+      <label key={item}>
+        <input
+          type="radio"
+          name="skillsAssessment"
+          value={item}
+          onChange={handleChange}
+        />{" "}
+        {item}
+      </label>
+    ))}
+  </div>
+</div>
 
-            <h2 className="mb-3 text-xl font-normal">
-              Work Experience in Nominated Occupation
-            </h2>
+<h2 className="mb-3 text-xl font-normal">
+  Work Experience in Nominated Occupation
+</h2>
 
-            {/* Overseas Experience */}
-            <div>
-              <p className="label">Overseas</p>
-              <div className="flex gap-6 mt-2">
-                {["0-1", "1-3", "3-5", "5+"].map((item) => (
-                  <label key={item}>
-                    <input
-                      type="radio"
-                      name="overseasExperience"
-                      value={item}
-                      onChange={handleChange}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
-              </div>
-            </div>
+{/* Overseas Experience */}
+<div>
+  <p className="label">Overseas</p>
+  <div className="flex gap-6 mt-2">
+    {["0-1", "1-3", "3-5", "5+"].map((item) => (
+      <label key={item}>
+        <input
+          type="radio"
+          name="overseasExperience"
+          value={item}
+          onChange={handleChange}
+        />{" "}
+        {item}
+      </label>
+    ))}
+  </div>
+</div>
 
-            {/* Australia Experience */}
-            <div>
-              <p className="label">Australia</p>
-              <div className="flex gap-6 mt-2">
-                {["0-1", "1-3", "3-5", "5+"].map((item) => (
-                  <label key={item}>
-                    <input
-                      type="radio"
-                      name="australiaExperience"
-                      value={item}
-                      onChange={handleChange}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
-              </div>
-            </div>
+{/* Australia Experience */}
+<div>
+  <p className="label">Australia</p>
+  <div className="flex gap-6 mt-2">
+    {["0-1", "1-3", "3-5", "5+"].map((item) => (
+      <label key={item}>
+        <input
+          type="radio"
+          name="australiaExperience"
+          value={item}
+          onChange={handleChange}
+        />{" "}
+        {item}
+      </label>
+    ))}
+  </div>
+</div>
 
             {/* Experience */}
             <div>
@@ -367,7 +363,7 @@ const Checklistgsm = () => {
                 className="input-style file:bg-gray-200 file:border-0 file:px-4 file:py-2 file:rounded-md"
               />
             </div>
-            {/* Comments */}
+         {/* Comments */}
             <textarea
               name="comments"
               placeholder="Your Comments"
@@ -382,10 +378,9 @@ const Checklistgsm = () => {
             {/* Submit */}
             <button
               type="submit"
-              disabled={loading}
-              className="bg-[#6dc7d1] hover:border-[#6dc7d1] hover:border-2  px-8 py-2 text-white rounded-full hover:bg-black transition disabled:opacity-50"
+              className="w-full bg-black text-white py-3 rounded-xl hover:bg-gray-800 transition"
             >
-              {loading ? "Submitting..." : "Submit →"}
+              Submit →
             </button>
           </form>
         </div>
