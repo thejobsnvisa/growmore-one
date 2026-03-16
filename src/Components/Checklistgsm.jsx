@@ -28,30 +28,28 @@ const handleSubmit = async (e) => {
   setLoading(true);
 
   try {
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
 
-    const finalPhone = `+${dialCode}${phoneNumber}`;
+    const form = e.target;
 
     const payload = {
-      fullName: data.fullName,
-      email: data.email,
-      phone: finalPhone,
-      country: data.country,
-      location: data.location,
-      age: data.age,
-      qualification: data.qualification,
-      occupation: data.occupation,
-      skillsAssessment: data.skillsAssessment,
-      overseasExperience: data.overseasExperience,
-      australiaExperience: data.australiaExperience,
-      englishTest: data.englishTest,
-      estimatedPoints: data.estimatedPoints,
-      partnerSkills: data.partnerSkills,
-      studiedInAustralia: data.studiedInAustralia,
-      professionalYear: data.professionalYear,
-      regionalWork: data.regionalWork,
-      comments: data.comments,
+      fullName: form.fullName.value,
+      email: form.email.value,
+      phone: `+${dialCode}${phoneNumber}`,
+      country: form.country.value,
+      location: form.location.value,
+      age: form.age.value,
+      qualification: form.qualification.value,
+      occupation: form.occupation.value,
+      skillsAssessment: form.skillsAssessment.value,
+      overseasExperience: form.overseasExperience.value,
+      australiaExperience: form.australiaExperience.value,
+      englishTest: form.englishTest.value,
+      estimatedPoints: form.estimatedPoints.value,
+      partnerSkills: form.partnerSkills.value,
+      studiedInAustralia: form.studiedInAustralia.value,
+      professionalYear: form.professionalYear.value,
+      regionalWork: form.regionalWork.value,
+      comments: form.comments.value,
       captchaToken: token,
       source: "GSM Visa Assessment Form",
     };
@@ -72,9 +70,10 @@ const handleSubmit = async (e) => {
 
     alert("Thank you! Our team will contact you shortly.");
 
-    e.target.reset();
+    form.reset();
     setPhoneNumber("");
     recaptchaRef.current.reset();
+
   } catch (error) {
     console.error("Submit Error:", error);
     alert("Something went wrong. Please try again.");
