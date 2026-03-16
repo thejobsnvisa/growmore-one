@@ -56,7 +56,7 @@ const handleSubmit = async (e) => {
       source: "GSM Visa Assessment Form",
     };
 
-    const response = await fetch("/api/Gsm", {
+    const response = await fetch("/api/gsm", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,14 +75,12 @@ const handleSubmit = async (e) => {
     e.target.reset();
     setPhoneNumber("");
     recaptchaRef.current.reset();
-
   } catch (error) {
     console.error("Submit Error:", error);
     alert("Something went wrong. Please try again.");
   } finally {
     setLoading(false);
   }
-
 };
 
 
