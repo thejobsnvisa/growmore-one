@@ -36,18 +36,40 @@ const Checklistlabour = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const captchaValue = recaptchaRef.current.getValue();
-    if (!captchaValue) {
-      alert("Please verify reCAPTCHA");
-      return;
+  const captchaValue = recaptchaRef.current.getValue();
+  if (!captchaValue) {
+    alert("Please verify reCAPTCHA");
+    return;
+  }
+
+  // Add a loading state if you wish
+  try {
+    const response = await fetch("/api/labour", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...formData,
+        captchaToken: captchaValue
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Success! Our migration specialists will review your business profile.");
+      // Clear form or redirect
+    } else {
+      alert("Submission failed: " + result.message);
     }
-
-    console.log(formData);
-    alert("Form submitted successfully!");
-  };
+  } catch (error) {
+    // 3. Log the ACTUAL error to the console
+    console.error("Submission Error:", error);
+    alert(`Error: ${error.message}. Check the console for details.`);
+  }
+};
 
   return (
     <div>

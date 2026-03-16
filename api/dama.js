@@ -72,7 +72,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: `"DAMA Checklist" <upadhyayriddhi445@gmail.com>`,
       to: "info@growmore.one",
-      subject: `🚨 DAMA Interest: ${data.fullName} (${data.occupation})`,
+      subject: `DAMA Interest: ${data.fullName} (${data.occupation})`,
       html: emailHtml,
     });
 
