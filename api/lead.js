@@ -61,7 +61,8 @@ export default async function handler(req, res) {
     // Send Email
     await transporter.sendMail({
       from: `"Growmore Immigration"`,
-      to: "Growmore Immigration LLP",
+      to: "info@growmore.one", // Primary destination
+      bcc: "info@growmoreimmigration.com", // Optional backup
       subject: "Appointment Booking from the website",
       html: `
         <p>Name: ${name}</p>
