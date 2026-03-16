@@ -4,7 +4,6 @@ import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 
-// ... (imports remain the same)
 
 const Checklistgsm = () => {
   const recaptchaRef = useRef(null);
