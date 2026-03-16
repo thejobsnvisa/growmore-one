@@ -241,7 +241,7 @@ const Navbar = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t px-6 py-3 space-y-4 text-base md:text-base font-medium text-[6px] text-green-700">
+        <div className="lg:hidden bg-white border-t px-6 py-3  space-y-4 md:text-base font-medium text-[16px] text-green-700">
           <Link
             to="/"
             onClick={closeAll}
