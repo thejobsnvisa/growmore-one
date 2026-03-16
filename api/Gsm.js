@@ -1,6 +1,4 @@
 import nodemailer from "nodemailer";
-import formidable from "formidable";
-import fs from "fs";
 
 export default async function handler(req, res) {
 
@@ -11,36 +9,28 @@ export default async function handler(req, res) {
     });
   }
 
-  const form = new formidable.IncomingForm({
-    multiples: false,
-    keepExtensions: true,
-  });
-
   try {
 
-    const [fields, files] = await form.parse(req);
-
-    const getValue = (value) =>
-      Array.isArray(value) ? value[0] : value;
-
-    const fullName = getValue(fields.fullName);
-    const email = getValue(fields.email);
-    const phone = getValue(fields.phone);
-    const country = getValue(fields.country);
-    const location = getValue(fields.location);
-    const age = getValue(fields.age);
-    const qualification = getValue(fields.qualification);
-    const occupation = getValue(fields.occupation);
-    const skillsAssessment = getValue(fields.skillsAssessment);
-    const overseasExperience = getValue(fields.overseasExperience);
-    const australiaExperience = getValue(fields.australiaExperience);
-    const englishTest = getValue(fields.englishTest);
-    const estimatedPoints = getValue(fields.estimatedPoints);
-    const partnerSkills = getValue(fields.partnerSkills);
-    const studiedInAustralia = getValue(fields.studiedInAustralia);
-    const professionalYear = getValue(fields.professionalYear);
-    const regionalWork = getValue(fields.regionalWork);
-    const comments = getValue(fields.comments);
+    const {
+      fullName,
+      email,
+      phone,
+      country,
+      location,
+      age,
+      qualification,
+      occupation,
+      skillsAssessment,
+      overseasExperience,
+      australiaExperience,
+      englishTest,
+      estimatedPoints,
+      partnerSkills,
+      studiedInAustralia,
+      professionalYear,
+      regionalWork,
+      comments
+    } = req.body;
 
     if (!fullName || !email) {
       return res.status(400).json({
@@ -86,29 +76,14 @@ export default async function handler(req, res) {
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
-        auth: {
+      auth: {
         user: "upadhyayriddhi445@gmail.com",
         pass: "rodq fksy juyo tvlm"
       },
     });
 
-    const attachments = [];
-
-    if (files.resume) {
-
-      const resume = Array.isArray(files.resume)
-        ? files.resume[0]
-        : files.resume;
-
-      attachments.push({
-        filename: resume.originalFilename,
-        content: fs.createReadStream(resume.filepath),
-      });
-
-    }
-
     await transporter.sendMail({
-      from: `"Growmore Immigration" `,
+      from: `"Growmore Immigration"`,
       to: "growmoreimmigration@gmail.com",
       subject: "New GSM Visa Eligibility Assessment",
       html: `
@@ -144,7 +119,6 @@ export default async function handler(req, res) {
         <h3>Comments</h3>
         <p>${comments}</p>
       `,
-      attachments,
     });
 
     return res.status(200).json({
@@ -165,4 +139,3 @@ export default async function handler(req, res) {
 
   }
 }
-
