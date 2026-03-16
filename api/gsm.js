@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       `.trim(),
     });
 
-    fetch("https://case.growmore.one/api/webhooks/website-form", {
+    fetch("https://leads.growmore.one/api/website-form", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: crmBody.toString(),
@@ -76,9 +76,9 @@ export default async function handler(req, res) {
     `;
 
     await transporter.sendMail({
-      from: `"Growmore Immigration" <upadhyayriddhi445@gmail.com>`,
+      from: `"Growmore Immigration"`,
       to: "growmoreimmigration@gmail.com",
-      subject: `New GSM Assessment: ${data.fullName}`,
+      subject: ` GSM Assessment Inquiry: ${data.fullName}`,
       html: emailHtml,
     });
 
