@@ -1,6 +1,5 @@
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-dotenv.config();
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ success: false, message: "Method not allowed" });
@@ -41,9 +40,7 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-    // eslint-disable-next-line no-undef
     user: process.env.EMAIL_USER,
-    // eslint-disable-next-line no-undef
     pass: process.env.EMAIL_PASS,
   },
     });
