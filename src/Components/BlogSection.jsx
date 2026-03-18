@@ -29,7 +29,19 @@ const blogs = [
 const BlogSection = () => {
   return (
    <section className="bg-white py-20">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+
+        {/* Subtitle */}
+        <p className="text-[#8fd07c] font-semibold text-sm tracking-widest uppercase mb-3">
+          Recent Blogs
+        </p>
+
+        {/* Title */}
+        <h2 className="text-3xl md:text-5xl font-medium text-[#163c3d] mb-14">
+          Latest{" "}
+          <span className="text-[#8fd07c] font-semibold">Insights</span> and
+          Immigration <span className="font-semibold">Updates</span>
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (
         <div
