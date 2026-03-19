@@ -48,16 +48,7 @@ import IndividualVisaGurdian from "./Pages/IndividualVisaGurdian";
 import Terms from "./Pages/Terms";
 import Policy from "./Pages/Policy";
 import Refund from "./Pages/Refund";
-import News1 from "./Pages/News1";
-import News2 from "./Pages/News2";
-import News3 from "./Pages/News3";
-import News4 from "./Pages/News4";
-import New5 from "./Pages/New5";
-import News6 from "./Pages/News6";
-import News7 from "./Pages/News7";
-import News8 from "./Pages/News8";
-import News9 from "./Pages/News9";
-import News10 from "./Pages/News10";
+import NewsArticle from "./Pages/NewsArtical";
 
 
 function App() {
@@ -189,46 +180,10 @@ function App() {
           path="/our-services/individual/student-guardian-visa/"
           element={< IndividualVisaGurdian />}
         />
-        <Route 
-    path="/tasmania-state-nomination-program-final-quarter/" 
-    element={<News1 />} 
-  />
-    <Route 
-    path="/tasmania-12-march-invitation-round-fewer-candidates-invited/" 
-    element={<News2 />} 
-  />
-   <Route 
-    path="/vic-invitation-round-17-mar-2026/" 
-    element={<News3 />} 
-  />
-  <Route 
-    path="/vetassess-to-pause-applications-and-remove-two-occupations-under-tra-changes/" 
-    element={<News4 />} 
-  />
-    <Route 
-    path="/tra-temporarily-pauses-osap-tss-registrations/" 
-    element={<New5 />} 
-  />
-    <Route 
-    path="/omara-ai-migration-assistance/" 
-    element={<News6 />} 
-  />
-    <Route 
-    path="/australia-proposes-temporary-visa-restrictions/" 
-    element={<News7 />} 
-  />
-    <Route 
-    path="/new-rule-407-training-visa-applications-allowed-only-after-nomination-approval/" 
-    element={<News8 />} 
-  />
-    <Route 
-    path="/salary-thresholds-rise-for-employer-sponsored-visas-from-1-july-2026/" 
-    element={<News9 />} 
-  />
-    <Route 
-    path="/tasmania-issues-latest-invitations-for-state-nomination-on-5-march-2026/" 
-    element={<News10/>} 
-  />
+<Route 
+  path="/:slug" 
+  element={<NewsArticle key={window.location.pathname} />} 
+/>
       </Routes>
       <Footer />
 
