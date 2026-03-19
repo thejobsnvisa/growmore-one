@@ -24,7 +24,7 @@ Applying For a Family Visa
         {/* Main Section */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-           <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
+             <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 md:h-240 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
               <div className="space-y-5">
                 <Link to="/our-services/employers/standard-business-sponsorship/">
                   <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
@@ -118,8 +118,7 @@ Applying For a Family Visa
               </div>
             </div>
             {/* Right Column */}
-            <div className="md:col-span-2 pl-6 sm:pl-16 lg:pl-26">
-              {" "}
+ <div className="md:col-span-2 pl-6 sm:pl-40 lg:pl-45">              {" "}
               <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] ">
                 What is a Family Visa?{" "}
               </h3>

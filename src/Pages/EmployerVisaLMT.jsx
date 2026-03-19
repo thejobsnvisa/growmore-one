@@ -25,7 +25,7 @@ const EmployerVisaLMT = () => {
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Left Column */}
-            <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 lg:h-155 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
+             <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 md:h-180 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
               <div className="space-y-5">
                 <Link to="/our-services/employers/standard-business-sponsorship/">
                   <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
@@ -95,7 +95,7 @@ const EmployerVisaLMT = () => {
               </div>
             </div>
             {/* Right Column */}
-            <div className="md:col-span-2 pl-6 sm:pl-16 lg:pl-26">
+            <div className="md:col-span-2 pl-6 sm:pl-40 lg:pl-45">
               {" "}
               <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] ">
                 Labour Market Testing (LMT) Guide for Subclass 482{" "}
@@ -106,8 +106,9 @@ const EmployerVisaLMT = () => {
                 </h1>
                 <p className="text-[#727272] mt-6 leading-relaxed  text-justify text-sm sm:text-base">
                   Labour Market Testing (LMT) is a mandatory requirement for{" "}
-                  <b className="text-black">Subclass 494</b> (Skilled Employer Sponsored Regional) and
-                  Subclass 482 (Temporary Skill Shortage) visa applications.
+                  <b className="text-black">Subclass 494</b> (Skilled Employer
+                  Sponsored Regional) and Subclass 482 (Temporary Skill
+                  Shortage) visa applications.
                 </p>
                 <p className="text-[#727272] mt-6 leading-relaxed  text-justify text-sm sm:text-base">
                   Our LMT services help businesses comply with regulations by
@@ -133,7 +134,8 @@ const EmployerVisaLMT = () => {
                     role.
                   </li>
                   <li>
-                    We specialize in <b className="text-black">subclass 494</b> and <b className="text-black">subclass 482</b> labour market
+                    We specialize in <b className="text-black">subclass 494</b>{" "}
+                    and <b className="text-black">subclass 482</b> labour market
                     testing and support employers in meeting all related
                     compliance obligations under the Labour Market Testing
                     Australia guidelines.

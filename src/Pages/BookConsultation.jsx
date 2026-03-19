@@ -41,7 +41,7 @@ const BookConsultation = () => {
 
       {/* Cards Section */}
       <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
           {/* Card 1 */}
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
@@ -52,14 +52,14 @@ const BookConsultation = () => {
               />
             </div>
 
-            <div className="p-8">
+            <div className="p-4">
               <h2 className="text-[22px] font-bold text-[#042325]">$99</h2>
 
               <h3 className="mt-3 text-lg font-bold">
                 Rapid Q&A with Krunal Nayak (15 Mins)
               </h3>
 
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed">
+              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed text-justify">
                 Book your online Rapid consultation with our Principal Migration
                 Agents specialised in Australian visas — appointments available
                 in approximately 3 weeks.
@@ -94,14 +94,14 @@ const BookConsultation = () => {
               />
             </div>
 
-            <div className="p-8">
+            <div className="p-4">
               <h2 className="text-[22px] font-bold text-[#042325]">$299</h2>
 
               <h3 className="mt-3 text-lg font-bold">
                 Standard Consultation with Krunal Nayak (30 Mins)
               </h3>
 
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed">
+              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed text-justify">
                 Book your online Standard consultation with our Principal
                 Migration Agents specialised in Australian visas — appointments
                 available in approximately 3 weeks.
@@ -136,14 +136,14 @@ const BookConsultation = () => {
               />
             </div>
 
-            <div className="p-8">
+            <div className="p-4">
               <h2 className="text-[22px] font-bold text-[#042325]">$500</h2>
 
               <h3 className="mt-3 text-lg font-bold">
                 Urgent Consultation with Krunal Nayak (30 Mins)
               </h3>
 
-              <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed">
+              <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed text-justify">
                 Book your urgent online consultation with our Principal
                 Migration Agents, who specialise in Australian visas and
                 applications, and receive priority expert guidance .
@@ -177,14 +177,14 @@ const BookConsultation = () => {
                 className="w-full h-full object-cover object-top"
               />{" "}
             </div>{" "}
-            <div className="p-8">
+            <div className="p-4">
               {" "}
               <h2 className="text-[22px] font-bold text-[#042325]">Free</h2>{" "}
               <h3 className="mt-3 text-lg font-semibold">
                 {" "}
                 Free Information Session with one of our Migration Expert{" "}
               </h3>{" "}
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed">
+              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed text-justify">
                 {" "}
                 Book your online session with our Migration Support Expert,
                 specializing in Australian visa pathways{" "}

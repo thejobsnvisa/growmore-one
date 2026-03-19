@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       {/* MAIN FOOTER */}
-      <div className="max-w-[1350px] mx-auto py-12 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 relative z-10">
+      <div className="max-w-[1350px] lg:w-[1400px] mx-auto py-12 px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 relative z-10">
         {/* Logo & About */}
         <div className="flex flex-col items-start">
           <img
@@ -66,7 +66,7 @@ const Footer = () => {
             alt="Growmore"
             className="h-10 sm:h-12 mb-4 sm:mb-6"
           />
-          <p className="text-white text-[14px] font-semibold leading-relaxed mb-4 sm:mb-6 w-70 text-justify">
+          <p className="text-white text-[14px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
             We are specialised in providing seamless visa solutions for
             individuals, students, and employers looking to make Australia their
             home.
@@ -100,7 +100,7 @@ const Footer = () => {
         </div>
 
         {/* Services */}
-        <div className="lg:ml-8">
+        <div className="md:ml-12 lg:ml-22">
           <h3 className="text-[20px] sm:text-[22px] font-semibold mb-4 sm:mb-6">
             Services
           </h3>

@@ -23,7 +23,7 @@ const StudentUk = () => {
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Left Column */}
-          <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-72 lg:h-60 md:w-[400px] lg:w-[470px] mx-auto md:mx-0">
+          <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-72 lg:h-60 md:w-[380px] lg:w-[470px] mx-auto md:mx-0">
             <div className="space-y-3">
               {/* Australia */}
               <Link to="/our-services/student-visa/student-visa-australia/">
@@ -57,7 +57,8 @@ const StudentUk = () => {
             </div>
           </div>
           {/* RIGHT CONTENT */}
-          <div className="md:col-span-2 md:pl-12 lg:pl-20">
+          <div className="md:col-span-2 pl-6 sm:pl-40 lg:pl-45">
+            {" "}
             <section className="mt-12 space-y-12">
               {/* Hero Intro */}
               <div>
@@ -533,7 +534,6 @@ const StudentUk = () => {
                 </ul>
               </div>
             </section>
-
             <Link to="/book-consultation">
               <button className="bg-[#6dc7d1] text-white mt-8 rounded-full hover:bg-black transition px-7 py-4 text-sm">
                 Book Consultation →

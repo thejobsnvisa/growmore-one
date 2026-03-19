@@ -65,7 +65,7 @@ const StudentVisa = () => {
   </div>
 </div>
           {/* Right Column */}
-          <div className="md:col-span-2 md:pl-12 lg:pl-20">
+          <div className="md:col-span-2 pl-6 sm:pl-40 lg:pl-45">
             <h2 className="text-2xl sm:text-3xl font-semibold text-[#28535B]">
               Student Visa Requirements
             </h2>

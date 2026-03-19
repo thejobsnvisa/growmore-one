@@ -25,7 +25,7 @@ Student Visa Australia
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Left Column */}
-           <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-68 lg:h-60 md:w-[280px] lg:w-[480px] mx-auto md:mx-0">
+           <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-68 lg:h-60 md:w-[380px] lg:w-[480px] mx-auto md:mx-0">
 
             <div className="space-y-3">
               {/* Australia */}
@@ -60,8 +60,8 @@ Student Visa Australia
             </div>
           </div>
           {/* RIGHT CONTENT */}
-          <div className="md:col-span-2 md:pl-12 lg:pl-20">
-            <div>
+          <div className="md:col-span-2 pl-6 sm:pl-40 lg:pl-45">
+             <div>
              <h1 className="text-3xl sm:text-xl font-semibold text-[#28535B] -mt-3">
                   Student Visa Australia
                 </h1>
