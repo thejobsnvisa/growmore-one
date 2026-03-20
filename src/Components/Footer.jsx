@@ -200,9 +200,25 @@ const Footer = () => {
         </div>
       </div>
       {/* COPYRIGHT */}
-      <div className="border-t border-white/20 py-6 text-center text-[16px] text-white px-4 relative z-10">
-        © {new Date().getFullYear()} Growmore Immigration | All Rights Reserved
-      </div>
+    <div className="border-t border-white/20 py-6 px-4 relative z-10">
+  <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between text-[14px] text-white gap-4">
+    
+    {/* Left Side */}
+    <p className="text-center sm:text-left">
+      © {new Date().getFullYear()} Growmore Immigration | All Rights Reserved
+    </p>
+
+    {/* Right Side */}
+    <div className="flex items-center gap-2">
+      <img
+        src="/assets/logo2.png"
+        alt="WebMotion"
+        className="h-5 object-contain"
+      />
+    </div>
+
+  </div>
+</div>
     </footer>
   );
 };
