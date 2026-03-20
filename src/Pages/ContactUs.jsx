@@ -7,13 +7,19 @@ import ContactSection from "../Components/ContactSection";
 const ContactUs = () => {
   const recaptchaRef = useRef(null);
   const [loading, setLoading] = useState(false);
-  const [dialCode, setDialCode] = useState("61");
+  const [dialCode, setDialCode] = useState("91"); // default India
   const [phoneNumber, setPhoneNumber] = useState("");
 
-const Sitekey = import.meta.env.VITE_sitekey;
+  // ✅ FIXED ENV VARIABLE (CASE-SENSITIVE)
+  const Sitekey = import.meta.env.VITE_SITEKEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!Sitekey) {
+      alert("Captcha not configured properly");
+      return;
+    }
 
     const token = recaptchaRef.current?.getValue();
 
@@ -42,19 +48,28 @@ const Sitekey = import.meta.env.VITE_sitekey;
 
       const response = await fetch("/api/lead", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
       const result = await response.json();
 
-      if (!result.success) throw new Error("Submission failed");
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Submission failed");
+      }
 
       alert("Thank you! Our team will contact you shortly.");
 
+      // ✅ Reset form
       e.target.reset();
       setPhoneNumber("");
+      setDialCode("91");
       recaptchaRef.current.reset();
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -80,13 +95,13 @@ const Sitekey = import.meta.env.VITE_sitekey;
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           {/* IMAGE */}
-      <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-  <img
-    src="/assets/krunal2.png"
-    alt="MARA Registration"
-    className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
-  />
-</div>
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <img
+              src="/assets/krunal2.png"
+              alt="MARA Registration"
+              className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
+            />
+          </div>
 
           {/* FORM */}
           <div className="w-full lg:w-1/2 flex flex-col">
@@ -132,6 +147,7 @@ const Sitekey = import.meta.env.VITE_sitekey;
                     <PhoneInput
                       country={"in"}
                       enableSearch
+                      value={dialCode}
                       onChange={(value, data) => {
                         setDialCode(data.dialCode);
                       }}
@@ -141,11 +157,9 @@ const Sitekey = import.meta.env.VITE_sitekey;
                         width: "100%",
                         border: "none",
                         height: "44px",
-                        backgroundColor: "white",
                       }}
                       buttonStyle={{
                         border: "none",
-                        backgroundColor: "white",
                       }}
                     />
                   </div>
@@ -186,17 +200,20 @@ const Sitekey = import.meta.env.VITE_sitekey;
 
                 {/* CAPTCHA */}
                 <div className="flex justify-start">
-                  <ReCAPTCHA
-                    sitekey={Sitekey}
-                    ref={recaptchaRef}
-                  />
+                  {Sitekey ? (
+                    <ReCAPTCHA sitekey={Sitekey} ref={recaptchaRef} />
+                  ) : (
+                    <p className="text-red-500 text-sm">
+                      Captcha not loaded. Check environment variables.
+                    </p>
+                  )}
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-64 bg-[#373737] hover:bg-black text-white py-3 rounded-xl hover:bg-gray-800 transition disabled:opacity-50"
+                  className="w-64 bg-[#373737] hover:bg-black text-white py-3 rounded-xl transition disabled:opacity-50"
                 >
                   {loading ? "Submitting..." : "Submit →"}
                 </button>
