@@ -20,7 +20,7 @@ What is your highest qualification?
         </p>
       <label className={`option ${selected === "20" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "20"}
           onChange={() => selectEducation("20", 20)}
@@ -30,7 +30,7 @@ What is your highest qualification?
       </label>
           <label className={`option ${selected === "15" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "15"}
           onChange={() => selectEducation("15", 15)}
@@ -40,7 +40,7 @@ What is your highest qualification?
       </label>
             <label className={`option ${selected === "10" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "10"}
           onChange={() => selectEducation("10", 10)}
@@ -50,7 +50,7 @@ What is your highest qualification?
       
       <label className={`option ${selected === "0" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "0"}
           onChange={() => selectEducation("0", 0)}
@@ -65,7 +65,7 @@ What is your highest qualification?
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginTop: "25px",
+          marginTop: "75px",
         }}
       >
         <button className="next-btn" onClick={prevStep}>

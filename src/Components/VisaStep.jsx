@@ -21,7 +21,7 @@ export default function VisaStep({ updateScore, nextStep }) {
       {/* 189 */}
       <label className={`option ${selected === "189" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="visa"
           checked={selected === "189"}
           onChange={() => handleVisa("189", 0)}
@@ -35,7 +35,7 @@ export default function VisaStep({ updateScore, nextStep }) {
       {/* 190 */}
       <label className={`option ${selected === "190" ? "active" : ""}`}>
         <input
-          type="radio"
+           type="CHECKBOX"
           name="visa"
           checked={selected === "190"}
           onChange={() => handleVisa("190", 5)}
@@ -52,7 +52,7 @@ export default function VisaStep({ updateScore, nextStep }) {
       {/* 491 */}
       <label className={`option ${selected === "491" ? "active" : ""}`}>
         <input
-          type="radio"
+           type="CHECKBOX"
           name="visa"
           checked={selected === "491"}
           onChange={() => handleVisa("491", 15)}

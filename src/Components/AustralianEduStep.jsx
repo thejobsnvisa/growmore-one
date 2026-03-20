@@ -28,7 +28,7 @@ export default function AustralianEduStep({ updateScore, nextStep, prevStep }) {
       {/* YES OPTION */}
       <label className={`option ${selected === "10" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="australianEdu"
           checked={selected === "10"}
           onChange={() => selectAustralianEdu("10", 10)}
@@ -39,7 +39,7 @@ export default function AustralianEduStep({ updateScore, nextStep, prevStep }) {
       {/* NO OPTION */}
       <label className={`option ${selected === "0" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="australianEdu"
           checked={selected === "0"}
           onChange={() => selectAustralianEdu("0", 0)}
@@ -52,7 +52,7 @@ export default function AustralianEduStep({ updateScore, nextStep, prevStep }) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginTop: "25px",
+          marginTop: "125px",
         }}
       >
         <button className="next-btn" onClick={prevStep}>

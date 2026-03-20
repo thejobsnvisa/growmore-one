@@ -29,7 +29,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
       </div>
       <label className={`option ${selected === "20" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "20"}
           onChange={() => selectAustralianExperience("20", 20)}
@@ -38,7 +38,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
       </label>
       <label className={`option ${selected === "15" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "15"}
           onChange={() => selectAustralianExperience("15", 15)}
@@ -47,7 +47,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
       </label>
       <label className={`option ${selected === "10" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "10"}
           onChange={() => selectAustralianExperience("10", 10)}
@@ -57,7 +57,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
 
       <label className={`option ${selected === "5" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "5"}
           onChange={() => selectAustralianExperience("5", 5)}
@@ -67,7 +67,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
 
       <label className={`option ${selected === "0" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "0"}
           onChange={() => selectAustralianExperience("0", 0)}
@@ -80,7 +80,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginTop: "25px",
+          marginTop: "75px",
         }}
       >
         <button className="next-btn" onClick={prevStep}>

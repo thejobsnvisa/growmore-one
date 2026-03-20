@@ -33,7 +33,7 @@ export default function Credit({ updateScore, nextStep, prevStep }) {
       {/* YES */}
       <label className={`option ${selected === "10" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="community"
           checked={selected === "10"}
           onChange={() => selectCommunity("10", 10)}
@@ -44,7 +44,7 @@ export default function Credit({ updateScore, nextStep, prevStep }) {
       {/* NO */}
       <label className={`option ${selected === "0" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="community"
           checked={selected === "0"}
           onChange={() => selectCommunity("0", 0)}
@@ -57,7 +57,7 @@ export default function Credit({ updateScore, nextStep, prevStep }) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginTop: "25px",
+          marginTop: "125px",
         }}
       >
         <button className="next-btn" onClick={prevStep}>

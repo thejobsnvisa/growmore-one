@@ -30,8 +30,7 @@ export default function SpecialEduStep({ updateScore, nextStep, prevStep }) {
           {/* YES OPTION */}
           <label className={`option ${selected === "10" ? "active" : ""}`}>
             <input
-              type="radio"
-              name="specialEdu"
+  type="CHECKBOX"              name="specialEdu"
               checked={selected === "10"}
               onChange={() => selectSpecialEdu("10", 10)}
             />
@@ -41,8 +40,7 @@ export default function SpecialEduStep({ updateScore, nextStep, prevStep }) {
           {/* NO OPTION */}
           <label className={`option ${selected === "0" ? "active" : ""}`}>
             <input
-              type="radio"
-              name="specialEdu"
+  type="CHECKBOX"              name="specialEdu"
               checked={selected === "0"}
               onChange={() => selectSpecialEdu("0", 0)}
             />
@@ -54,7 +52,7 @@ export default function SpecialEduStep({ updateScore, nextStep, prevStep }) {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              marginTop: "25px",
+              marginTop: "125px",
             }}
           >
             <button className="next-btn" onClick={prevStep}>

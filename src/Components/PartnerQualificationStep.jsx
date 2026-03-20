@@ -32,7 +32,7 @@ export default function PartnerQualificationStep({
       {/* 10 POINTS - SKILLED PARTNER */}
       <label className={`option ${selected === "skilled_partner" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="partnerQualification"
           checked={selected === "skilled_partner"}
           onChange={() => selectOption("skilled_partner", 10)}
@@ -51,7 +51,7 @@ export default function PartnerQualificationStep({
       {/* 10 POINTS - SINGLE / PR */}
       <label className={`option ${selected === "single_pr" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="partnerQualification"
           checked={selected === "single_pr"}
           onChange={() => selectOption("single_pr", 10)}
@@ -68,7 +68,7 @@ export default function PartnerQualificationStep({
       {/* 5 POINTS */}
       <label className={`option ${selected === "competent_partner" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="partnerQualification"
           checked={selected === "competent_partner"}
           onChange={() => selectOption("competent_partner", 5)}
@@ -86,7 +86,7 @@ export default function PartnerQualificationStep({
       {/* 0 POINTS */}
       <label className={`option ${selected === "none" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="partnerQualification"
           checked={selected === "none"}
           onChange={() => selectOption("none", 0)}

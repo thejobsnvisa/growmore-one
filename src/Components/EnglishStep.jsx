@@ -22,7 +22,7 @@ export default function EnglishStep({ updateScore, nextStep, prevStep }) {
       {/* ---------------- COMPETENT ---------------- */}
       <label className={`option ${selected === "competent" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="english"
           checked={selected === "competent"}
           onChange={() => selectEnglish("competent", 0)}
@@ -45,7 +45,7 @@ export default function EnglishStep({ updateScore, nextStep, prevStep }) {
       {/* ---------------- PROFICIENT ---------------- */}
       <label className={`option ${selected === "proficient" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="english"
           checked={selected === "proficient"}
           onChange={() => selectEnglish("proficient", 10)}
@@ -67,7 +67,7 @@ export default function EnglishStep({ updateScore, nextStep, prevStep }) {
       {/* ---------------- SUPERIOR ---------------- */}
       <label className={`option ${selected === "superior" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="english"
           checked={selected === "superior"}
           onChange={() => selectEnglish("superior", 20)}

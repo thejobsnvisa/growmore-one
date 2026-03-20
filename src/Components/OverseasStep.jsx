@@ -33,7 +33,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
       </div>
       <label className={`option ${selected === "15" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "15"}
           onChange={() => selectExperience("15", 15)}
@@ -42,7 +42,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
       </label>
       <label className={`option ${selected === "15" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "10"}
           onChange={() => selectExperience("10", 10)}
@@ -51,7 +51,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
       </label>
       <label className={`option ${selected === "5" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "5"}
           onChange={() => selectExperience("5", 5)}
@@ -61,7 +61,7 @@ export default function OverseasStep({ updateScore, nextStep, prevStep }) {
 
       <label className={`option ${selected === "0" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="exp"
           checked={selected === "0"}
           onChange={() => selectExperience("0", 0)}

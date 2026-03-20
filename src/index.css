@@ -15,17 +15,17 @@ body {
 /* circle label inside */
 .circle {
   position: relative;
-  width: 160px;
+  width: 170px;
   height: 160px;
 }
 
 .circle-label {
   position: absolute;
-  bottom: 18px;
+  bottom: -50px;
   width: 100%;
   text-align: center;
   font-size: 13px;
-  color: #6b7280;
+  color: #222e50;
   font-weight: 500;
 }
 

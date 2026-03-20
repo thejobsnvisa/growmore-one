@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
-body{
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  background:#f4f7f8;
-  margin:0;
-}
-html, body {
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #f4f7f8;
+  margin: 0;
   overflow-x: hidden;
 }
-.input-style {
-  @apply w-full px-4 py-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#5DC2D3];
-}
 
+/* ================= UTILITIES ================= */
+.input-style {
+  @apply w-full px-4 py-3 rounded-md border border-gray-300 bg-white;
+}
 
 .label {
   @apply font-medium text-sm;
@@ -20,6 +20,7 @@ html, body {
 .react-tel-input input {
   background-color: white !important;
 }
+
 /* ================= CONTAINER ================= */
 .calculator-container {
   display: flex;
@@ -29,7 +30,6 @@ html, body {
   margin: 0 auto;
 }
 
-/* MOBILE STACK */
 @media (max-width: 1024px) {
   .calculator-container {
     flex-direction: column;
@@ -46,21 +46,16 @@ html, body {
 /* ================= CARD ================= */
 .card {
   background: #fff;
-  padding: 20px;
+  padding: 24px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  min-height: 400px;
+  min-height: 550px;
 }
 
-/* MOBILE CARD */
 @media (max-width: 768px) {
   .card {
     padding: 16px;
     min-height: auto;
-  }
-
-  .card h2 {
-    font-size: 22px;
   }
 }
 
@@ -70,90 +65,79 @@ html, body {
   justify-content: space-between;
   align-items: flex-start;
   border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 10px;
   gap: 10px;
+  color: #164750;
 }
 
 .step-header h2 {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 700;
-  color: #243b53;
+  color: #222e50;
   margin: 0;
-  padding: 10px 0;
+  padding: 20px 0 0; /* Reduced from 40px for better vertical balance */
 }
 
-/* MOBILE HEADER */
 @media (max-width: 768px) {
   .step-header {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .step-header h2 {
-    font-size: 20px;
-  }
 }
 
 /* ================= SCORE BOX ================= */
 .step-points {
-  background: #1f5d5b;
+  background: #164750;
   color: white;
   font-size: 24px;
   font-weight: 700;
   padding: 12px 22px;
-  border-radius: 12px;
-  min-width: 60px;
+  border-radius: 4px;
+  /* Fixed: border-bottom needs style and color */
+  border-top: none;
+  margin-top: -25px;
+  min-width: 70px;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .step-points {
-    font-size: 18px;
-    padding: 8px 16px;
-  }
 }
 
 /* ================= QUESTION ================= */
 .question {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  font-size: 18px;
-  color: #394b59;
-}
-
-@media (max-width: 768px) {
-  .question {
-    font-size: 15px;
-  }
+  margin: 15px 0 22px;
+  font-size: 20px;
+  color: #222e50;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 /* ================= OPTIONS ================= */
 .option {
   display: flex;
-  gap: 8px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #e4e7eb;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
   margin-bottom: 12px;
   cursor: pointer;
-  transition: 0.25s;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+  border-radius: 10px;
 }
 
-.option:hover {
-  border-color: #4fb6c2;
-  background: #f4fbfc;
-}
-
-.option input {
-  width: 18px;
-  height: 18px;
+.option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
   margin-top: 4px;
+  cursor: pointer;
+  accent-color: #164750;
+  flex-shrink: 0;
 }
 
-.option p {
-  color: #666;
-  margin: 5px 0 0;
-  font-size: 14px;
+.option p,
+.option span,
+.option li {
+  color: #222e50;
+  font-weight: 500; /* Fixed: 550 is non-standard; used 500 */
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* ================= BUTTON ================= */
@@ -161,42 +145,40 @@ html, body {
   background: #55c0cc;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 10px 44px;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.25s;
-  margin-top: 20px;
-  width: auto;
+  margin-top: 40px;
+  display: inline-block;
 }
 
 .next-btn:hover {
-  background: #3aaab7;
+  background: #333333;
 }
 
-.next-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* MOBILE BUTTON */
 @media (max-width: 768px) {
   .next-btn {
     width: 100%;
-    text-align: center;
+    margin-top: 25px;
   }
 }
 
-/* ================= RIGHT PANEL ================= */
 .score-panel {
   width: 30%;
+
   background: white;
+
   border-radius: 12px;
+
   padding: 25px;
+
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* MOBILE SCORE PANEL */
+
 @media (max-width: 1024px) {
   .score-panel {
     width: 100%;
@@ -204,10 +186,12 @@ html, body {
 }
 
 /* ================= CIRCLE ================= */
+
 .circle-wrapper {
   width: 160px;
   height: 180px;
-  margin: auto;
+  margin: 40px auto 0; /* top | horizontal | bottom */
+  position: relative;
 }
 
 .circle {
@@ -216,28 +200,40 @@ html, body {
 
 .circle-label {
   position: absolute;
-  top: 65%;
+  margin-bottom: 10px;
+  top: 60%;
+
   left: 50%;
+
   transform: translate(-50%, -50%);
-  font-size: 14px;
+
+  font-size: 18px;
+
   font-weight: 600;
-  color: #6b7280;
+
+  color: #222e50;
+
   pointer-events: none;
 }
 
 /* ================= TABLE ================= */
+
 .score-table {
   width: 100%;
+
   border-collapse: collapse;
+
   font-size: 16px;
 }
 
 .score-table tr {
   border-bottom: 1px solid #e5e5e5;
+
+  padding: 5px;
 }
 
 .score-table tr:nth-child(odd) {
-  background: #f9f9f9;
+  background: #80808012;
 }
 
 .score-table tr:hover {
@@ -246,19 +242,33 @@ html, body {
 
 .score-row {
   display: flex;
+
   justify-content: space-between;
+
   padding: 14px 0;
+
   border-bottom: 1px solid #eee;
 }
 
 .td-left {
-  color: #444;
+  color: #212529;
+
+  font-size: 14px;
+
+  font-family: 14px;
+
+  padding: 5px;
 }
 
 .td-right {
   text-align: right;
-  font-weight: 600;
-  color: #222;
+
+  font-size: 14px;
+
+  color: #212529;
+
+  padding: 5px;
+  margin-top: 30px;
 }
 
 .label {
@@ -268,20 +278,27 @@ html, body {
 .value {
   font-weight: 600;
 }
-.section-title{
-  font-weight:500;
+
+.section-title {
+  font-weight: 500;
 }
+
 .contact-section {
   background: #eff9fb;
+
   padding: 80px 20px;
+
   text-align: center;
 }
 
 .contact-title {
   font-size: 32px;
+
   font-weight: 600;
+
   margin-bottom: 50px;
-  color:#164750;
+
+  color: #164750;
 }
 
 .contact-title span {
@@ -290,22 +307,35 @@ html, body {
 
 .contact-wrapper {
   max-width: 1140px;
+
   margin: 0 auto;
+
   display: flex;
+
   justify-content: center;
+
   gap: 30px;
+
   flex-wrap: wrap;
 }
 
 .contact-card {
   background: #ffffff;
+
   border-radius: 14px;
+
   padding: 25px;
+
   width: 520px;
+
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
+
   transition: 0.3s ease;
 }
 
@@ -315,66 +345,96 @@ html, body {
 
 .contact-card h3 {
   margin-bottom: 15px;
+
   font-size: 22px;
 }
 
 .contact-info {
   text-align: left;
+
   margin-bottom: 20px;
 }
 
 .contact-info p {
   margin: 8px 0;
+
   font-size: 14px;
+
   color: #333;
 }
 
 .contact-card iframe {
   width: 100%;
+
   height: 220px;
+
   border-radius: 10px;
+
   border: none;
 }
 
 /* Responsive */
+
 @media (max-width: 1024px) {
   .contact-card {
     width: 100%;
   }
 }
+
 .info-row {
   display: flex;
+
   gap: 15px;
+
   margin-bottom: 18px;
+
   align-items: flex-start;
 }
 
 .icon {
   font-size: 20px;
+
   margin-top: 4px;
+
   color: #333;
 }
 
 .label {
   font-size: 14px;
+
   color: #666;
+
   margin: 0;
 }
 
 .value {
   font-size: 16px;
+
   font-weight: 600;
+
   color: #0f4f55;
-  margin: 3px 0 0 0;
+
+  margin: 10px 0 0 0;
+
   text-decoration: none;
 }
 
 .value:hover {
   color: #7bc043;
 }
+
 @keyframes fade {
-  0% { opacity: 0; transform: translateY(5px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
 }
 
 .animate-fade {

@@ -20,26 +20,26 @@ export default function AgeStep({ updateScore, nextStep, prevStep }) {
                 </p>
           
                 <label className="option">
-                  <input type="radio" name="age" onChange={() => selectAge("18-24",25)} />
+                  <input type="CHECKBOX" name="age" onChange={() => selectAge("18-24",25)} />
                   <span>18 to 24</span>
                 </label>
           
                 <label className="option">
-                  <input type="radio" name="age" onChange={() => selectAge("25-32",30)} />
+                  <input type="CHECKBOX" name="age" onChange={() => selectAge("25-32",30)} />
                   <span>25 to 32</span>
                 </label>
           
                 <label className="option">
-                  <input type="radio" name="age" onChange={() => selectAge("33-39",25)} />
+                  <input type="CHECKBOX" name="age" onChange={() => selectAge("33-39",25)} />
                   <span>33 to 39</span>
                 </label>
           
                 <label className="option">
-                  <input type="radio" name="age" onChange={() => selectAge("40-44",15)} />
+                  <input type="CHECKBOX" name="age" onChange={() => selectAge("40-44",15)} />
                   <span>40 to 44</span>
                 </label>
           
-                <div style={{display:"flex", justifyContent:"space-between", marginTop:"25px"}}>
+                <div style={{display:"flex", justifyContent:"space-between", marginTop:"75px"}}>
                   <button className="next-btn" onClick={prevStep}>← Previous</button>
           
                   <button

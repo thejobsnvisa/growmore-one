@@ -28,7 +28,7 @@ export default function ProfessionalStep({ updateScore, nextStep, prevStep }) {
       {/* YES OPTION */}
       <label className={`option ${selected === "5" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="professional    "
           checked={selected === "5"}
           onChange={() => selectProfessional("5", 5)}
@@ -39,7 +39,7 @@ export default function ProfessionalStep({ updateScore, nextStep, prevStep }) {
       {/* NO OPTION */}
       <label className={`option ${selected === "0" ? "active" : ""}`}>
         <input
-          type="radio"
+          type="CHECKBOX"
           name="professional"
           checked={selected === "0"}
           onChange={() => selectProfessional("0", 0)}
@@ -52,7 +52,7 @@ export default function ProfessionalStep({ updateScore, nextStep, prevStep }) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginTop: "25px",
+          marginTop: "125px",
         }}
       >
         <button className="next-btn" onClick={prevStep}>

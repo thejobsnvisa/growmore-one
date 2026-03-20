@@ -62,7 +62,7 @@ function ScoreRow({ title, value }) {
   return (
     <tr>
       <td className="td-left section-title">{title}</td>
-      <td className="td-right rs-vl">{value}</td>
+      <td className="td-right rs-vl ">{value}</td>
     </tr>
   );
 }
