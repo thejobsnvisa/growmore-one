@@ -137,7 +137,7 @@ const Migrate = () => {
       </section>
       <section className="py-14 px-4 bg-white ">
         {/* Rounded Background Container */}
-        <div className="max-w-8xl mx-auto h-100 bg-[#333333] rounded-[30px] md:rounded-[40px] px-6 md:px-10 py-12 relative overflow-hidden">
+        <div className="max-w-8xl  mx-auto md:h-120 lg:h-100 bg-[#333333] rounded-[30px] md:rounded-[40px] px-6 md:px-10 py-12 relative overflow-hidden">
           {/* Background wave */}
           <img
             src="/assets/wave2.jpg"
@@ -146,7 +146,7 @@ const Migrate = () => {
           />
 
           {/* Content */}
-          <div className="relative max-w-7xl mx-auto mt-4 grid md:grid-cols-2 gap-10 items-center ">
+          <div className="relative max-w-7xl  mx-auto mt-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ">
             {/* LEFT */}
             <div className="text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold text-white leading-tight">
@@ -165,7 +165,7 @@ const Migrate = () => {
                   className="w-10 h-10 shrink-0"
                 />
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  <h3 className="text-xl md:text-xl font-semibold text-white">
                     4,46,000
                   </h3>
                   <p className="text-sm md:text-base text-white mt-1">
