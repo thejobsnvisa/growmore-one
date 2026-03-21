@@ -3,28 +3,27 @@ import { FaCalendar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const blogs = [
-  {
+   {
     id: 1,
     slug: "australia-2025-26-state-nomination-where-spots-are-still-available",
-    title:
-      "Australia 2025–26 State Nomination : Where Spots Are Still Available",
+    title: "Australia 2025–26 State Nomination : Where Spots Are Still Available",
     date: "March 19, 2026",
     image: "/assets/ng1.png",
-  },
+  } ,
   {
     id: 2,
-    slug: "tra-temporarily-pauses-osap-tss-registrations",
-    title: "TRA Temporarily Pauses OSAP & TSS Registrations",
-    date: "March 17, 2026",
-    image: "/assets/n1.jpg",
-  },
+    slug: "act-state-nomination-2025-2026-latest-round-allocation-update",
+    title: "ACT State Nomination 2025–2026 : Latest Round & Allocation Update",
+    date: "March 19, 2026",
+    image: "/assets/ng2.jpg",
+  } ,
   {
     id: 3,
-    slug: "omara-ai-migration-assistance",
-    title: "AI in Migration: Key Legal Rules Every RMA Must Follow",
-    date: "March 17, 2026",
-    image: "/assets/n2.jpg",
-  },
+    slug: "tasmania-latest-invitation-round-19-march-2026",
+    title: "Tasmania Latest Invitation Round: 19 March 2026",
+    date: "March 19, 2026",
+    image: "/assets/ng3.jpg",
+  } ,
 ];
 
 const BlogSection = () => {
