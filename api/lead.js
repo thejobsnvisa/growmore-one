@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     // 1. Verify reCAPTCHA first
     const captchaResponse = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.VITE_RECAPTCHA_SITE_KEY}&response=${captchaToken}`,
+      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SITE_KEY}&response=${captchaToken}`,
       { method: "POST" }
     );
     const captchaData = await captchaResponse.json();
