@@ -1,52 +1,92 @@
 export const reviewsData = [
   {
+    id: 1,
     name: "Ravi Ajit Barot",
     rating: 5,
-    text: "Highly recommend GrowMore Immigration. The entire process was smooth and well managed with great guidance."
+    text: "Highly recommend GrowMore Immigration. The entire process was smooth and well managed with great guidance.",
+    date: "2024-03-15",
+    time: "2 weeks ago",
+    relevance: 10,
   },
   {
+    id: 2,
     name: "Viraj Patel",
     rating: 5,
-    text: "Very knowledgeable team. They supported me throughout my student visa process."
+    text: "Very knowledgeable team. They supported me throughout my student visa process.",
+    date: "2024-03-20",
+    time: "1 week ago",
+    relevance: 8,
   },
   {
+    id: 3,
     name: "Soham Ekbote",
     rating: 5,
-    text: "Amazing experience. They handled my case even after rejection and made it successful."
+    text: "Amazing experience. They handled my case even after rejection and made it successful.",
+    date: "2024-02-10",
+    time: "1 month ago",
+    relevance: 9,
   },
   {
+    id: 4,
     name: "Kiran Jani",
     rating: 5,
-    text: "Very professional team with excellent communication. Always available for queries."
+    text: "Very professional team with excellent communication. Always available for queries.",
+    date: "2024-03-22",
+    time: "1 day ago",
+    relevance: 7,
   },
   {
+    id: 5,
     name: "Dhwanil Jani",
     rating: 5,
-    text: "Highly professional and helpful. Got my visa smoothly without any issues."
+    text: "Highly professional and helpful. Got my visa smoothly without any issues.",
+    date: "2024-01-05",
+    time: "2 months ago",
+    relevance: 6,
   },
   {
+    id: 6,
     name: "Clemy Christy",
     rating: 5,
-    text: "Great coordination and support. Got approval faster than expected."
+    text: "Great coordination and support. Got approval faster than expected.",
+    date: "2024-03-18",
+    time: "5 days ago",
+    relevance: 5,
   },
   {
+    id: 7,
     name: "Neha Shah",
     rating: 4,
-    text: "Good service and quick response from the team."
+    text: "Good service and quick response from the team.",
+    date: "2023-12-15",
+    time: "3 months ago",
+    relevance: 4,
   },
   {
+    id: 8,
     name: "Amit Jain",
     rating: 5,
-    text: "Transparent process and honest advice. Highly satisfied."
+    text: "Transparent process and honest advice. Highly satisfied.",
+    date: "2024-03-01",
+    time: "3 weeks ago",
+    relevance: 3,
   },
   {
+    id: 9,
     name: "Priyanka Mehta",
     rating: 5,
-    text: "Excellent support throughout the visa journey."
+    text: "Excellent support throughout the visa journey.",
+    date: "2024-02-28",
+    time: "4 weeks ago",
+    relevance: 2,
   },
   {
+    id: 10,
     name: "Rahul Sharma",
     rating: 4,
-    text: "Helpful staff and smooth documentation process."
+    text: "Helpful staff and smooth documentation process.",
+    date: "2023-11-20",
+    time: "4 months ago",
+    relevance: 1,
   }
 ];

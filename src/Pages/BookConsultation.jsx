@@ -42,7 +42,6 @@ const BookConsultation = () => {
       {/* Cards Section */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
-
           {/* Card 1 */}
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
@@ -60,7 +59,7 @@ const BookConsultation = () => {
                 Standard Consultation with Krunal Nayak (30 Mins)
               </h3>
 
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed text-justify">
+              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
                 Book your online Standard consultation with our Principal
                 Migration Agents specialised in Australian visas — appointments
                 available in approximately 3 weeks.
@@ -94,29 +93,29 @@ const BookConsultation = () => {
             </div>
 
             <div className="p-4">
-              <h2 className="text-[22px] font-bold text-[#042325]">$150</h2>
+              <h2 className="text-[22px] font-bold text-[#042325]">$99</h2>
 
               <h3 className="mt-3 text-lg font-bold">
-                Rapid Q&A with Krunal Nayak (15 Mins)
+                10-Minute Express Online Consultation with Mr. Krunal Nayak
               </h3>
 
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed text-justify">
-                Book your online Rapid consultation with our Principal Migration
-                Agents specialised in Australian visas — appointments available
-                in approximately 3 weeks.
+              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
+                This short consultation is ideal if you have 2–3 quick questions
+                and need clear, professional direction from a Registered
+                Migration Agent.
               </p>
               <a
                 href="https://6fvy.short.gy/icfactsheet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 text-[15px] mt-4 block"
+                className="text-blue-600 text-[15px] mt-10 block"
               >
                 {" "}
                 View Factsheet{" "}
               </a>
               <button
                 onClick={() =>
-                  openCalendly("https://calendly.com/krunalnayak/rapid")
+                  openCalendly("https://calendly.com/krunalnayak/rapid?month=2026-03")
                 }
                 className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
               >
@@ -141,7 +140,7 @@ const BookConsultation = () => {
                 Urgent Consultation with Krunal Nayak (30 Mins)
               </h3>
 
-              <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed text-justify">
+              <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed ">
                 Book your urgent online consultation with our Principal
                 Migration Agents, who specialise in Australian visas and
                 applications, and receive priority expert guidance .
@@ -177,12 +176,14 @@ const BookConsultation = () => {
             </div>{" "}
             <div className="p-4">
               {" "}
-              <h2 className="text-[22px] font-bold text-[#042325]">Free</h2>{" "}
+              <h2 className="text-[22px] font-bold text-[#042325]">
+                Free
+              </h2>{" "}
               <h3 className="mt-3 text-lg font-semibold">
                 {" "}
                 Free Information Session with one of our Migration Expert{" "}
               </h3>{" "}
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed text-justify">
+              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
                 {" "}
                 Book your online session with our Migration Support Expert,
                 specializing in Australian visa pathways{" "}
