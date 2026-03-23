@@ -60,35 +60,30 @@ const ContactUs = () => {
 
   return (
     <div className="w-full">
-
       {/* Hero Section */}
       <section className="bg-[#28535B] py-16 md:py-20">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <h1 className="text-3xl md:text-5xl font-semibold text-white mb-3">
             Contact Us
           </h1>
-          <p className="text-white font-semibold">
-            Home &gt; Contact Us
-          </p>
+          <p className="text-white font-semibold">Home &gt; Contact Us</p>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
           {/* IMAGE */}
-      <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-  <img
-    src="/assets/krunal2.png"
-    alt="MARA Registration"
-    className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
-  />
-</div>
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <img
+              src="/assets/krunal2.png"
+              alt="MARA Registration"
+              className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
+            />
+          </div>
 
           {/* FORM */}
           <div className="w-full lg:w-1/2 flex flex-col">
-
             {/* Heading */}
             <div className="w-full mb-6 text-left">
               <p className="text-[#8fd07c] text-sm font-semibold">
@@ -101,9 +96,7 @@ const ContactUs = () => {
 
             {/* Form Card */}
             <div className="bg-[#EFF9FB] rounded-3xl shadow-2xl w-full max-w-xl p-6 md:p-8">
-
               <form onSubmit={handleSubmit} className="space-y-4">
-
                 {/* Name + Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
@@ -124,7 +117,6 @@ const ContactUs = () => {
 
                 {/* Phone Input */}
                 <div className="flex gap-3">
-
                   {/* Country Code */}
                   <div className="w-24 sm:w-28 bg-white rounded-lg border border-gray-300">
                     <PhoneInput
@@ -185,9 +177,9 @@ const ContactUs = () => {
                 {/* CAPTCHA */}
                 <div className="flex justify-start">
                   <ReCAPTCHA
-  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-  ref={recaptchaRef}
-/>
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    ref={recaptchaRef}
+                  />
                 </div>
 
                 {/* Submit */}
@@ -198,7 +190,6 @@ const ContactUs = () => {
                 >
                   {loading ? "Submitting..." : "Submit →"}
                 </button>
-
               </form>
             </div>
           </div>
