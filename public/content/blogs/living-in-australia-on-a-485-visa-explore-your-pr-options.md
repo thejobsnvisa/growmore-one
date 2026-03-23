@@ -137,6 +137,7 @@ So, if you are currently living in Australia on a 485 visa and considering perma
 * Skilled Work Regional visa (subclass 491) 
 * Temporary Skill Shortage visa (subclass 482) 
 * Employer Nomination Scheme (subclass 186) 
+
 The right option depends on your occupation, experience, and competitiveness. 
  
 **2.How many points are required for PR after a 485 visa?** 
