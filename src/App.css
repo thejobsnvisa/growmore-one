@@ -92,13 +92,31 @@ body {
   font-weight: 700;
   padding: 12px 22px;
   border-radius: 4px;
-  /* Fixed: border-bottom needs style and color */
   border-top: none;
   margin-top: -25px;
   min-width: 70px;
   text-align: center;
+  display: inline-block; /* Ensures proper centering and wrapping */
+  box-sizing: border-box;
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .step-points {
+    font-size: 20px;
+    padding: 10px 18px;
+    min-width: 60px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  .step-points {
+    font-size: 16px;
+    padding: 8px 14px;
+    min-width: 50px;
+  }
+}
 /* ================= QUESTION ================= */
 .question {
   margin: 15px 0 22px;
