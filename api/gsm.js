@@ -79,13 +79,13 @@ export default async function handler(req, res) {
         <p><b>Comments:</b> ${data.comments || "N/A"}</p>
     `;
 
-    await transporter.sendMail({
-      from: `"Growmore Immigration"`,
-      to: "info@growmore.one", // Primary destination
-      bcc: "info@growmoreimmigration.com", // Optional backup
-      subject: ` GSM Assessment Inquiry: ${data.fullName}`,
-      html: emailHtml,
-    });
+   await transporter.sendMail({
+  from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
+  to: "info@growmore.one", // Primary destination
+  bcc: "info@growmoreimmigration.com", // Optional backup
+  subject: `DAMA Interest: ${data.fullName} (${data.occupation})`,
+  html: emailHtml,
+});
 
     return res
       .status(200)

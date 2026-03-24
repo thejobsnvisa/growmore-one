@@ -68,13 +68,13 @@ export default async function handler(req, res) {
       </div>
     `;
 
-    await transporter.sendMail({
-       from: `"Growmore Immigration"`,
-      to: "info@growmore.one", // Primary destination
-      bcc: "info@growmoreimmigration.com", // Optional backup
-      subject: `DAMA Interest: ${data.fullName} (${data.occupation})`,
-      html: emailHtml,
-    });
+   await transporter.sendMail({
+  from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
+  to: "info@growmore.one", // Primary destination
+  bcc: "info@growmoreimmigration.com", // Optional backup
+  subject: `DAMA Interest: ${data.fullName} (${data.occupation})`,
+  html: emailHtml,
+});
 
     return res.status(200).json({ success: true, message: "Submission successful" });
 
