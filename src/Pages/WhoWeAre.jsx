@@ -78,9 +78,11 @@ const WhoWeAre = () => {
             </div>
 
             {/* BUTTON */}
-            <button className="bg-[#6dc7d1] text-white px-8 py-3 rounded-full font-medium hover:bg-black transition">
-              Book Consultation →
-            </button>
+              <Link to="/book-consultation">
+              <button className="bg-[#6dc7d1] text-white  rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
+                Book Consultation →
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -135,9 +137,11 @@ const WhoWeAre = () => {
             </div>
 
             {/* BUTTON */}
-            <button className="bg-[#6dc7d1] text-white px-8 py-3 rounded-full font-medium hover:bg-black transition">
-              Book Consultation →
-            </button>
+              <Link to="/book-consultation">
+              <button className="bg-[#6dc7d1] text-white  rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
+                Book Consultation →
+              </button>
+            </Link>
           </div>
         </div>
       </section>
