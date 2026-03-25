@@ -3,6 +3,8 @@ import PhoneInput from "react-phone-input-2";
 import ReCAPTCHA from "react-google-recaptcha";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
+import img2 from "../assets/img2.png";
+
 
 const Hero = () => {
   const recaptchaRef = useRef(null);
@@ -90,10 +92,10 @@ const Hero = () => {
   };
 
   return (
-    <section
-      className="relative min-h-screen bg-cover bg-center flex items-center"
-      style={{ backgroundImage: "url('/assets/img2.png')" }}
-    >
+   <section
+  className="relative min-h-screen bg-cover bg-center flex items-center"
+  style={{ backgroundImage: `url(${img2})` }}
+>
       {/* Dark Overlay */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
