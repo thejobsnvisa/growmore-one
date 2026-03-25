@@ -46,7 +46,7 @@ const BookConsultation = () => {
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               <img
-                src="/assets/c2.jpg"
+                src={`${import.meta.env.BASE_URL}assets/c2.jpg`}
                 alt="Standard Consultation"
                 className="w-full h-full object-cover object-top"
               />
@@ -86,7 +86,7 @@ const BookConsultation = () => {
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               <img
-                src="/assets/c1.jpg"
+                src={`${import.meta.env.BASE_URL}assets/c1.jpg`}
                 alt="Rapid Consultation"
                 className="w-full h-full object-cover object-top"
               />
@@ -127,7 +127,7 @@ const BookConsultation = () => {
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               <img
-                src="/assets/c.png"
+                src={`${import.meta.env.BASE_URL}assets/c.png`}
                 alt="Urgent Consultation"
                 className="w-full h-full object-cover object-top"
               />
@@ -169,7 +169,7 @@ const BookConsultation = () => {
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               {" "}
               <img
-                src="/assets/c3.jpg"
+                src={`${import.meta.env.BASE_URL}assets/c3.jpg`}
                 alt="Urgent Consultation"
                 className="w-full h-full object-cover object-top"
               />{" "}

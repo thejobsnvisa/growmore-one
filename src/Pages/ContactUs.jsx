@@ -76,7 +76,7 @@ const ContactUs = () => {
           {/* IMAGE */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <img
-              src="/assets/krunal2.png"
+              src={`${import.meta.env.BASE_URL}assets/krunal2.png`}
               alt="MARA Registration"
               className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
             />

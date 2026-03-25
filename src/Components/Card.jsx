@@ -12,7 +12,7 @@ const Card = () => {
             {/* Icon + Title */}
             <div className="flex items-start gap-4 mb-4">
               <img
-                src="/assets/card-img1.svg"
+                src={`${import.meta.env.BASE_URL}assets/card-img1.svg`}
                 alt="Employer Sponsor Visa"
                 className="w-12 h-12"
               />
@@ -42,7 +42,7 @@ const Card = () => {
             {/* Icon + Title */}
             <div className="flex items-start gap-4 mb-4">
               <img
-                src="/assets/card-img2.svg"
+                src={`${import.meta.env.BASE_URL}assets/card-img2.svg`}
                 alt="Employer Sponsor Visa"
                 className="w-12 h-12"
               />
@@ -72,7 +72,7 @@ const Card = () => {
             {/* Icon + Title */}
             <div className="flex items-start gap-4 mb-4">
               <img
-                src="/assets/card-img3.svg"
+                src={`${import.meta.env.BASE_URL}assets/card-img3.svg`}
                 alt="Student Visa"
                 className="w-12 h-12"
               />
@@ -101,7 +101,7 @@ const Card = () => {
             {/* Icon + Title */}
             <div className="flex items-start gap-4 mb-4">
               <img
-                src="/assets/card-img4.svg"
+                src={`${import.meta.env.BASE_URL}assets/card-img4.svg`}
                 alt="Individual Sponsored Visa"
                 className="w-12 h-12"
               />

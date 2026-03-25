@@ -64,10 +64,10 @@ import IndividualVisaGurdian from "./Pages/IndividualVisaGurdian";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/growmore-one">
+      {" "}
       <Navbar />
       <ScrollToTop />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
@@ -116,10 +116,7 @@ function App() {
         {/* Policies */}
         <Route path="/terms-services" element={<Terms />} />
         <Route path="/privacy-policy" element={<Policy />} />
-        <Route
-          path="/cancellation-and-refund-policy"
-          element={<Refund />}
-        />
+        <Route path="/cancellation-and-refund-policy" element={<Refund />} />
 
         {/* Student Pages */}
         <Route
@@ -207,7 +204,6 @@ function App() {
           element={<IndividualVisaGurdian />}
         />
       </Routes>
-
       <Footer />
     </Router>
   );

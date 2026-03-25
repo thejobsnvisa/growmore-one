@@ -19,7 +19,7 @@ const Footer = () => {
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: `url('/assets/footer.jpg')`,
+          backgroundImage: `url('${import.meta.env.BASE_URL}assets/footer.jpg')`,
           backgroundPosition: "bottom center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-start gap-4 text-center md:text-left">
             <div className="bg-[#6dc7d1] rounded-full p-2">
               <img
-                src="/assets/img1.svg"
+                src={`${import.meta.env.BASE_URL}assets/img1.svg`}
                 alt="phone"
                 className="h-12 w-12 sm:h-14 sm:w-14"
               />
@@ -69,7 +69,7 @@ const Footer = () => {
         {/* Logo & About */}
         <div className="flex flex-col items-start">
           <img
-            src="/assets/logo1.png"
+            src={`${import.meta.env.BASE_URL}assets/logo1.png`}
             alt="Growmore"
             className="h-10 sm:h-12 mb-4 sm:mb-6"
           />
@@ -200,7 +200,7 @@ const Footer = () => {
         {/* MARA Card */}
         <div className="flex justify-start lg:justify-end mt-6 md:mt-0">
           <img
-            src="/assets/mara-card.png"
+            src={`${import.meta.env.BASE_URL}assets/mara-card.png`}
             alt="MARA Registration"
             className="rounded-xl max-h-48 sm:max-h-52 md:max-h-60 object-contain"
           />
@@ -218,7 +218,7 @@ const Footer = () => {
     {/* Right Side */}
     <div className="flex items-center gap-2">
       <img
-        src="/assets/logo2.png"
+        src={`${import.meta.env.BASE_URL}assets/logo2.png`}
         alt="WebMotion"
         className="h-5 object-contain"
       />

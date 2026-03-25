@@ -74,7 +74,7 @@ const Labour = () => {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center md:justify-end">
             <img
-              src="/assets/labour.png"
+              src={`${import.meta.env.BASE_URL}assets/labour.png`}
               alt="Labour Agreement"
               className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg 
                          h-auto 
