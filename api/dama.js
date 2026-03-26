@@ -1,6 +1,5 @@
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-dotenv.config();
+
 export default async function handler(req, res) {
     // ✅ CORS (IMPORTANT for GitHub Pages)
   res.setHeader("Access-Control-Allow-Origin", "*");
