@@ -1,27 +1,33 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  // ✅ CORS Configuration
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  // =========================================
+  // ✅ CORS HEADERS (MUST BE FIRST)
+  // =========================================
   res.setHeader(
     "Access-Control-Allow-Origin",
     "https://thejobsnvisa.github.io"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET,OPTIONS,POST"
+    "GET,POST,OPTIONS"
   );
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Content-Type, Authorization"
   );
+  res.setHeader("Access-Control-Allow-Credentials", "true");
 
-  // ✅ Handle preflight request (VERY IMPORTANT)
+  // =========================================
+  // ✅ HANDLE PREFLIGHT (CRITICAL FIX)
+  // =========================================
   if (req.method === "OPTIONS") {
-    return res.status(200).end();
+    return res.status(200).json({ success: true });
   }
 
-  // ✅ Health check
+  // =========================================
+  // ✅ HEALTH CHECK
+  // =========================================
   if (req.method === "GET") {
     return res.status(200).json({
       success: true,
@@ -29,7 +35,9 @@ export default async function handler(req, res) {
     });
   }
 
-  // ❌ Only POST allowed
+  // =========================================
+  // ❌ ONLY POST ALLOWED
+  // =========================================
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -48,9 +56,9 @@ export default async function handler(req, res) {
       captchaToken,
     } = req.body;
 
-    // ================================
+    // =========================================
     // ✅ 1. VERIFY RECAPTCHA
-    // ================================
+    // =========================================
     const captchaRes = await fetch(
       "https://www.google.com/recaptcha/api/siteverify",
       {
@@ -71,9 +79,9 @@ export default async function handler(req, res) {
       });
     }
 
-    // ================================
+    // =========================================
     // ✅ 2. SEND DATA TO CRM
-    // ================================
+    // =========================================
     const cleanPhone = phone ? phone.replace(/\D/g, "") : "";
 
     const crmPayload = {
@@ -97,9 +105,9 @@ export default async function handler(req, res) {
       console.error("CRM failed (ignored):", err);
     }
 
-    // ================================
-    // ✅ 3. SEND EMAIL (FIXED SMTP)
-    // ================================
+    // =========================================
+    // ✅ 3. SEND EMAIL
+    // =========================================
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
@@ -128,9 +136,9 @@ export default async function handler(req, res) {
       `,
     });
 
-    // ================================
+    // =========================================
     // ✅ SUCCESS RESPONSE
-    // ================================
+    // =========================================
     return res.status(200).json({
       success: true,
       message: "Lead submitted successfully ✅",
@@ -146,7 +154,9 @@ export default async function handler(req, res) {
   }
 }
 
-// ✅ Important for Vercel
+// =========================================
+// ✅ REQUIRED FOR VERCEL
+// =========================================
 export const config = {
   api: {
     bodyParser: true,
