@@ -57,8 +57,6 @@ const Hero = () => {
     }
 
     setLoading(true);
-    const toastId = toast.loading("Sending your inquiry...");
-
     try {
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
@@ -74,37 +72,25 @@ const Hero = () => {
         source: "Website Hero Form",
       };
 
-  const BASE_URL = "https://growmore-1.vercel.app";
-
-const response = await fetch(`${BASE_URL}/api/lead`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(payload),
-});
+     const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/lead`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  }
+);
       const result = await response.json();
 
-      if (result.success) {
-        toast.update(toastId, { 
-          render: "Success! We will contact you soon.", 
-          type: "success", 
-          isLoading: false, 
-          autoClose: 5000 
-        });
-        e.target.reset();
-        setPhoneNumber("");
-        recaptchaRef.current.reset();
-      } else {
-        throw new Error(result.message || "Submission failed");
-      }
-    } catch (error) {
-      toast.update(toastId, { 
-        render: `Error: ${error.message}`, 
-        type: "error", 
-        isLoading: false, 
-        autoClose: 5000 
-      });
+ if (!result.success) throw new Error("Submission failed");
+
+      alert("Thank you! Our team will contact you shortly.");
+
+      e.target.reset();
+      setPhoneNumber("");
+      recaptchaRef.current.reset();
     } finally {
       setLoading(false);
     }
