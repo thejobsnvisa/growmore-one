@@ -1,102 +1,67 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  // ✅ Allow GET for testing (optional)
-  if (req.method === "GET") {
-    return res.status(200).json({
-      success: true,
-      message: "API is running 🚀",
-    });
-  }
+  // 1. Handle CORS - Note: Removed trailing slash to match browser origin exactly
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", "https://thejobsnvisa.github.io"); 
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+  );
 
-  if (req.method !== "POST") {
-    return res.status(405).json({
-      success: false,
-      message: "Method not allowed",
-    });
-  }
+  // Handle Preflight request
+  if (req.method === "OPTIONS") return res.status(200).end();
+  
+  // Health check
+  if (req.method === "GET")
+    return res.status(200).json({ message: "API Active" });
 
   try {
-    const body =
-      typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+    const { name, email, phone, visaType, message, source, captchaToken } = req.body;
 
-    const { name, email, phone, visaType, message, source } = body;
+    // 2. Verify reCAPTCHA
+    const captchaVerify = await fetch(
+      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+      {
+        method: "POST",
+      },
+    );
+    const captchaResult = await captchaVerify.json();
 
-    if (!name || !email || !phone) {
-      return res.status(400).json({
-        success: false,
-        message: "Name, email and phone are required",
-      });
+    if (!captchaResult.success) {
+      return res
+        .status(400)
+        .json({ success: false, message: "reCAPTCHA verification failed" });
     }
 
-    // ✅ Improved phone parsing (handles +91, spaces, etc.)
-    const cleanPhone = phone.replace(/\D/g, "");
-
-    let countryCode = "91"; // default India
-    let phoneNumber = cleanPhone;
-
-    if (cleanPhone.length > 10) {
-      countryCode = cleanPhone.slice(0, cleanPhone.length - 10);
-      phoneNumber = cleanPhone.slice(-10);
-    }
-
-    // ✅ CRM Payload
+    // 3. CRM Integration (Webhook)
+    const cleanPhone = phone ? phone.replace(/\D/g, "") : "";
     const crmPayload = {
       Name: name,
       Email: email,
-      Phone: phoneNumber,
-      Country_Code: countryCode,
+      Phone: cleanPhone,
       Inquiries: visaType || "General Inquiry",
-      Source: source || "Website Form",
+      Source: source || "Hero Form",
       Message: message || "",
     };
 
-    console.log("📤 Sending to CRM:", crmPayload);
-
-    // ✅ Timeout controller (important in production)
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000); // 10 sec
-
-    let crmData = null;
-
     try {
-      const crmResponse = await fetch(
-        "https://case.growmore.one/api/webhooks/website-form",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(crmPayload),
-          signal: controller.signal,
-        }
-      );
-
-      clearTimeout(timeout);
-
-      const text = await crmResponse.text();
-
-      console.log("📥 CRM Raw Response:", text);
-
-      try {
-        crmData = JSON.parse(text);
-      } catch {
-        crmData = { raw: text };
-      }
-
-      if (!crmResponse.ok) {
-        throw new Error(text);
-      }
-    } catch (err) {
-      console.error("❌ CRM ERROR:", err.message);
-
-      // ❗ Don't fail entire API if CRM fails
-      crmData = { error: err.message };
+      await fetch("https://case.growmore.one/api/webhooks/website-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(crmPayload),
+      });
+    } catch (err) { // ✅ Fixed: Added 'err' variable here
+      console.error("CRM Webhook failed, continuing to email...", err);
     }
 
-    // ✅ Email Transport
+    // 4. Email Integration
     const transporter = nodemailer.createTransport({
-      service: "gmail", // cleaner
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -104,31 +69,24 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
+      from: `"Growmore Website" <${process.env.EMAIL_USER}>`,
       to: "info@growmore.one",
-      bcc: "info@growmoreimmigration.com",
-      subject: "Appointment Booking from Website",
+      subject: `New Lead: ${name}`,
       html: `
-        <h3>New Lead</h3>
+        <h3>New Lead Received</h3>
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> +${countryCode} ${phoneNumber}</p>
-        <p><b>Inquiry:</b> ${visaType || "N/A"}</p>
-        <p><b>Message:</b> ${message || "N/A"}</p>
+        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Visa Type:</b> ${visaType}</p>
+        <p><b>Message:</b> ${message}</p>
       `,
     });
 
-    return res.status(200).json({
-      success: true,
-      message: "Form submitted successfully",
-      crm: crmData
-    });
+    return res
+      .status(200)
+      .json({ success: true, message: "Lead captured successfully" });
   } catch (error) {
-    console.error("❌ ERROR:", error);
-
-    return res.status(500).json({
-      success: false,
-      message: error.message || "Something went wrong",
-    });
+    console.error("API Error:", error);
+    return res.status(500).json({ success: false, message: error.message });
   }
 }
