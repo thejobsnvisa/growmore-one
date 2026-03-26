@@ -1,21 +1,12 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  // ✅ CORS (Allow GitHub Pages)
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://thejobsnvisa.github.io"
-  );
+  // ✅ CORS
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization"
-  );
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  // ❗ IMPORTANT: remove credentials unless needed
-  // res.setHeader("Access-Control-Allow-Credentials", "true");
-
-  // ✅ Handle preflight
+  // ✅ Preflight
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -28,7 +19,7 @@ export default async function handler(req, res) {
     });
   }
 
-  // ❌ Only POST allowed
+  // ❌ Only POST
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -48,7 +39,7 @@ export default async function handler(req, res) {
     } = req.body;
 
     // ==============================
-    // ✅ 1. VERIFY reCAPTCHA
+    // ✅ 1. VERIFY CAPTCHA (NON-BLOCKING)
     // ==============================
     let captchaSuccess = false;
 
@@ -65,23 +56,15 @@ export default async function handler(req, res) {
       );
 
       const captchaData = await captchaRes.json();
-      console.log("Captcha response:", captchaData);
+      console.log("Captcha result:", captchaData);
 
       captchaSuccess = captchaData.success;
     } catch (err) {
-      console.error("Captcha verification error:", err);
-    }
-
-    // ❗ TEMP DEBUG: comment this if testing
-    if (!captchaSuccess) {
-      return res.status(400).json({
-        success: false,
-        message: "reCAPTCHA failed",
-      });
+      console.error("Captcha error:", err);
     }
 
     // ==============================
-    // ✅ 2. SEND TO CRM
+    // ✅ 2. SEND TO CRM (ALWAYS RUNS)
     // ==============================
     const cleanPhone = phone ? phone.replace(/\D/g, "") : "";
 
@@ -98,6 +81,7 @@ export default async function handler(req, res) {
           Inquiries: visaType || "General Inquiry",
           Source: source || "Website",
           Message: message || "",
+          CaptchaVerified: captchaSuccess ? "Yes" : "No", // ✅ IMPORTANT
         }),
       });
     } catch (err) {
@@ -125,6 +109,7 @@ export default async function handler(req, res) {
         <p><b>Phone:</b> ${phone}</p>
         <p><b>Visa Type:</b> ${visaType}</p>
         <p><b>Message:</b> ${message}</p>
+        <p><b>Captcha Verified:</b> ${captchaSuccess ? "Yes" : "No"}</p>
       `,
     });
 
@@ -133,8 +118,11 @@ export default async function handler(req, res) {
     // ==============================
     return res.status(200).json({
       success: true,
-      message: "Lead captured successfully!",
+      message: captchaSuccess
+        ? "Lead submitted successfully ✅"
+        : "Lead submitted (captcha failed ⚠️)",
     });
+
   } catch (error) {
     console.error("API ERROR:", error);
 
