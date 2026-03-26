@@ -38,11 +38,15 @@ const ContactUs = () => {
         source: "Website Form",
       };
 
-      const response = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+    const BASE_URL = "https://growmore-1.vercel.app";
+
+const response = await fetch(`${BASE_URL}/api/lead`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+});
 
       const result = await response.json();
 

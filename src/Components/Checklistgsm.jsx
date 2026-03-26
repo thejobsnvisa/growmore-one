@@ -4,7 +4,6 @@ import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 const Checklistgsm = () => {
   const recaptchaRef = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -43,11 +42,13 @@ const Checklistgsm = () => {
         comments: form.comments.value,
         captchaToken: token, // Sent to backend
       };
+      const BASE_URL = "https://growmore-1.vercel.app";
 
-      // FIX: Ensure this URL matches your file path exactly (lowercase)
-      const response = await fetch("/api/gsm", {
+      const response = await fetch(`${BASE_URL}/api/gsm`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
@@ -315,12 +316,12 @@ const Checklistgsm = () => {
               className="input-style h-24"
             />
 
-               <div className="flex justify-start">
-                  <ReCAPTCHA
-                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                    ref={recaptchaRef}
-                  />
-                </div>
+            <div className="flex justify-start">
+              <ReCAPTCHA
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                ref={recaptchaRef}
+              />
+            </div>
 
             <button
               type="submit"

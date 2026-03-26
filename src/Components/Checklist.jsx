@@ -49,7 +49,9 @@ const Checklist = () => {
     };
 
     try {
-      const response = await fetch("/api/dama", {
+      const BASE_URL = "https://growmore-1.vercel.app";
+
+      const response = await fetch(`${BASE_URL}/api/dama`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

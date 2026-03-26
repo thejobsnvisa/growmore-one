@@ -41,12 +41,15 @@ const Migrate = () => {
         source: "Website Form",
       };
 
-      const response = await fetch("/api/lead", {
+      const BASE_URL = "https://growmore-1.vercel.app";
+
+      const response = await fetch(`${BASE_URL}/api/lead`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
-
       const result = await response.json();
       if (!result.success) throw new Error("Submission failed");
 
@@ -320,7 +323,6 @@ const Migrate = () => {
                   className="bg-white rounded-lg px-4 py-3 w-full border border-gray-300"
                 />
 
-                
                 {/* reCAPTCHA */}
                 <div className="flex justify-center sm:justify-start w-full sm:w-auto max-w-sm sm:max-w-md lg:max-w-lg">
                   <ReCAPTCHA
