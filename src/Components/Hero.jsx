@@ -75,7 +75,7 @@ const Hero = () => {
       };
 
       // 🚀 Use your actual Vercel URL
-      const API_URL = "https://growmore-one-pi.vercel.app//api/lead";
+      const API_URL = "https://growmore-one-pi.vercel.app/api/lead";
 
       const response = await fetch(API_URL, {
         method: "POST",
