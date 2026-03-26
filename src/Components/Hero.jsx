@@ -74,15 +74,16 @@ const Hero = () => {
         source: "Website Hero Form",
       };
 
-      // 🚀 Use your actual Vercel URL
-      const API_URL = "https://growmore-one-pi.vercel.app/api/lead";
-
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
+     const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/lead`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  }
+);
       const result = await response.json();
 
       if (result.success) {
