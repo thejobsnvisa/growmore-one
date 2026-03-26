@@ -3,12 +3,16 @@ import PhoneInput from "react-phone-input-2";
 import ReCAPTCHA from "react-google-recaptcha";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
+// 1. Added Toast Imports
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
   const recaptchaRef = useRef(null);
   const [loading, setLoading] = useState(false);
-  const [dialCode, setDialCode] = useState("61"); // Australia default
+  const [dialCode, setDialCode] = useState("61");
   const [phoneNumber, setPhoneNumber] = useState("");
+
   const texts = [
     "Employer Visa Expert",
     "Skill in Demand Visa SC482",
@@ -20,6 +24,7 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // ✅ Fixed Typing Effect Logic
   useEffect(() => {
     const currentWord = texts[currentWordIndex];
     const typingSpeed = isDeleting ? 40 : 80;
@@ -44,20 +49,19 @@ const Hero = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const token = recaptchaRef.current?.getValue();
 
     if (!token) {
-      alert("Please verify the captcha");
+      toast.warn("Please verify the captcha");
       return;
     }
 
     setLoading(true);
+    const toastId = toast.loading("Sending your inquiry...");
 
     try {
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
-
       const finalPhone = `+${dialCode}${phoneNumber}`;
 
       const payload = {
@@ -67,33 +71,51 @@ const Hero = () => {
         visaType: data.visaType,
         message: data.message,
         captchaToken: token,
-        source: "Website Form",
+        source: "Website Hero Form",
       };
 
-      const response = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+  const BASE_URL = "https://growmore-1.vercel.app";
 
+const response = await fetch(`${BASE_URL}/api/lead`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+});
       const result = await response.json();
-      if (!result.success) throw new Error("Submission failed");
 
-      alert("Thank you! Our team will contact you shortly.");
-
-      e.target.reset();
-      setPhoneNumber("");
-      recaptchaRef.current.reset();
+      if (result.success) {
+        toast.update(toastId, { 
+          render: "Success! We will contact you soon.", 
+          type: "success", 
+          isLoading: false, 
+          autoClose: 5000 
+        });
+        e.target.reset();
+        setPhoneNumber("");
+        recaptchaRef.current.reset();
+      } else {
+        throw new Error(result.message || "Submission failed");
+      }
+    } catch (error) {
+      toast.update(toastId, { 
+        render: `Error: ${error.message}`, 
+        type: "error", 
+        isLoading: false, 
+        autoClose: 5000 
+      });
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section
-      className="relative min-h-screen bg-cover bg-center flex items-center"
-      style={{ backgroundImage: "url('/assets/img2.png')" }}
-    >
+  <section
+  style={{
+    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img2.png)`
+  }}
+>
       {/* Dark Overlay */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
