@@ -5,8 +5,8 @@ const Brochures = () => {
     {
       id: 1,
       title: "Student Visa - Australia",
-      image: "/assets/b1.jpg",
-      file: "/assets/student-visa-brochure.pdf", // optional download file
+      image: `${import.meta.env.BASE_URL}/b1.jpg`,
+      file:`${import.meta.env.BASE_URL}/student-visa-brochure.pdf`
     },
   ];
 
