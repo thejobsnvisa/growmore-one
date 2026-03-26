@@ -1,120 +1,67 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  // =========================================
-  // ✅ CORS HEADERS (MUST BE FIRST)
-  // =========================================
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://thejobsnvisa.github.io"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,POST,OPTIONS"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization"
-  );
+  // 1. CORS Headers (Redundancy for vercel.json)
+  res.setHeader("Access-Control-Allow-Origin", "https://thejobsnvisa.github.io");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Allow-Credentials", "true");
 
-  // =========================================
-  // ✅ HANDLE PREFLIGHT (CRITICAL FIX)
-  // =========================================
+  // 2. Handle Preflight OPTIONS (Browser check)
   if (req.method === "OPTIONS") {
-    return res.status(200).json({ success: true });
+    return res.status(200).end();
   }
 
-  // =========================================
-  // ✅ HEALTH CHECK
-  // =========================================
+  // 3. Health Check
   if (req.method === "GET") {
-    return res.status(200).json({
-      success: true,
-      message: "API is working 🚀",
-    });
+    return res.status(200).json({ success: true, message: "API Active 🚀" });
   }
 
-  // =========================================
-  // ❌ ONLY POST ALLOWED
-  // =========================================
+  // 4. Main POST Logic
   if (req.method !== "POST") {
-    return res.status(405).json({
-      success: false,
-      message: "Method Not Allowed",
-    });
+    return res.status(405).json({ success: false, message: "Method Not Allowed" });
   }
 
   try {
-    const {
-      name,
-      email,
-      phone,
-      visaType,
-      message,
-      source,
-      captchaToken,
-    } = req.body;
+    const { name, email, phone, visaType, message, source, captchaToken } = req.body;
 
-    // =========================================
-    // ✅ 1. VERIFY RECAPTCHA
-    // =========================================
-    const captchaRes = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
-      }
-    );
-
+    // 5. Verify reCAPTCHA
+    const captchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+    });
     const captchaData = await captchaRes.json();
 
     if (!captchaData.success) {
-      return res.status(400).json({
-        success: false,
-        message: "reCAPTCHA failed",
-      });
+      return res.status(400).json({ success: false, message: "reCAPTCHA failed" });
     }
 
-    // =========================================
-    // ✅ 2. SEND DATA TO CRM
-    // =========================================
+    // 6. Send to CRM Webhook
     const cleanPhone = phone ? phone.replace(/\D/g, "") : "";
-
-    const crmPayload = {
-      Name: name,
-      Email: email,
-      Phone: cleanPhone,
-      Inquiries: visaType || "General Inquiry",
-      Source: source || "Website",
-      Message: message || "",
-    };
-
     try {
       await fetch("https://case.growmore.one/api/webhooks/website-form", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(crmPayload),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Phone: cleanPhone,
+          Inquiries: visaType || "General Inquiry",
+          Source: source || "Website",
+          Message: message || "",
+        }),
       });
     } catch (err) {
-      console.error("CRM failed (ignored):", err);
+      console.error("CRM Webhook failed:", err);
     }
 
-    // =========================================
-    // ✅ 3. SEND EMAIL
-    // =========================================
+    // 7. Send Email via Gmail
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS, // Use Google App Password here
       },
     });
 
@@ -123,42 +70,18 @@ export default async function handler(req, res) {
       to: "info@growmore.one",
       subject: `New Lead: ${name}`,
       html: `
-        <div style="font-family: Arial; line-height: 1.6;">
-          <h2>New Lead Captured</h2>
           <p><b>Name:</b> ${name}</p>
           <p><b>Email:</b> ${email}</p>
           <p><b>Phone:</b> ${phone}</p>
           <p><b>Visa Type:</b> ${visaType}</p>
           <p><b>Message:</b> ${message}</p>
-          <hr/>
-          <p style="font-size:12px;">Sent from Growmore Website</p>
-        </div>
       `,
     });
 
-    // =========================================
-    // ✅ SUCCESS RESPONSE
-    // =========================================
-    return res.status(200).json({
-      success: true,
-      message: "Lead submitted successfully ✅",
-    });
+    return res.status(200).json({ success: true, message: "Lead captured!" });
 
   } catch (error) {
     console.error("API ERROR:", error);
-
-    return res.status(500).json({
-      success: false,
-      message: "Internal Server Error",
-    });
+    return res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 }
-
-// =========================================
-// ✅ REQUIRED FOR VERCEL
-// =========================================
-export const config = {
-  api: {
-    bodyParser: true,
-  },
-};
