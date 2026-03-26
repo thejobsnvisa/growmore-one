@@ -197,15 +197,14 @@ const BookConsultation = () => {
                 {" "}
                 View Factsheet{" "}
               </a>{" "}
-              <button
-                onClick={() =>
-                  openCalendly("https://calendly.com/krunalnayak/urgent")
-                }
-                className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
+              <a
+                href="https://case.growmore.one/add/company-website"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
               >
-                {" "}
-                Book Now{" "}
-              </button>{" "}
+                Book Now
+              </a>
             </div>{" "}
           </div>
         </div>
