@@ -1,8 +1,9 @@
 {
-  "name": "growmore",
+  "name": "growmore-one",
   "private": true,
-  "version": "0.0.0",
-  "homepage": "https://thejobsnvisa.github.io/growmore-one",
+  "version": "1.0.1",
+  "description": "Growmore Immigration Digital Platform",
+  "homepage": "https://thejobsnvisa.github.io/growmore-one/",
   "type": "module",
   "scripts": {
     "dev": "vite",
