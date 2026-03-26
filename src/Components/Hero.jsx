@@ -72,8 +72,9 @@ const Hero = () => {
         source: "Website Hero Form",
       };
 
-     const response = await fetch(
-  `${import.meta.env.VITE_API_URL}/api/lead`,
+     const BASE_URL = "https://growmore-1.vercel.app";
+
+      const response = await fetch(`${BASE_URL}/api/lead`,
   {
     method: "POST",
     headers: {
