@@ -1,7 +1,17 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  // ✅ Allow GET for testing (optional)
+  // ✅ CORS (IMPORTANT for GitHub Pages)
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // ✅ Handle preflight
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
+  // ✅ Allow GET for testing
   if (req.method === "GET") {
     return res.status(200).json({
       success: true,
@@ -29,10 +39,10 @@ export default async function handler(req, res) {
       });
     }
 
-    // ✅ Improved phone parsing (handles +91, spaces, etc.)
+    // ✅ Phone parsing
     const cleanPhone = phone.replace(/\D/g, "");
 
-    let countryCode = "91"; // default India
+    let countryCode = "91";
     let phoneNumber = cleanPhone;
 
     if (cleanPhone.length > 10) {
@@ -53,9 +63,9 @@ export default async function handler(req, res) {
 
     console.log("📤 Sending to CRM:", crmPayload);
 
-    // ✅ Timeout controller (important in production)
+    // ✅ CRM CALL
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000); // 10 sec
+    const timeout = setTimeout(() => controller.abort(), 10000);
 
     let crmData = null;
 
@@ -64,9 +74,7 @@ export default async function handler(req, res) {
         "https://case.growmore.one/api/webhooks/website-form",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(crmPayload),
           signal: controller.signal,
         }
@@ -75,7 +83,6 @@ export default async function handler(req, res) {
       clearTimeout(timeout);
 
       const text = await crmResponse.text();
-
       console.log("📥 CRM Raw Response:", text);
 
       try {
@@ -84,19 +91,15 @@ export default async function handler(req, res) {
         crmData = { raw: text };
       }
 
-      if (!crmResponse.ok) {
-        throw new Error(text);
-      }
+      if (!crmResponse.ok) throw new Error(text);
     } catch (err) {
       console.error("❌ CRM ERROR:", err.message);
-
-      // ❗ Don't fail entire API if CRM fails
       crmData = { error: err.message };
     }
 
-    // ✅ Email Transport
+    // ✅ EMAIL
     const transporter = nodemailer.createTransport({
-      service: "gmail", // cleaner
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -121,8 +124,9 @@ export default async function handler(req, res) {
     return res.status(200).json({
       success: true,
       message: "Form submitted successfully",
-      crm: crmData
+      crm: crmData,
     });
+
   } catch (error) {
     console.error("❌ ERROR:", error);
 
