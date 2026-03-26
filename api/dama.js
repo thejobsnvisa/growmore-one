@@ -1,37 +1,48 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-    // ✅ CORS (IMPORTANT for GitHub Pages)
+  // ✅ CORS (GitHub Pages support)
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
+  // ✅ IMPORTANT: Handle preflight request
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
-    return res.status(405).json({ success: false, message: "Method not allowed" });
+    return res.status(405).json({
+      success: false,
+      message: "Method not allowed",
+    });
   }
 
   try {
     const data = req.body;
 
-    // Basic server-side validation
+    // ✅ Validation
     if (!data.fullName || !data.email || !data.captchaToken) {
-      return res.status(400).json({ success: false, message: "Missing required fields" });
+      return res.status(400).json({
+        success: false,
+        message: "Missing required fields",
+      });
     }
 
-    /* ========= CRM Integration ========= */
+    /* ========= CRM ========= */
     const crmBody = new URLSearchParams({
       Name: data.fullName,
       Email: data.email,
-      Phone: data.phone,
+      Phone: data.phone || "",
       Inquiries: "DAMA Pre-Screening",
       Source: "Website DAMA Checklist",
       Message: `
-        Occupation: ${data.occupation}
-        Qualification: ${data.qualification}
-        Experience: ${data.experience}
-        Skills Assessment: ${data.skillsAssessment}
-        Has Job Offer: ${data.jobOffer}
-        Location: ${data.location}
+Occupation: ${data.occupation}
+Qualification: ${data.qualification}
+Experience: ${data.experience}
+Skills Assessment: ${data.skillsAssessment}
+Has Job Offer: ${data.jobOffer}
+Location: ${data.location}
       `.trim(),
     });
 
@@ -39,51 +50,58 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: crmBody.toString(),
-    }).catch(err => console.error("CRM Sync Error:", err));
+    }).catch((err) => console.error("CRM Sync Error:", err));
 
-   const transporter = nodemailer.createTransport({
-         host: "smtp.gmail.com",
-         port: 587,
-         secure: false,
-         auth: {
-           user: process.env.EMAIL_USER,
-           pass: process.env.EMAIL_PASS,
-         },
-       });
+    /* ========= EMAIL ========= */
+    const transporter = nodemailer.createTransport({
+      service: "gmail", // ✅ cleaner
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
     const emailHtml = `
-      <div>
-        <div style="padding: 20px; line-height: 1.5;">
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          <p><strong>Residence:</strong> ${data.country}</p>
-          <p><strong>Location:</strong> ${data.location}</p>
-          <hr/>
-          <h3>Professional Profile</h3>
-          <ul>
-            <li><strong>Qualification:</strong> ${data.qualification}</li>
-            <li><strong>Occupation:</strong> ${data.occupation}</li>
-            <li><strong>Skills Assessment:</strong> ${data.skillsAssessment}</li>
-            <li><strong>Experience:</strong> ${data.experience}</li>
-            <li><strong>Job Offer in Region:</strong> ${data.jobOffer}</li>
-          </ul>
-        </div>
+      <div style="padding:20px;line-height:1.5;">
+        <h3>DAMA Lead</h3>
+        <p><b>Name:</b> ${data.fullName}</p>
+        <p><b>Email:</b> ${data.email}</p>
+        <p><b>Phone:</b> ${data.phone || "N/A"}</p>
+        <p><b>Residence:</b> ${data.country || "N/A"}</p>
+        <p><b>Location:</b> ${data.location || "N/A"}</p>
+
+        <hr/>
+
+        <h4>Professional Profile</h4>
+        <ul>
+          <li><b>Qualification:</b> ${data.qualification}</li>
+          <li><b>Occupation:</b> ${data.occupation}</li>
+          <li><b>Skills Assessment:</b> ${data.skillsAssessment}</li>
+          <li><b>Experience:</b> ${data.experience}</li>
+          <li><b>Job Offer:</b> ${data.jobOffer}</li>
+        </ul>
       </div>
     `;
 
-   await transporter.sendMail({
-  from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
-  to: "info@growmore.one", // Primary destination
-  bcc: "info@growmoreimmigration.com", // Optional backup
-  subject: `DAMA Interest: ${data.fullName} (${data.occupation})`,
-  html: emailHtml,
-});
+    await transporter.sendMail({
+      from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
+      to: "info@growmore.one",
+      bcc: "info@growmoreimmigration.com",
+      subject: `DAMA Lead: ${data.fullName} (${data.occupation})`,
+      html: emailHtml,
+    });
 
-    return res.status(200).json({ success: true, message: "Submission successful" });
+    return res.status(200).json({
+      success: true,
+      message: "Submission successful",
+    });
 
   } catch (error) {
     console.error("API Error:", error);
-    return res.status(500).json({ success: false, error: error.message });
+
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
   }
 }
