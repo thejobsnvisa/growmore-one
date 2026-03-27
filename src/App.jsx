@@ -64,7 +64,7 @@ import IndividualVisaGurdian from "./Pages/IndividualVisaGurdian";
 
 function App() {
   return (
-    <Router basename="/growmore-one">
+    <Router basename="/">
       <Navbar />
       <ScrollToTop />
       <Routes>
