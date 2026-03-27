@@ -15,32 +15,44 @@
     <title>
       Best Australia PR Immigration Consultant & Migration Agents Melbourne
     </title>
-<script type="text/javascript">
-  (function(l) {
-    // Check if 'p=' exists anywhere in the search string
-    if (l.search.indexOf('p=/') !== -1) {
-      var decoded = l.search.slice(1).split('&').map(function(s) { 
-        return s.replace(/~and~/g, '&') 
-      }).filter(function(s) {
-        return s.slice(0, 2) === 'p='
-      })[0];
+    <script type="text/javascript">
+      (function (l) {
+        // This checks if the redirect parameter 'p=/' exists anywhere in the URL search string
+        if (l.search.indexOf("p=/") !== -1) {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .filter(function (s) {
+              return s.slice(0, 2) === "p=";
+            })[0];
 
-      if (decoded) {
-        // Correctly calculate the new path
-        var newPath = decoded.slice(2);
-        
-        // Clean the URL and push it to the browser history
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + newPath +
-          (l.search.split('&').filter(function(s) { return s.slice(0, 2) === 'q=' })[0] || '')
-            .slice(2).replace(/~and~/g, '&') +
-          l.hash
-        );
-      }
-    }
-  }(window.location))
-</script>
-    </head>
+          if (decoded) {
+            var newPath = decoded.slice(2);
+
+            // This is the magic: it wipes the '?p=' and restores the clean URL
+            // before React Router even starts.
+            window.history.replaceState(
+              null,
+              null,
+              l.pathname.slice(0, -1) +
+                newPath +
+                (
+                  l.search.split("&").filter(function (s) {
+                    return s.slice(0, 2) === "q=";
+                  })[0] || ""
+                )
+                  .slice(2)
+                  .replace(/~and~/g, "&") +
+                l.hash,
+            );
+          }
+        }
+      })(window.location);
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
