@@ -190,14 +190,12 @@ export default function CommentSection() {
               ></textarea>
             </div>
 
-            <div className="mt-2">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey="6Lcb_HEsAAAAAJESdQwpfYltspCpspxJPbCyM58Z"
-                onChange={(val) => setToken(val)}
-                onExpired={() => setToken(null)} // Handle expiration
-              />
-            </div>
+            <div className="flex justify-center sm:justify-start w-full sm:w-auto max-w-sm sm:max-w-md lg:max-w-lg">
+                  <ReCAPTCHA
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    ref={recaptchaRef}
+                  />
+                </div>
 
             <button
               type="submit"
