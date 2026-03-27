@@ -19,28 +19,34 @@ const BlogsArticle = () => {
 
   const article = blogs.find((item) => item.slug === slug);
 
-  useEffect(() => {
+useEffect(() => {
     window.scrollTo(0, 0);
 
     if (article) {
       let isMounted = true;
 
-      fetch(`/content/blogs/${slug}.md`)
+      // ✅ Use BASE_URL to handle /growmore-one/ or / automatically
+      const baseUrl = import.meta.env.BASE_URL;
+      const filePath = `${baseUrl}content/blogs/${slug}.md`.replace(/\/+/g, '/');
+
+      fetch(filePath)
         .then((res) => {
           if (!res.ok) throw new Error("File not found");
           return res.text();
         })
         .then((text) => {
           if (isMounted) {
-            if (text.trim().startsWith("<!doctype html>")) {
-              throw new Error("Wrong file path");
+            // Check if the response is actually HTML (GitHub's 404 page)
+            if (text.trim().startsWith("<!doctype html>") || text.trim().startsWith("<html")) {
+              throw new Error("Wrong file path - received HTML instead of Markdown");
             }
             setContent(text);
           }
         })
-        .catch(() => {
+        .catch((err) => {
+          console.error("Fetch error:", err);
           setContent(
-            "# Content Not Found\nPlease check your markdown file path."
+            "# Content Not Found\nPlease check that the file exists in `public/content/blogs/`."
           );
         });
 
@@ -48,7 +54,7 @@ const BlogsArticle = () => {
         isMounted = false;
       };
     }
-  }, [slug]);
+  }, [slug, article]);
 
   if (!article)
     return (
