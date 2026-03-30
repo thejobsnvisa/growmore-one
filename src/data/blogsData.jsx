@@ -80,7 +80,7 @@ export const blogs = [
   },
   {
     id: 12,
-    slug: "parent-visa-804-australia-guide",
+    slug: "parent-visa-804-australia-a-simple-guide-for-families",
     title: "Parent Visa 804 Australia – A Simple Guide for Families",
     date: "February 6, 2026",
     image: `${import.meta.env.BASE_URL}assets/b8.jpg`,

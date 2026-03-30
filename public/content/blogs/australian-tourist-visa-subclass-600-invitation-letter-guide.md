@@ -8,7 +8,6 @@ When you invite someone to Australia — whether it’s your parents, your sibli
 Before those moments happen, there’s one important step: preparing a strong **Visitor Visa (Subclass 600)** application. And a well-written invitation letter can quietly strengthen that process.
 
 
-
 ## Why an Invitation Letter Matters
 
 An invitation letter helps immigration authorities understand the purpose behind the visit. It explains:
