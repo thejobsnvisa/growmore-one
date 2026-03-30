@@ -18,7 +18,7 @@ const team = [
   },
   {
     name: "Hiren Maharaj",
-    role: "CMO",
+    role: "Knowledge Manager",
     img: `${import.meta.env.BASE_URL}assets/team4.png`,
   },
 ];
