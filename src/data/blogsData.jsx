@@ -87,15 +87,7 @@ export const blogs = [
   },
   {
     id: 13,
-    slug: "australian-migration-hunger-games",
-    title:
-      "Fastest Finger First: Why Australian Migration Feels Like the Hunger Games",
-    date: "January 20, 2026",
-    image: `${import.meta.env.BASE_URL}assets/b9.png`,
-  },
-  {
-    id: 14,
-    slug: "skills-assessment-guide-australia",
+    slug: "australia-skills-assessment-guide-eligibility-fees-timeline",
     title: "Australia Skills Assessment Guide: Eligibility, Fees & Timeline",
     date: "January 13, 2026",
     image: `${import.meta.env.BASE_URL}assets/b10.jpg`,
