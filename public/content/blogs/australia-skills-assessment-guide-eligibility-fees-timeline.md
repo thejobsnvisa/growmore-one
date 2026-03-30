@@ -17,13 +17,13 @@ With the right guidance — whether through research or support from experienced
 
 An **Australian Skills Assessment** is a formal evaluation of your:
 
-- ✔ Educational qualifications  
-- ✔ Work experience  
-- ✔ Professional skills  
+ ✔ Educational qualifications  
+ ✔ Work experience  
+ ✔ Professional skills  
 
 These are assessed against Australian standards for your nominated occupation.
 
-The process is conducted by a **government-approved assessing authority**, not the Department of Home Affairs.
+The process is conducted by a **governmentapproved assessing authority**, not the Department of Home Affairs.
 
 **Outcome:**
 
@@ -34,12 +34,12 @@ The process is conducted by a **government-approved assessing authority**, not t
 
 You will typically need a skills assessment before:
 
-- ✔ Submitting your **Expression of Interest (EOI)**  
-- ✔ Applying for visas such as:  
-  - Skilled Independent Visa (**Subclass 189**)  
-  - Skilled Nominated Visa (**Subclass 190**)  
-  - Skilled Work Regional Visa (**Subclass 491**)  
-  - Employer Sponsored Visa pathways  
+ ✔ Submitting your **Expression of Interest (EOI)**  
+ ✔ Applying for visas such as:  
+   Skilled Independent Visa (**Subclass 189**)  
+   Skilled Nominated Visa (**Subclass 190**)  
+   Skilled Work Regional Visa (**Subclass 491**)  
+   Employer Sponsored Visa pathways  
 
 A valid skills assessment is essential — whether applying independently or through an immigration agent.
 
@@ -69,19 +69,19 @@ Your job duties must align with Australian standards.
 
 ### 3️⃣ English Language Ability
 Some authorities require:
-- IELTS  
-- PTE  
-- TOEFL  
+ IELTS  
+ PTE  
+ TOEFL  
 
 ## Assessing Authorities (Who Assesses What?)
 
 Depending on your occupation:
 
-- **ACS** – IT professionals  
-- **Engineers Australia** – Engineers  
-- **VETASSESS** – Business & professional roles  
-- **Trades Recognition Australia (TRA)** – Trade occupations  
-- **ANMAC** – Nurses & midwives  
+ **ACS** – IT professionals  
+ **Engineers Australia** – Engineers  
+ **VETASSESS** – Business & professional roles  
+ **Trades Recognition Australia (TRA)** – Trade occupations  
+ **ANMAC** – Nurses & midwives  
 
 
 ## Skills Assessment Fees in Australia
@@ -90,40 +90,40 @@ There is no fixed cost.
 
 Fees vary depending on:
 
-- ✔ Assessing authority  
-- ✔ Standard vs priority processing  
+ ✔ Assessing authority  
+ ✔ Standard vs priority processing  
 
 
 ## Processing Time
 
 Processing times vary:
 
-- 🕐 Standard: A few weeks to a few months  
-- ⏱️ Complex cases: 3–6 months  
+ 🕐 Standard: A few weeks to a few months  
+ ⏱️ Complex cases: 3–6 months  
 
 ### Common Reasons for Delays
 
-- ❗ Incomplete documentation  
-- ❗ Weak or unclear reference letters  
-- ❗ Incorrect occupation selection  
+ ❗ Incomplete documentation  
+ ❗ Weak or unclear reference letters  
+ ❗ Incorrect occupation selection  
 
 ## Required Documents
 
 Most authorities require:
 
-- 📄 Academic certificates & transcripts  
-- 📄 Employment reference letters  
-- 📄 Passport copy  
-- 📄 English test results (if required)  
+ 📄 Academic certificates & transcripts  
+ 📄 Employment reference letters  
+ 📄 Passport copy  
+ 📄 English test results (if required)  
 
 
 ## Common Mistakes to Avoid
 
-- ❌ Generic job descriptions  
-- ❌ Poorly written reference letters  
-- ❌ Choosing the wrong assessing authority  
-- ❌ Delayed English test results  
-- ❌ Incorrect or missing documents  
+ ❌ Generic job descriptions  
+ ❌ Poorly written reference letters  
+ ❌ Choosing the wrong assessing authority  
+ ❌ Delayed English test results  
+ ❌ Incorrect or missing documents  
 
 ## Frequently Asked Questions (FAQs)
 
