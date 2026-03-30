@@ -73,7 +73,7 @@ export const blogs = [
   },
   {
     id: 11,
-    slug: "tourist-visa-600-invitation-letter-guide",
+    slug: "australian-tourist-visa-subclass-600-invitation-letter-guide",
     title: "Australian Tourist Visa (Subclass 600) Invitation Letter Guide",
     date: "February 9, 2026",
     image: `${import.meta.env.BASE_URL}assets/b7.jpg`,
