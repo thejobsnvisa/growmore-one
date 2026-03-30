@@ -38,6 +38,7 @@ You will typically need a skills assessment before:
 
 - Submitting your **Expression of Interest (EOI)**  
 - Applying for visas such as:  
+
   - Skilled Independent Visa (**Subclass 189**)  
   - Skilled Nominated Visa (**Subclass 190**)  
   - Skilled Work Regional Visa (**Subclass 491**)  
