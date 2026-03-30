@@ -93,10 +93,10 @@ const BookConsultation = () => {
             </div>
 
             <div className="p-4">
-              <h2 className="text-[22px] font-bold text-[#042325]">$99</h2>
+              <h2 className="text-[22px] font-bold text-[#042325]">$149</h2>
 
               <h3 className="mt-3 text-lg font-bold">
-                10-Minute Express Online Consultation with Mr. Krunal Nayak
+                15-Minute Express Online Consultation with Mr. Krunal Nayak
               </h3>
 
               <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
