@@ -137,7 +137,7 @@ const BookConsultation = () => {
               <h2 className="text-[22px] font-bold text-[#042325]">$500</h2>
 
               <h3 className="mt-3 text-lg font-bold">
-                Urgent Consultation with Krunal Nayak (30 Mins)
+                Urgent Consultation with Krunal Nayak (60 Mins)
               </h3>
 
               <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed ">
