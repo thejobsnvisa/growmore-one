@@ -73,7 +73,7 @@ const Footer = () => {
             alt="Growmore"
             className="h-10 sm:h-12 mb-4 sm:mb-6"
           />
-          <p className="text-white text-[16px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
+          <p className="text-white text-[14px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
             We are specialised in providing seamless visa solutions for
             individuals, students, and employers looking to make Australia their
             home.
@@ -138,7 +138,7 @@ const Footer = () => {
           <h3 className="text-[20px] sm:text-[22px] font-semibold mb-4 sm:mb-6">
             Quick Links
           </h3>
-          <ul className="space-y-2 sm:space-y-3 text-[16px] text-white font-semibold">
+          <ul className="space-y-2 sm:space-y-3 text-[14px] text-white font-semibold">
             <li>
               <Link
                 to="/points-calculator"
@@ -173,7 +173,7 @@ const Footer = () => {
           <h3 className="text-[20px] sm:text-[22px] font-semibold mb-4 sm:mb-6">
             Useful Links
           </h3>
-          <ul className="space-y-2 sm:space-y-3 text-[16px] text-white font-semibold">
+          <ul className="space-y-2 sm:space-y-3 text-[14px] text-white font-semibold">
             <li>
               <Link to="/terms-services" className="hover:text-gray-400 transition">
                 Terms & Services
