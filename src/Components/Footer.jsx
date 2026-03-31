@@ -73,7 +73,7 @@ const Footer = () => {
             alt="Growmore"
             className="h-10 sm:h-12 mb-4 sm:mb-6"
           />
-          <p className="text-white text-[14px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
+          <p className="text-white text-[16px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
             We are specialised in providing seamless visa solutions for
             individuals, students, and employers looking to make Australia their
             home.
