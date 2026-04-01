@@ -12,17 +12,17 @@ const blogs = [
   },
    {
     id: 2,
-    slug: "nsw-becomes-new-skills-assessment-authority-for-surveyor-anzsco-232212",
-    title: "NSW Becomes New Skills Assessment Authority for Surveyor (ANZSCO 232212)",
-    date: "March 28, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng0.jpg`,
-  },
-   {
-    id: 3,
     slug: "final-call-act-canberra-matrix-final-round-expected-in-may",
     title: "ACT Canberra Matrix Final Round Expected in May 2026",
     date: "March 30, 2026",
     image: `${import.meta.env.BASE_URL}assets/ng.1.jpg`,
+  },
+   {
+    id: 3,
+    slug: "nsw-becomes-new-skills-assessment-authority-for-surveyor-anzsco-232212",
+    title: "NSW Becomes New Skills Assessment Authority for Surveyor (ANZSCO 232212)",
+    date: "March 28, 2026",
+    image: `${import.meta.env.BASE_URL}assets/ng0.jpg`,
   },
 ];
 
