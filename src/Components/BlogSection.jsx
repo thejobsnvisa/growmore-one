@@ -3,20 +3,19 @@ import { FaCalendar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const blogs = [
-  {
+ {
     id: 1,
-    slug: "australia-2025-26-state-nomination-where-spots-are-still-available",
-    title:
-      "Australia 2025–26 State Nomination : Where Spots Are Still Available",
-    date: "March 19, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng1.png`,
+    slug: "nsw-confirms-skilled-migration-invitation-round-for-april-2026",
+    title: "NSW Confirms Skilled Migration Invitation Round for April 2026",
+    date: "April 1, 2026",
+    image: `${import.meta.env.BASE_URL}assets/ng.jpg`,
   },
   {
     id: 2,
-    slug: "act-state-nomination-2025-2026-latest-round-allocation-update",
-    title: "ACT State Nomination 2025–2026 : Latest Round & Allocation Update",
-    date: "March 19, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng2.jpg`,
+    slug: "which-australian-visa-should-you-choose-3-questions-to-decide",
+    title: "Which Australian Visa Is Right? 3 Questions to Decide",
+    date: "March 31, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg.jpg`,
   },
   {
     id: 3,
