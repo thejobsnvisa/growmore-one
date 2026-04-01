@@ -17,12 +17,12 @@ const blogs = [
     date: "March 31, 2026",
     image: `${import.meta.env.BASE_URL}assets/bg.jpg`,
   },
-  {
+   {
     id: 3,
-    slug: "tasmania-latest-invitation-round-19-march-2026",
-    title: "Tasmania Latest Invitation Round: 19 March 2026",
-    date: "March 19, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng3.jpg`,
+    slug: "final-call-act-canberra-matrix-final-round-expected-in-may",
+    title: "ACT Canberra Matrix Final Round Expected in May 2026",
+    date: "March 30, 2026",
+    image: `${import.meta.env.BASE_URL}assets/ng.1.jpg`,
   },
 ];
 

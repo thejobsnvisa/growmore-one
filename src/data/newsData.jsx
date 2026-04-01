@@ -11,7 +11,7 @@ export const blogs = [
     id: 1,
     slug: "final-call-act-canberra-matrix-final-round-expected-in-may",
     title: "ACT Canberra Matrix Final Round Expected in May 2026",
-    date: "March 31, 2026",
+    date: "March 30, 2026",
     image: `${base}assets/ng.1.jpg`,
   },
   {
