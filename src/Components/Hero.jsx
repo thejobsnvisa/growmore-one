@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import ReCAPTCHA from "react-google-recaptcha";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 // 1. Added Toast Imports
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
@@ -45,7 +45,7 @@ const Hero = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentWordIndex]);
+  }, [displayText, isDeleting, currentWordIndex, texts]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,7 +57,6 @@ const Hero = () => {
     }
 
     setLoading(true);
-    const toastId = toast.loading("Sending your inquiry...");
 
     try {
       const formData = new FormData(e.target);
@@ -87,12 +86,7 @@ const Hero = () => {
       const result = await response.json();
 
       if (result.success) {
-        toast.update(toastId, { 
-          render: "Success! We will contact you soon.", 
-          type: "success", 
-          isLoading: false, 
-          autoClose: 5000 
-        });
+        alert("Thank you! Our team will contact you shortly.");
         e.target.reset();
         setPhoneNumber("");
         recaptchaRef.current.reset();
@@ -100,12 +94,7 @@ const Hero = () => {
         throw new Error(result.message || "Submission failed");
       }
     } catch (error) {
-      toast.update(toastId, { 
-        render: `Error: ${error.message}`, 
-        type: "error", 
-        isLoading: false, 
-        autoClose: 5000 
-      });
+      alert(`Error: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -201,7 +190,7 @@ const Hero = () => {
                     <PhoneInput
                       country={"au"}
                       enableSearch
-                      onChange={(value, data) => setDialCode(data.dialCode)}
+                      onChange={(_, data) => setDialCode(data.dialCode)}
                       inputProps={{ readOnly: true }}
                       containerStyle={{ width: "100%" }}
                       inputStyle={{
