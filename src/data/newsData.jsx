@@ -1,5 +1,12 @@
 const base = import.meta.env.BASE_URL;
-export const blogs = [
+export const blogs = [ 
+   {
+    id: 0,
+    slug: "nsw-confirms-skilled-migration-invitation-round-for-april-2026",
+    title: "NSW Confirms Skilled Migration Invitation Round for April 2026",
+    date: "April 1, 2026",
+    image: `${base}assets/ng.jpg`,
+  },
    {
     id: 1,
     slug: "final-call-act-canberra-matrix-final-round-expected-in-may",
