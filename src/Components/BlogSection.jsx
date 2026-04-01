@@ -10,12 +10,12 @@ const blogs = [
     date: "April 1, 2026",
     image: `${import.meta.env.BASE_URL}assets/ng.jpg`,
   },
-  {
+   {
     id: 2,
-    slug: "which-australian-visa-should-you-choose-3-questions-to-decide",
-    title: "Which Australian Visa Is Right? 3 Questions to Decide",
-    date: "March 31, 2026",
-    image: `${import.meta.env.BASE_URL}assets/bg.jpg`,
+    slug: "nsw-becomes-new-skills-assessment-authority-for-surveyor-anzsco-232212",
+    title: "NSW Becomes New Skills Assessment Authority for Surveyor (ANZSCO 232212)",
+    date: "March 28, 2026",
+    image: `${import.meta.env.BASE_URL}assets/ng0.jpg`,
   },
    {
     id: 3,
