@@ -1,6 +1,12 @@
 const base = import.meta.env.BASE_URL;
-
 export const blogs = [
+  {
+    id: 0,
+    slug: "nsw-becomes-new-skills-assessment-authority-for-surveyor-anzsco-232212",
+    title: "NSW Becomes New Skills Assessment Authority for Surveyor (ANZSCO 232212)",
+    date: "March 28, 2026",
+    image: `${base}assets/ng0.jpg`,
+  },
   {
     id: 1,
     slug: "australia-2025-26-state-nomination-where-spots-are-still-available",
