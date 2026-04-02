@@ -1,10 +1,17 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  // ✅ CORS (GitHub Pages support)
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  // ✅ Allow only your frontend domain
+const allowedOrigin = "https://thejobsnvisa.github.io";
+
+const origin = req.headers.origin;
+
+if (origin === allowedOrigin) {
+  res.setHeader("Access-Control-Allow-Origin", origin);
+}
+
+res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   // ✅ IMPORTANT: Handle preflight request
   if (req.method === "OPTIONS") {
