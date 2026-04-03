@@ -178,6 +178,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/news/:slug" element={<NewsArticle />} />
       </Routes>
+       <elevenlabs-convai agent-id="agent_0001kn90gccre0vazv8wnf4x814y"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
       <Footer />
     </Router>
   );
