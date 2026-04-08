@@ -116,7 +116,7 @@ const Videos = () => {
             navigation
             pagination={{ clickable: true }}
             breakpoints={{
-              768: { slidesPerView: 2 },
+              768: { slidesPerView: 6 },
               1024: { slidesPerView: 3 },
             }}
           >

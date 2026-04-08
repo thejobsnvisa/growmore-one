@@ -1,13 +1,17 @@
 {
-  "name": "growmore",
+  "name": "growmore-one",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
+  "description": "Growmore Immigration Digital Platform",
+  "homepage": "https://thejobsnvisa.github.io/growmore-one/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
@@ -26,6 +30,7 @@
     "react-markdown": "^10.1.0",
     "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^7.13.0",
+    "react-toastify": "^11.0.5",
     "remark-gfm": "^4.0.1",
     "swiper": "^12.1.2",
     "tailwindcss": "^4.1.18"

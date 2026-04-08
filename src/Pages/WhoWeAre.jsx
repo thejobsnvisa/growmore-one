@@ -27,7 +27,7 @@ const WhoWeAre = () => {
 
             {/* Image */}
             <img
-              src="/assets/g1.png"
+              src={`${import.meta.env.BASE_URL}assets/g1.png`}
               alt="Team Discussion"
               className="relative rounded-3xl w-full h-full object-cover"
             />
@@ -98,7 +98,7 @@ const WhoWeAre = () => {
 
             {/* Image */}
             <img
-              src="/assets/g2.png"
+              src={`${import.meta.env.BASE_URL}assets/g2.png`}
               alt="Team Discussion"
               className="relative rounded-3xl w-full h-full object-cover"
             />

@@ -6,43 +6,43 @@ const data = [
     text: `I want to say thank you to you, which has been really helpful in managing my application from the beginning of doing the skill assessment until my visa is granted. You have been actively in communication with the DHA or VETASSESS to ensure that my application was done in a timely manner. I also kept updated throughout the entire process. Highly recommended`,
     title: "Jovita Indahsari",
     subtitle: "SC190 - PR Visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
   {
     text: `First of all Mr KrunalBhai has vast knowledge of immigration process he provided me the right guidance according to my profile and always helps me to choose right path, and the best thing is he personally do all the process and take care of their clients. All over it was a best experience i would surely recommend to anyone for any kind of visa.`,
     title: "Rahi",
     subtitle: "SC491 - PR Visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
   {
     text: `Kunal and the entire team at Growmore were very efficient and professional in handling our file. They had excellent knowledge regarding the immigration matters and were always there to answer our questions whenever we had. Exceptional customer service and communication from the entire team. Thank you.`,
     title: "Kiran H Jani",
     subtitle: "SC - 804 Parents Visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
   {
     text: `Absolutely amazing service and coordination with the client. Within in a month I have got my approval. Staff is very helpful and cooperative all the time. Thank you so much for your support and help.`,
     title: "Clemy Robert bhai Christy",
     subtitle: "SC485 - Temporary Graduate visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
   {
     text: `Grow More team is highly professional and very helpful. Special thanks to Kunal who really gave us the correct guidance and helped us to get the parents visa for our parents. I would highly recommend Kunal and his team for immigration services and to get your visa granted easily and without any hassle.`,
     title: "Dhwanil Jani",
     subtitle: "SC - 804 Parents Visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
   {
     text: `Grow More team is highly professional and very helpful. Special thanks to Kunal who really gave us the correct guidance and helped us to get the parents visa for our parents. I would highly recommend Kunal and his team for immigration services and to get your visa granted easily and without any hassle.`,
     title: "Student Visa",
     subtitle: "SC600 VisitorVisa/SC500 - Student Visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
   {
     text: `They work with full dedication. Entire team is very supportive. Query get resolved quickly. Staff is very responsive. They prepare file very accurately, so the chances of rejection are minimised`,
     title: "Krunalkumar Jaykumar Shah",
     subtitle: "SC491 - PR Visa",
-    image: "/assets/test.jpg",
+    image: `${import.meta.env.BASE_URL}assets/test.jpg`,
   },
 ];
 
@@ -62,8 +62,12 @@ export default function Testimonials() {
   return (
     <section className="relative py-20 px-4 bg-[#eff9fb] overflow-hidden rounded-[60px] m-3">
       {/* Background */}
-      <div className="absolute inset-0 opacity-20 bg-[url('/assets/wave2.jpg')] bg-cover bg-center"></div>
-
+      <div
+        className="absolute inset-0 opacity-20 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}assets/wave2.jpg)`,
+        }}
+      ></div>
       <div className="relative z-10 max-w-[1200px] mx-auto">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -125,4 +129,3 @@ export default function Testimonials() {
     </section>
   );
 }
- 

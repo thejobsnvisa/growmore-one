@@ -38,11 +38,15 @@ const ContactUs = () => {
         source: "Website Form",
       };
 
-      const response = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+    const BASE_URL = "https://growmore-1.vercel.app";
+
+const response = await fetch(`${BASE_URL}/api/lead`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+});
 
       const result = await response.json();
 
@@ -76,7 +80,7 @@ const ContactUs = () => {
           {/* IMAGE */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <img
-              src="/assets/krunal2.png"
+              src={`${import.meta.env.BASE_URL}assets/krunal2.png`}
               alt="MARA Registration"
               className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
             />

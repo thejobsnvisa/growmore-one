@@ -41,12 +41,15 @@ const Migrate = () => {
         source: "Website Form",
       };
 
-      const response = await fetch("/api/lead", {
+      const BASE_URL = "https://growmore-1.vercel.app";
+
+      const response = await fetch(`${BASE_URL}/api/lead`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
-
       const result = await response.json();
       if (!result.success) throw new Error("Submission failed");
 
@@ -78,7 +81,7 @@ const Migrate = () => {
             {/* Big Family Image */}
             <div className="row-span-2">
               <img
-                src="/assets/i1.png"
+                src={`${import.meta.env.BASE_URL}assets/i1.png`}
                 alt="Family Immigration"
                 className="w-full h-94 object-cover rounded-2xl"
               />
@@ -87,7 +90,7 @@ const Migrate = () => {
             {/* City Image */}
             <div>
               <img
-                src="/assets/i2.png"
+                src={`${import.meta.env.BASE_URL}assets/i2.png`}
                 alt="Australia City"
                 className="w-full h-32 object-cover rounded-2xl shadow-sm"
               />
@@ -96,7 +99,7 @@ const Migrate = () => {
             {/* Consultant Image */}
             <div>
               <img
-                src="/assets/i3.png"
+                src={`${import.meta.env.BASE_URL}assets/i3.png`}
                 alt="Consultant"
                 className="w-full h-57 object-cover rounded-2xl shadow-sm"
               />
@@ -142,7 +145,7 @@ const Migrate = () => {
         <div className="max-w-8xl  mx-auto md:h-120 lg:h-100 bg-[#333333] rounded-[30px] md:rounded-[40px] px-6 md:px-10 py-12 relative overflow-hidden">
           {/* Background wave */}
           <img
-            src="/assets/wave2.jpg"
+            src={`${import.meta.env.BASE_URL}assets/wave2.jpg`}
             alt="wave background"
             className="absolute inset-0 w-full h-full  object-cover opacity-20 pointer-events-none"
           />
@@ -162,7 +165,7 @@ const Migrate = () => {
               {/* CARD 1 */}
               <div className="flex items-start gap-4 border border-white rounded-xl p-4 shadow-md hover:shadow-lg transition">
                 <img
-                  src="/assets/r1.svg"
+                  src={`${import.meta.env.BASE_URL}assets/r1.svg`}
                   alt=""
                   className="w-10 h-10 shrink-0"
                 />
@@ -179,7 +182,7 @@ const Migrate = () => {
               {/* CARD 2 */}
               <div className="flex items-start gap-4 border border-white rounded-xl p-4 shadow-md hover:shadow-lg transition">
                 <img
-                  src="/assets/r2.svg"
+                  src={`${import.meta.env.BASE_URL}assets/r2.svg`}
                   alt=""
                   className="w-10 h-10 shrink-0"
                 />
@@ -196,7 +199,7 @@ const Migrate = () => {
               {/* CARD 3 */}
               <div className="flex items-start gap-4 border border-white rounded-xl p-4 shadow-md hover:shadow-lg transition sm:col-span-2">
                 <img
-                  src="/assets/r3.svg"
+                  src={`${import.meta.env.BASE_URL}assets/r3.svg`}
                   alt=""
                   className="w-10 h-10 shrink-0"
                 />
@@ -222,7 +225,7 @@ const Migrate = () => {
           {/* IMAGE */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <img
-              src="/assets/krunal2.png"
+              src={`${import.meta.env.BASE_URL}assets/krunal2.png`}
               alt="MARA Registration"
               className="w-full max-w-sm h-[680px] object-cover rounded-2xl"
             />
@@ -320,7 +323,6 @@ const Migrate = () => {
                   className="bg-white rounded-lg px-4 py-3 w-full border border-gray-300"
                 />
 
-                
                 {/* reCAPTCHA */}
                 <div className="flex justify-center sm:justify-start w-full sm:w-auto max-w-sm sm:max-w-md lg:max-w-lg">
                   <ReCAPTCHA

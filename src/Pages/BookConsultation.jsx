@@ -46,7 +46,7 @@ const BookConsultation = () => {
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               <img
-                src="/assets/c2.jpg"
+                src={`${import.meta.env.BASE_URL}assets/c2.jpg`}
                 alt="Standard Consultation"
                 className="w-full h-full object-cover object-top"
               />
@@ -86,17 +86,17 @@ const BookConsultation = () => {
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               <img
-                src="/assets/c1.jpg"
+                src={`${import.meta.env.BASE_URL}assets/c1.jpg`}
                 alt="Rapid Consultation"
                 className="w-full h-full object-cover object-top"
               />
             </div>
 
             <div className="p-4">
-              <h2 className="text-[22px] font-bold text-[#042325]">$99</h2>
+              <h2 className="text-[22px] font-bold text-[#042325]">$149</h2>
 
               <h3 className="mt-3 text-lg font-bold">
-                10-Minute Express Online Consultation with Mr. Krunal Nayak
+                15-Minute Express Online Consultation with Mr. Krunal Nayak
               </h3>
 
               <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
@@ -127,7 +127,7 @@ const BookConsultation = () => {
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               <img
-                src="/assets/c.png"
+                src={`${import.meta.env.BASE_URL}assets/c.png`}
                 alt="Urgent Consultation"
                 className="w-full h-full object-cover object-top"
               />
@@ -137,7 +137,7 @@ const BookConsultation = () => {
               <h2 className="text-[22px] font-bold text-[#042325]">$500</h2>
 
               <h3 className="mt-3 text-lg font-bold">
-                Urgent Consultation with Krunal Nayak (30 Mins)
+                Urgent Consultation with Krunal Nayak (60 Mins)
               </h3>
 
               <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed ">
@@ -169,7 +169,7 @@ const BookConsultation = () => {
             <div className="h-[350px] overflow-hidden rounded-t-3xl">
               {" "}
               <img
-                src="/assets/c3.jpg"
+                src={`${import.meta.env.BASE_URL}assets/c3.jpg`}
                 alt="Urgent Consultation"
                 className="w-full h-full object-cover object-top"
               />{" "}
@@ -197,15 +197,14 @@ const BookConsultation = () => {
                 {" "}
                 View Factsheet{" "}
               </a>{" "}
-              <button
-                onClick={() =>
-                  openCalendly("https://calendly.com/krunalnayak/urgent")
-                }
-                className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
+              <a
+                href="https://case.growmore.one/add/company-website"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
               >
-                {" "}
-                Book Now{" "}
-              </button>{" "}
+                Book Now
+              </a>
             </div>{" "}
           </div>
         </div>

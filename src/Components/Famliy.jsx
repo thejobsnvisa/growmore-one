@@ -11,7 +11,7 @@ const Famliy = () => {
           {/* Big Family Image */}
           <div className="row-span-2">
             <img
-              src="/assets/famliy-img.png"
+              src={`${import.meta.env.BASE_URL}assets/famliy-img.png`}
               alt="Family Immigration"
               className="w-full h-110 object-cover rounded-2xl"
             />
@@ -20,7 +20,7 @@ const Famliy = () => {
           {/* City Image */}
           <div>
             <img
-              src="/assets/img3.png"
+              src={`${import.meta.env.BASE_URL}assets/img3.png`}
               alt="Australia City"
               className="w-full h-48 object-cover rounded-2xl shadow-sm"
             />
@@ -29,7 +29,7 @@ const Famliy = () => {
           {/* Consultant Image */}
           <div>
             <img
-              src="/assets/krunal-img.jpg"
+              src={`${import.meta.env.BASE_URL}assets/krunal-img.jpg`}
               alt="Consultant"
               className="w-full h-110 object-cover rounded-2xl shadow-sm"
             />
@@ -38,7 +38,7 @@ const Famliy = () => {
           {/* MARA Card */}
           <div className="mt-[-220px]">
             <img
-              src="/assets/mara-card.png"
+              src={`${import.meta.env.BASE_URL}assets/mara-card.png`}
               alt="MARA Registration"
               className="w-full h-full object-cover rounded-2xl shadow-sm "
             />
@@ -77,7 +77,7 @@ const Famliy = () => {
                 {/* Icon + Title */}
                 <div className="flex items-start gap-4 mb-4">
                   <img
-                    src="/assets/card-img6.svg"
+                    src={`${import.meta.env.BASE_URL}assets/card-img6.svg`}
                     alt="Proven Integrity Icon"
                     className="w-12 h-12"
                   />
@@ -115,7 +115,7 @@ const Famliy = () => {
             <div className="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 max-w-md">
               <div className="flex items-start gap-4 mb-4">
                 <img
-                  src="/assets/card-img7.svg"
+                  src={`${import.meta.env.BASE_URL}assets/card-img7.svg`}
                   alt="Trusted Expertise Icon"
                   className="w-12 h-12"
                 />

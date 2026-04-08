@@ -213,22 +213,17 @@ body {
 
 .circle-label {
   position: absolute;
-  margin-bottom: 10px;
-  top: 65%;
-
+  top: 38%;
   left: 50%;
-  
   transform: translate(-50%, -50%);
-
   font-size: 16px;
-
   font-weight: 600;
-
-  color: #222e50;
-
-  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
 /* ================= TABLE ================= */
 
 .score-table {

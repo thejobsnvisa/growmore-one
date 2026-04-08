@@ -4,22 +4,22 @@ const team = [
   {
     name: "Krunal Nayak",
     role: "Founder of Growmore Immigration",
-    img: "/assets/team1.png",
+    img: `${import.meta.env.BASE_URL}assets/team1.png`,
   },
   {
     name: "Keyur Chaudhari",
     role: "General Manager",
-    img: "/assets/team2.png",
+    img: `${import.meta.env.BASE_URL}assets/team2.png`,
   },
   {
     name: "Abhisha Rathod",
     role: "COO",
-    img: "/assets/team3.png",
+    img:`${import.meta.env.BASE_URL}assets/team3.png`,
   },
   {
     name: "Hiren Maharaj",
-    role: "CMO",
-    img: "/assets/team4.png",
+    role: "Knowledge Manager",
+    img: `${import.meta.env.BASE_URL}assets/team4.png`,
   },
 ];
 
@@ -71,19 +71,19 @@ const Teams = () => {
       {/* SOCIAL ICONS */}
       <div className="flex flex-wrap gap-4 sm:gap-5 pt-2">
         <a href="https://www.facebook.com/growmore.one">
-          <img src="/assets/f.svg" alt="Facebook" className="w-7 h-7 sm:w-9 sm:h-9" />
+          <img src={`${import.meta.env.BASE_URL}assets/f.svg`} alt="Facebook" className="w-7 h-7 sm:w-9 sm:h-9" />
         </a>
         <a href="https://www.instagram.com/growmore.one/">
-          <img src="/assets/i.svg" alt="Instagram" className="w-7 h-7 sm:w-9 sm:h-9" />
+          <img src={`${import.meta.env.BASE_URL}assets/i.svg`} alt="Instagram" className="w-7 h-7 sm:w-9 sm:h-9" />
         </a>
         <a href="https://www.linkedin.com/company/growmore-immigration/">
-          <img src="/assets/l.svg" alt="LinkedIn" className="w-7 h-7 sm:w-9 sm:h-9" />
+          <img src={`${import.meta.env.BASE_URL}assets/l.svg`} alt="LinkedIn" className="w-7 h-7 sm:w-9 sm:h-9" />
         </a>
         <a href="https://tiktok.com/@growmore.immigration">
-          <img src="/assets/t.svg" alt="Tiktok" className="w-7 h-7 sm:w-9 sm:h-9" />
+          <img src={`${import.meta.env.BASE_URL}assets/t.svg`} alt="Tiktok" className="w-7 h-7 sm:w-9 sm:h-9" />
         </a>
         <a href="https://www.youtube.com/@growmoreimmigration">
-          <img src="/assets/y.svg" alt="YouTube" className="w-7 h-7 sm:w-9 sm:h-9" />
+          <img src={`${import.meta.env.BASE_URL}assets/y.svg`} alt="YouTube" className="w-7 h-7 sm:w-9 sm:h-9" />
         </a>
       </div>
     </div>
@@ -91,7 +91,7 @@ const Teams = () => {
     {/* RIGHT IMAGE */}
     <div className="w-full lg:w-1/2">
       <img
-        src="/assets/c.png"
+        src={`${import.meta.env.BASE_URL}assets/c.png`}
         alt="community"
         className="rounded-2xl w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[360px] object-cover"
       />

@@ -19,7 +19,7 @@ const Footer = () => {
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: `url('/assets/footer.jpg')`,
+          backgroundImage: `url('${import.meta.env.BASE_URL}assets/footer.jpg')`,
           backgroundPosition: "bottom center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-start gap-4 text-center md:text-left">
             <div className="bg-[#6dc7d1] rounded-full p-2">
               <img
-                src="/assets/img1.svg"
+                src={`${import.meta.env.BASE_URL}assets/img1.svg`}
                 alt="phone"
                 className="h-12 w-12 sm:h-14 sm:w-14"
               />
@@ -69,11 +69,11 @@ const Footer = () => {
         {/* Logo & About */}
         <div className="flex flex-col items-start">
           <img
-            src="/assets/logo1.png"
+            src={`${import.meta.env.BASE_URL}assets/logo1.png`}
             alt="Growmore"
             className="h-10 sm:h-12 mb-4 sm:mb-6"
           />
-          <p className="text-white text-[14px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
+          <p className="text-white text-[15px] font-semibold leading-relaxed mb-4 sm:mb-6  w-70 text-justify">
             We are specialised in providing seamless visa solutions for
             individuals, students, and employers looking to make Australia their
             home.
@@ -111,7 +111,7 @@ const Footer = () => {
           <h3 className="text-[20px] sm:text-[22px] font-semibold mb-4 sm:mb-6">
             Services
           </h3>
-          <ul className="space-y-2 sm:space-y-3 text-[16px] text-white font-semibold">
+          <ul className="space-y-2 sm:space-y-3 text-[15px] text-white font-semibold">
             <li>
               <Link
                 to="/our-services/individual"
@@ -138,7 +138,7 @@ const Footer = () => {
           <h3 className="text-[20px] sm:text-[22px] font-semibold mb-4 sm:mb-6">
             Quick Links
           </h3>
-          <ul className="space-y-2 sm:space-y-3 text-[16px] text-white font-semibold">
+          <ul className="space-y-2 sm:space-y-3 text-[15px] text-white font-semibold">
             <li>
               <Link
                 to="/points-calculator"
@@ -173,7 +173,7 @@ const Footer = () => {
           <h3 className="text-[20px] sm:text-[22px] font-semibold mb-4 sm:mb-6">
             Useful Links
           </h3>
-          <ul className="space-y-2 sm:space-y-3 text-[16px] text-white font-semibold">
+          <ul className="space-y-2 sm:space-y-3 text-[15px] text-white font-semibold">
             <li>
               <Link to="/terms-services" className="hover:text-gray-400 transition">
                 Terms & Services
@@ -200,7 +200,7 @@ const Footer = () => {
         {/* MARA Card */}
         <div className="flex justify-start lg:justify-end mt-6 md:mt-0">
           <img
-            src="/assets/mara-card.png"
+            src={`${import.meta.env.BASE_URL}assets/mara-card.png`}
             alt="MARA Registration"
             className="rounded-xl max-h-48 sm:max-h-52 md:max-h-60 object-contain"
           />
@@ -208,7 +208,7 @@ const Footer = () => {
       </div>
       {/* COPYRIGHT */}
     <div className="border-t border-white/20 py-6 px-4 relative z-10">
-  <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between text-[14px] text-white gap-4">
+  <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between text-[15px] text-white gap-4">
     
     {/* Left Side */}
     <p className="text-center sm:text-left">
@@ -218,7 +218,7 @@ const Footer = () => {
     {/* Right Side */}
     <div className="flex items-center gap-2">
       <img
-        src="/assets/logo2.png"
+        src={`${import.meta.env.BASE_URL}assets/logo2.png`}
         alt="WebMotion"
         className="h-5 object-contain"
       />

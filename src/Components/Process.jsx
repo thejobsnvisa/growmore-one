@@ -2,27 +2,27 @@ import React, { useEffect, useRef, useState } from "react";
 
 const steps = [
   {
-    img: "/assets/r1.png",
+    img: `${import.meta.env.BASE_URL}assets/r1.png`,
     title: "Inquiry",
     text: "Raise query by contacting us through WhatsApp or website.",
   },
   {
-    img: "/assets/r2.png",
+    img: `${import.meta.env.BASE_URL}assets/r2.png`,
     title: "Registration",
     text: "Book a consultation with an RMA and sign the service agreement.",
   },
   {
-    img: "/assets/r3.png",
+    img: `${import.meta.env.BASE_URL}assets/r3.png`,
     title: "Documentation",
     text: "Gather and prepare all required documents.",
   },
   {
-    img: "/assets/r4.png",
+    img: `${import.meta.env.BASE_URL}assets/r4.png`,
     title: "Lodgement",
     text: "Lodge your visa application with precision.",
   },
   {
-    img: "/assets/r5.png",
+    img: `${import.meta.env.BASE_URL}assets/r5.png`,
     title: "Support",
     text: "Receive ongoing guidance throughout the process.",
   },
@@ -51,7 +51,7 @@ export default function ProcessSection() {
     >
       {/* Background */}
       <img
-        src="/assets/wave2.jpg"
+        src={`${import.meta.env.BASE_URL}assets/wave2.jpg`}
         alt="wave background"
         className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
       />
