@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   // ✅ Allow only your frontend domain
-const allowedOrigin = "https://thejobsnvisa.github.io";
+const allowedOrigin = "https://thejobsnvisa.github.io,https://www.growmore.one";
 
 const origin = req.headers.origin;
 
