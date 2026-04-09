@@ -65,7 +65,6 @@ import IndividualVisaGurdian from "./Pages/IndividualVisaGurdian";
 function App() {
   return (
     <Router>
-      {" "}
       <Navbar />
       <ScrollToTop />
       <Routes>
