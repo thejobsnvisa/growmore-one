@@ -5,11 +5,8 @@
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
-<<<<<<< HEAD
         { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
-=======
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
->>>>>>> 363c20353128161178ee7d742741b66756afabdf
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" 
       ]
     }
   ]
