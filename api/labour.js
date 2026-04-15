@@ -1,7 +1,6 @@
 import nodemailer from "nodemailer";
-
-export default async function handler(req, res) {
   // ✅ Allow only your frontend domain
+export default async function handler(req, res) {
 const allowedOrigins = [
   "https://thejobsnvisa.github.io",
   "https://www.growmore.one",
@@ -18,10 +17,6 @@ if (allowedOrigins.includes(origin)) {
 
 res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
 res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
-if (req.method === "OPTIONS") {
-  return res.status(200).end();
-}
 
   // ✅ IMPORTANT: Handle preflight
   if (req.method === "OPTIONS") {
