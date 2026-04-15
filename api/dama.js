@@ -1,28 +1,27 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-const allowedOrigins = [
-  "https://thejobsnvisa.github.io",
-  "https://www.growmore.one",
-  "https://growmore.one",
-  "https://www.growmore.au",
-  "https://growmore.au"
-];
 
-const origin = req.headers.origin;
+  const allowedOrigins = [
+    "https://thejobsnvisa.github.io",
+    "https://www.growmore.one",
+    "https://growmore.one",
+    "https://www.growmore.au",
+    "https://growmore.au"
+  ];
 
-if (allowedOrigins.includes(origin)) {
-  res.setHeader("Access-Control-Allow-Origin", origin);
-}
+  const origin = req.headers.origin;
 
-res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  // ✅ Set CORS FIRST
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
 
-if (req.method === "OPTIONS") {
-  return res.status(200).end();
-}
+  res.setHeader("Vary", "Origin"); // 🔥 CRITICAL FIX
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // ✅ IMPORTANT: Handle preflight request
+  // ✅ Handle preflight ONCE
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -37,7 +36,6 @@ if (req.method === "OPTIONS") {
   try {
     const data = req.body;
 
-    // ✅ Validation
     if (!data.fullName || !data.email || !data.captchaToken) {
       return res.status(400).json({
         success: false,
@@ -70,41 +68,19 @@ Location: ${data.location}
 
     /* ========= EMAIL ========= */
     const transporter = nodemailer.createTransport({
-      service: "gmail", // ✅ cleaner
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
-    const emailHtml = `
-      <div style="padding:20px;line-height:1.5;">
-        <h3>DAMA Lead</h3>
-        <p><b>Name:</b> ${data.fullName}</p>
-        <p><b>Email:</b> ${data.email}</p>
-        <p><b>Phone:</b> ${data.phone || "N/A"}</p>
-        <p><b>Residence:</b> ${data.country || "N/A"}</p>
-        <p><b>Location:</b> ${data.location || "N/A"}</p>
-
-        <hr/>
-
-        <h4>Professional Profile</h4>
-        <ul>
-          <li><b>Qualification:</b> ${data.qualification}</li>
-          <li><b>Occupation:</b> ${data.occupation}</li>
-          <li><b>Skills Assessment:</b> ${data.skillsAssessment}</li>
-          <li><b>Experience:</b> ${data.experience}</li>
-          <li><b>Job Offer:</b> ${data.jobOffer}</li>
-        </ul>
-      </div>
-    `;
-
     await transporter.sendMail({
       from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
       to: "info@growmore.one",
       bcc: "info@growmoreimmigration.com",
       subject: `DAMA Lead: ${data.fullName} (${data.occupation})`,
-      html: emailHtml,
+      html: `<p>New lead from website</p>`,
     });
 
     return res.status(200).json({
