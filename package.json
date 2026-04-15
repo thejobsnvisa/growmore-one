@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.1",
   "description": "Growmore Immigration Digital Platform",
-  "homepage": "https://growmore.one",
+  "homepage": "https://growmore.au",
   "type": "module",
   "scripts": {
     "dev": "vite",
