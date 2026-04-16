@@ -1,36 +1,46 @@
 import nodemailer from "nodemailer";
-  // ✅ Allow only your frontend domain
+
 export default async function handler(req, res) {
-const allowedOrigins = [
-  "https://thejobsnvisa.github.io",
-  "https://www.growmore.one",
-  "https://growmore.one",
-  "https://www.growmore.au",
-  "https://growmore.au"
-];
+  const allowedOrigins = [
+    "https://thejobsnvisa.github.io",
+    "https://www.growmore.one",
+    "https://growmore.one",
+    "https://www.growmore.au",
+    "https://growmore.au"
+  ];
 
-const origin = req.headers.origin;
+  const origin = req.headers.origin;
 
-if (allowedOrigins.includes(origin)) {
-  res.setHeader("Access-Control-Allow-Origin", origin);
-}
+  // ✅ ALWAYS set CORS (critical)
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  } else {
+    // 🔥 TEMP fallback (remove later)
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    console.log("Blocked Origin:", origin);
+  }
 
-res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // ✅ IMPORTANT: Handle preflight
+  // ✅ Handle preflight
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
+  // ❌ Only POST allowed
   if (req.method !== "POST") {
-    return res
-      .status(405)
-      .json({ success: false, message: "Method not allowed" });
+    return res.status(405).json({
+      success: false,
+      message: "Method not allowed",
+    });
   }
 
   try {
-    const data = req.body;
+    // ✅ Safe body parsing
+    const data =
+      typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
     // ✅ Validation
     if (!data.companyName || !data.abn || !data.contactPerson) {
@@ -40,29 +50,35 @@ res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
       });
     }
 
-    /* ========= CRM Integration ========= */
-    const crmBody = new URLSearchParams({
-      Name: data.contactPerson,
-      Company: data.companyName,
-      Email: "Employer Inquiry",
-      Phone: data.abn,
-      Inquiries: "Employer-Sponsored Visa Assessment",
-      Source: "Website Employer Form",
-      Message: `
+    /* ========= CRM ========= */
+    try {
+      const crmBody = new URLSearchParams({
+        Name: data.contactPerson,
+        Company: data.companyName,
+        Email: "Employer Inquiry",
+        Phone: data.abn,
+        Inquiries: "Employer-Sponsored Visa Assessment",
+        Source: "Website Employer Form",
+        Message: `
 ABN: ${data.abn}
 Staff: ${data.totalEmployees}
 Revenue: ${data.turnoverRange}
 Job Title: ${data.jobTitle}
 ANZSCO: ${data.anzscoCode}
 DAMA Status: ${data.dama}
-      `.trim(),
-    });
+        `.trim(),
+      });
 
-    fetch("https://leads.growmore.one/api/website-form", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: crmBody.toString(),
-    }).catch((err) => console.error("CRM Error:", err));
+      await fetch("https://leads.growmore.one/api/website-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: crmBody.toString(),
+      });
+    } catch (crmError) {
+      console.error("CRM Error:", crmError);
+    }
 
     /* ========= EMAIL ========= */
     const transporter = nodemailer.createTransport({
@@ -93,7 +109,7 @@ DAMA Status: ${data.dama}
       from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
       to: "info@growmore.one",
       bcc: "info@growmoreimmigration.com",
-      subject: `DAMA Interest: ${data.contactPerson}`, // ✅ FIXED
+      subject: `DAMA Interest: ${data.contactPerson}`,
       html: emailHtml,
     });
 
@@ -107,7 +123,7 @@ DAMA Status: ${data.dama}
 
     return res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Internal server error",
     });
   }
 }
