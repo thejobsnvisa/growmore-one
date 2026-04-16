@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
-    res.setHeader("Access-Control-Allow-Origin", "*"); 
+    return res.status(403).json({ success: false, message: "Origin not allowed" });
   }
 
   res.setHeader("Vary", "Origin");
