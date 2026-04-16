@@ -1,14 +1,15 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  const allowedOrigins = [
-    "https://thejobsnvisa.github.io",
-    "https://www.growmore.one",
-    "https://growmore.one",
-    "https://www.growmore.au",
-    "https://growmore.au",
-    "https://growmore-1.vercel.app" // Added your frontend vercel domain
-  ];
+ const allowedOrigins = [
+  "https://thejobsnvisa.github.io",
+  "https://www.growmore.one",
+  "https://growmore.one",
+  "https://www.growmore.au",
+  "https://growmore.au",
+  "https://growmore.au/", // with slash
+  "https://growmore-1.vercel.app"
+];
 
   const origin = req.headers.origin;
 
