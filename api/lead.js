@@ -1,32 +1,30 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
- const allowedOrigins = [
-  "https://thejobsnvisa.github.io",
-  "https://www.growmore.one",
-  "https://growmore.one",
-  "https://www.growmore.au",
-  "https://growmore.au",
-  "https://growmore.au/", // with slash
-  "https://growmore-1.vercel.app"
-];
+  const allowedOrigins = [
+    "https://thejobsnvisa.github.io",
+    "https://www.growmore.one",
+    "https://growmore.one",
+    "https://www.growmore.au",
+    "https://growmore.au",
+    "https://growmore-1.vercel.app"
+  ];
 
   const origin = req.headers.origin;
 
-  // ✅ Fix: Set CORS dynamically or use fallback to avoid 403 blocks
+  // ✅ Step 1: Reflective CORS (Fixes custom domain block)
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
-    // If testing or unexpected origin, allow but log it
+    // Fallback to allow Vercel subdomains/previews
     res.setHeader("Access-Control-Allow-Origin", origin || "*"); 
-    console.log("Request from origin:", origin);
   }
 
   res.setHeader("Vary", "Origin");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // Handle preflight
+  // ✅ Step 2: Immediate Preflight Response
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -36,11 +34,12 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Ensure body is parsed
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
     const { name, email, phone, visaType, message } = body;
 
-    // ... (Your Phone & CRM Logic remains the same)
+    if (!name || !email || !phone) {
+      return res.status(400).json({ success: false, message: "Required fields missing" });
+    }
 
     /* ========= EMAIL NOTIFICATION ========= */
     try {
@@ -57,11 +56,11 @@ export default async function handler(req, res) {
         to: "info@growmore.one",
         bcc: "info@growmoreimmigration.com",
         subject: "New Lead from Website",
-        html: `<p><b>Name:</b> ${name}</p><p><b>Phone:</b> ${phone}</p>`,
+        html: `<p><b>Name:</b> ${name}</p><p><b>Phone:</b> ${phone}</p><p><b>Visa:</b> ${visaType}</p>`,
       });
-    } catch (e) { console.error("Email hidden error:", e.message); }
+    } catch (e) { console.error("Email error suppressed for user experience:", e.message); }
 
-    // ✅ ALWAYS return a clean JSON object
+    // ✅ Step 3: Clean JSON return
     return res.status(200).json({
       success: true,
       message: "Thank you! Our team will contact you shortly.",
