@@ -1,27 +1,30 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-const allowedOrigins = [
-  "https://thejobsnvisa.github.io",
-  "https://www.growmore.one",
-  "https://growmore.one",
-  "https://www.growmore.au",
-  "https://growmore.au"
-];
+  const allowedOrigins = [
+    "https://thejobsnvisa.github.io",
+    "https://www.growmore.one",
+    "https://growmore.one",
+    "https://www.growmore.au",
+    "https://growmore.au"
+  ];
 
-const origin = req.headers.origin;
+  const origin = req.headers.origin;
 
-if (allowedOrigins.includes(origin)) {
-  res.setHeader("Access-Control-Allow-Origin", origin);
-}
+  // ✅ ALWAYS set CORS (critical fix)
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  } else {
+    // 🔥 TEMP fallback (remove after testing)
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    console.log("Blocked Origin:", origin);
+  }
 
-res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-if (req.method === "OPTIONS") {
-  return res.status(200).end();
-}
-  // ✅ Handle preflight
+  // ✅ Handle preflight ONLY ONCE
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -34,6 +37,7 @@ if (req.method === "OPTIONS") {
     });
   }
 
+  // ❌ Only POST allowed for main logic
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -42,6 +46,7 @@ if (req.method === "OPTIONS") {
   }
 
   try {
+    // ✅ Safe body parsing
     const body =
       typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
@@ -56,7 +61,6 @@ if (req.method === "OPTIONS") {
 
     // ✅ Phone parsing
     const cleanPhone = phone.replace(/\D/g, "");
-
     let countryCode = "91";
     let phoneNumber = cleanPhone;
 
@@ -65,32 +69,27 @@ if (req.method === "OPTIONS") {
       phoneNumber = cleanPhone.slice(-10);
     }
 
-    // ✅ CRM Payload
-    const crmPayload = {
-      Name: name,
-      Email: email,
-      Phone: phoneNumber,
-      Country_Code: countryCode,
-      Inquiries: visaType || "General Inquiry",
-      Source: source || "Website Form",
-      Message: message || "",
-    };
-
-    console.log("📤 Sending to CRM:", crmPayload);
-
-    // ✅ CRM CALL
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000);
-
+    /* ========= CRM ========= */
     let crmData = null;
 
     try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 10000);
+
       const crmResponse = await fetch(
         "https://case.growmore.one/api/webhooks/website-form",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(crmPayload),
+          body: JSON.stringify({
+            Name: name,
+            Email: email,
+            Phone: phoneNumber,
+            Country_Code: countryCode,
+            Inquiries: visaType || "General Inquiry",
+            Source: source || "Website Form",
+            Message: message || "",
+          }),
           signal: controller.signal,
         }
       );
@@ -98,7 +97,6 @@ if (req.method === "OPTIONS") {
       clearTimeout(timeout);
 
       const text = await crmResponse.text();
-      console.log("📥 CRM Raw Response:", text);
 
       try {
         crmData = JSON.parse(text);
@@ -107,12 +105,13 @@ if (req.method === "OPTIONS") {
       }
 
       if (!crmResponse.ok) throw new Error(text);
+
     } catch (err) {
       console.error("❌ CRM ERROR:", err.message);
       crmData = { error: err.message };
     }
 
-    // ✅ EMAIL
+    /* ========= EMAIL ========= */
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -147,7 +146,7 @@ if (req.method === "OPTIONS") {
 
     return res.status(500).json({
       success: false,
-      message: error.message || "Something went wrong",
+      message: "Internal server error",
     });
   }
 }
