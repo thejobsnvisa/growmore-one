@@ -1,30 +1,14 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  const allowedOrigins = [
-    "https://thejobsnvisa.github.io",
-    "https://www.growmore.one",
-    "https://growmore.one",
-    "https://www.growmore.au",
-    "https://growmore.au",
-    "https://growmore-1.vercel.app"
-  ];
-
+  // ✅ DYNAMIC CORS: Trust the incoming origin
   const origin = req.headers.origin;
-
-  // ✅ Step 1: Reflective CORS (Fixes custom domain block)
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  } else {
-    // Fallback to allow Vercel subdomains/previews
-    res.setHeader("Access-Control-Allow-Origin", origin || "*"); 
-  }
-
+  res.setHeader("Access-Control-Allow-Origin", origin || "*");
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // ✅ Step 2: Immediate Preflight Response
+  // ✅ PREFLIGHT FIX: Must return 200 immediately for browser security checks
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -58,9 +42,10 @@ export default async function handler(req, res) {
         subject: "New Lead from Website",
         html: `<p><b>Name:</b> ${name}</p><p><b>Phone:</b> ${phone}</p><p><b>Visa:</b> ${visaType}</p>`,
       });
-    } catch (e) { console.error("Email error suppressed for user experience:", e.message); }
+    } catch (e) { 
+      console.error("Email hidden error:", e.message); 
+    }
 
-    // ✅ Step 3: Clean JSON return
     return res.status(200).json({
       success: true,
       message: "Thank you! Our team will contact you shortly.",
@@ -68,6 +53,6 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error("Global Error:", error);
-    return res.status(500).json({ success: false, message: "Server error. Please try again." });
+    return res.status(500).json({ success: false, message: "Internal server error" });
   }
 }
