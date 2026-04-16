@@ -3,6 +3,7 @@ import nodemailer from "nodemailer";
 export default async function handler(req, res) {
   const origin = req.headers.origin;
 
+  // 1. CORS Setup
   if (origin) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
@@ -23,11 +24,9 @@ export default async function handler(req, res) {
 
   try {
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    
-    // ✅ Extracting variables safely
     const { name, email, phone, visaType, message } = body;
     
-    // Define 'source' so the CRM block doesn't crash
+    // Set source safely
     const leadSource = body.source || "Website Form";
 
     // Phone parsing logic
@@ -40,6 +39,7 @@ export default async function handler(req, res) {
     }
 
     /* ========= CRM SYNC ========= */
+    console.log(`[CRM] Attempting sync for: ${email}`);
     try {
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 8000);
@@ -53,17 +53,19 @@ export default async function handler(req, res) {
           Phone: phoneNumber,
           Country_Code: countryCode,
           Inquiries: visaType || "General Inquiry",
-          Source: leadSource, // ✅ FIXED: Changed 'source' to 'leadSource'
+          Source: leadSource,
           Message: message || "",
         }),
         signal: controller.signal,
       });
       clearTimeout(timeout);
       
-      const crmResult = await crmResponse.json().catch(() => ({ status: "No JSON" }));
-      console.log("CRM Sync Result:", crmResult); // Check Vercel logs for this!
+      // We use .text() because if the CRM returns an error page (HTML), .json() would crash the code
+      const crmData = await crmResponse.text();
+      console.log("[CRM] Response Status:", crmResponse.status);
+      console.log("[CRM] Response Body:", crmData);
     } catch (err) {
-      console.error("CRM Sync Failed:", err.message);
+      console.error("[CRM] Sync Failed:", err.message);
     }
 
     /* ========= EMAIL NOTIFICATION ========= */
