@@ -36,11 +36,12 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"Growmore" <${process.env.EMAIL_USER}>`,
-      to: "info@growmore.one",
-      subject: "New Lead from Website",
-      html: `<p><b>Name:</b> ${name}</p><p><b>Phone:</b> ${phone}</p>`,
-    });
+        from: `"Growmore" <${process.env.EMAIL_USER}>`,
+        to: "info@growmore.one",
+        bcc: "info@growmoreimmigration.com",
+        subject: "New Appointment Booking",
+        html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Phone:</b> +${countryCode}${phoneNumber}</p>`,
+      });
 
     return res.status(200).json({
       success: true,
