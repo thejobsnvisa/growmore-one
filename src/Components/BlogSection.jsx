@@ -5,24 +5,24 @@ import { Link } from "react-router-dom";
 const blogs = [
  {
     id: 1,
-    slug: "nsw-confirms-skilled-migration-invitation-round-for-april-2026",
-    title: "NSW Confirms Skilled Migration Invitation Round for April 2026",
-    date: "April 1, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng.jpg`,
+    slug: "tasmania-state-nomination-invitations-released-16-april-2026",
+    title: "Tasmania State Nomination Invitations Released 16 April 2026",
+    date: "April 16, 2026",
+    image: `${import.meta.env.BASE_URL}assets/11.png`,
   },
    {
     id: 2,
-    slug: "final-call-act-canberra-matrix-final-round-expected-in-may",
-    title: "ACT Canberra Matrix Final Round Expected in May 2026",
-    date: "March 30, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng.1.jpg`,
+    slug: "new-immigration-policy-proposal-what-s-ahead",
+    title: "New Immigration Policy Proposal: What’s Ahead?",
+    date: "April 15, 2026",
+    image: `${import.meta.env.BASE_URL}assets/12.png`,
   },
    {
     id: 3,
-    slug: "nsw-becomes-new-skills-assessment-authority-for-surveyor-anzsco-232212",
-    title: "NSW Becomes New Skills Assessment Authority for Surveyor (ANZSCO 232212)",
-    date: "March 28, 2026",
-    image: `${import.meta.env.BASE_URL}assets/ng0.jpg`,
+    slug: "victoria-skilled-visa-closing-soon-roi-deadline-28-april-2026",
+    title: "Victoria Skilled Visa Closing Soon | ROI Deadline 28 April 2026",
+    date: "April 13, 2026",
+    image: `${import.meta.env.BASE_URL}assets/13.png`,
   },
 ];
 
