@@ -1,32 +1,35 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-const allowedOrigins = [
-  "https://thejobsnvisa.github.io",
-  "https://www.growmore.one",
-  "https://growmore.one",
-  "https://www.growmore.au",
-  "https://growmore.au"
-];
+  const allowedOrigins = [
+    "https://thejobsnvisa.github.io",
+    "https://www.growmore.one",
+    "https://growmore.one",
+    "https://www.growmore.au",
+    "https://growmore.au"
+  ];
 
-const origin = req.headers.origin;
+  const origin = req.headers.origin;
 
-if (allowedOrigins.includes(origin)) {
-  res.setHeader("Access-Control-Allow-Origin", origin);
-}
+  // ✅ Always set CORS FIRST
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  } else {
+    // 🔥 TEMP fallback (remove later if needed)
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    console.log("Blocked Origin:", origin);
+  }
 
-res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-if (req.method === "OPTIONS") {
-  return res.status(200).end();
-}
-
-  // ✅ IMPORTANT: Handle preflight request
+  // ✅ Handle preflight (ONLY ONCE)
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
+  // ❌ Allow only POST
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -35,7 +38,9 @@ if (req.method === "OPTIONS") {
   }
 
   try {
-    const data = req.body;
+    // ✅ Safe body parsing
+    const data =
+      typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
     // ✅ Validation
     if (!data.fullName || !data.email || !data.captchaToken) {
@@ -46,27 +51,33 @@ if (req.method === "OPTIONS") {
     }
 
     /* ========= CRM Integration ========= */
-    const crmBody = new URLSearchParams({
-      Name: data.fullName,
-      Email: data.email,
-      Phone: data.phone || "",
-      Country: data.country || "",
-      Inquiries: "GSM Visa Eligibility Assessment",
-      Source: "Website GSM Form",
-      Message: `
+    try {
+      const crmBody = new URLSearchParams({
+        Name: data.fullName,
+        Email: data.email,
+        Phone: data.phone || "",
+        Country: data.country || "",
+        Inquiries: "GSM Visa Eligibility Assessment",
+        Source: "Website GSM Form",
+        Message: `
 Occupation: ${data.occupation}
 Qualification: ${data.qualification}
 Points: ${data.estimatedPoints}
 Location: ${data.location}
 Comments: ${data.comments || "None"}
-      `.trim(),
-    });
+        `.trim(),
+      });
 
-    fetch("https://leads.growmore.one/api/website-form", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: crmBody.toString(),
-    }).catch((err) => console.error("CRM Error:", err));
+      await fetch("https://leads.growmore.one/api/website-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: crmBody.toString(),
+      });
+    } catch (crmError) {
+      console.error("CRM Error:", crmError);
+    }
 
     /* ========= EMAIL ========= */
     const transporter = nodemailer.createTransport({
@@ -114,7 +125,7 @@ Comments: ${data.comments || "None"}
       from: `"Growmore Immigration" <${process.env.EMAIL_USER}>`,
       to: "info@growmore.one",
       bcc: "info@growmoreimmigration.com",
-      subject: `GSM Lead: ${data.fullName} (${data.occupation})`, // ✅ fixed title
+      subject: `GSM Lead: ${data.fullName} (${data.occupation})`,
       html: emailHtml,
     });
 
@@ -128,7 +139,7 @@ Comments: ${data.comments || "None"}
 
     return res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Internal server error",
     });
   }
 }
