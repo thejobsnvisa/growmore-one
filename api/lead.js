@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 export default async function handler(req, res) {
   const origin = req.headers.origin;
 
-  // ✅ Step 1: Dynamic Reflection (Must be exactly what the browser sends)
+  // ✅ Step 1: CORS Headers
   if (origin) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
@@ -13,9 +13,8 @@ export default async function handler(req, res) {
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Max-Age", "86400"); // Cache preflight for 24h
+  res.setHeader("Access-Control-Max-Age", "86400");
 
-  // ✅ Step 2: Immediate Preflight Return
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -25,23 +24,36 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Standardize body parsing
+    // ✅ Safety check for body parsing
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+    
+    // Make sure these match exactly what your frontend sends
     const { name, email, phone, visaType, message } = body;
 
-    // Your Nodemailer logic...
+    // ✅ Step 2: Nodemailer Setup
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
+      auth: { 
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS 
+      },
     });
 
     await transporter.sendMail({
-        from: `"Growmore" <${process.env.EMAIL_USER}>`,
-        to: "info@growmore.one",
-        bcc: "info@growmoreimmigration.com",
-        subject: "New Appointment Booking",
-        html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Phone:</b> +${countryCode}${phoneNumber}</p>`,
-      });
+      from: `"Growmore" <${process.env.EMAIL_USER}>`,
+      to: "info@growmore.one",
+      bcc: "info@growmoreimmigration.com",
+      subject: "New Appointment Booking",
+      // ✅ FIXED: Using the 'phone' variable extracted from body above
+      html: `
+        <h3>New Lead Details</h3>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Visa Type:</b> ${visaType || 'Not specified'}</p>
+        <p><b>Message:</b> ${message || 'No message'}</p>
+      `,
+    });
 
     return res.status(200).json({
       success: true,
@@ -49,7 +61,12 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    console.error("API Error:", error);
-    return res.status(500).json({ success: false, message: "Internal Server Error" });
+    // This logs the ACTUAL error to your Vercel Dashboard logs
+    console.error("API Error:", error.message);
+    return res.status(500).json({ 
+      success: false, 
+      message: "Internal Server Error", 
+      error: error.message 
+    });
   }
 }
