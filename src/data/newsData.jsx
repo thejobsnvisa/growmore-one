@@ -1,6 +1,13 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
+   {
+    id: 25,
+    slug: "nsw-190-invitation-round-selective-invites-issued-16-april-test",
+    title: "NSW 190 Invitation Round: Selective Invites Issued 16 April",
+    date: "April 16, 2026",
+    image: `${base}assets/14.png`,
+  },
   {
     id: 24,
     slug: "nsw-190-invitation-round-selective-invites-issued-16-april",
