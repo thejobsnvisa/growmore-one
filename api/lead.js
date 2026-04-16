@@ -29,6 +29,39 @@ export default async function handler(req, res) {
     
     // Make sure these match exactly what your frontend sends
     const { name, email, phone, visaType, message } = body;
+      // Phone parsing logic
+    const cleanPhone = phone.replace(/\D/g, "");
+    let countryCode = "91";
+    let phoneNumber = cleanPhone;
+    if (cleanPhone.length > 10) {
+      countryCode = cleanPhone.slice(0, cleanPhone.length - 10);
+      phoneNumber = cleanPhone.slice(-10);
+    }
+
+    /* ========= CRM SYNC ========= */
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
+
+      const crmResponse = await fetch("https://case.growmore.one/api/webhooks/website-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Phone: phoneNumber,
+          Country_Code: countryCode,
+          Inquiries: visaType || "General Inquiry",
+          Source: source || "Website Form",
+          Message: message || "",
+        }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeout);
+      await crmResponse.json().catch(() => ({ status: "No JSON response" }));
+    } catch (err) {
+      console.error("CRM Error:", err.message);
+    }
 
     // ✅ Step 2: Nodemailer Setup
     const transporter = nodemailer.createTransport({
