@@ -3,7 +3,6 @@ import nodemailer from "nodemailer";
 export default async function handler(req, res) {
   const origin = req.headers.origin;
 
-  // ✅ Step 1: CORS Headers
   if (origin) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
@@ -13,7 +12,6 @@ export default async function handler(req, res) {
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Max-Age", "86400");
 
   if (req.method === "OPTIONS") {
     return res.status(200).end();
@@ -24,13 +22,16 @@ export default async function handler(req, res) {
   }
 
   try {
-    // ✅ Safety check for body parsing
     const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
     
-    // Make sure these match exactly what your frontend sends
+    // ✅ Extracting variables safely
     const { name, email, phone, visaType, message } = body;
-      // Phone parsing logic
-    const cleanPhone = phone.replace(/\D/g, "");
+    
+    // Define 'source' so the CRM block doesn't crash
+    const leadSource = body.source || "Website Form";
+
+    // Phone parsing logic
+    const cleanPhone = phone ? phone.replace(/\D/g, "") : "";
     let countryCode = "91";
     let phoneNumber = cleanPhone;
     if (cleanPhone.length > 10) {
@@ -52,18 +53,20 @@ export default async function handler(req, res) {
           Phone: phoneNumber,
           Country_Code: countryCode,
           Inquiries: visaType || "General Inquiry",
-          Source: source || "Website Form",
+          Source: leadSource, // ✅ FIXED: Changed 'source' to 'leadSource'
           Message: message || "",
         }),
         signal: controller.signal,
       });
       clearTimeout(timeout);
-      await crmResponse.json().catch(() => ({ status: "No JSON response" }));
+      
+      const crmResult = await crmResponse.json().catch(() => ({ status: "No JSON" }));
+      console.log("CRM Sync Result:", crmResult); // Check Vercel logs for this!
     } catch (err) {
-      console.error("CRM Error:", err.message);
+      console.error("CRM Sync Failed:", err.message);
     }
 
-    // ✅ Step 2: Nodemailer Setup
+    /* ========= EMAIL NOTIFICATION ========= */
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { 
@@ -77,7 +80,6 @@ export default async function handler(req, res) {
       to: "info@growmore.one",
       bcc: "info@growmoreimmigration.com",
       subject: "New Appointment Booking",
-      // ✅ FIXED: Using the 'phone' variable extracted from body above
       html: `
         <h3>New Lead Details</h3>
         <p><b>Name:</b> ${name}</p>
@@ -94,8 +96,7 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    // This logs the ACTUAL error to your Vercel Dashboard logs
-    console.error("API Error:", error.message);
+    console.error("Critical API Error:", error.message);
     return res.status(500).json({ 
       success: false, 
       message: "Internal Server Error", 
