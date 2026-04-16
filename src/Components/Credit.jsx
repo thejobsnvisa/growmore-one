@@ -31,7 +31,7 @@ export default function Credit({ updateScore, nextStep, prevStep }) {
       </div>
 
       {/* YES */}
-      <label className={`option ${selected === "10" ? "active" : ""}`}>
+      <label className={`option ${selected === "5" ? "active" : ""}`}>
         <input
           type="CHECKBOX"
           name="community"
