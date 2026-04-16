@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 
 const blogs = [
  {
+    id: 0,
+    slug: "nsw-190-invitation-round-selective-invites-issued-16-april",
+    title: "NSW 190 Invitation Round: Selective Invites Issued 16 April",
+    date: "April 16, 2026",
+    image: `${import.meta.env.BASE_URL}assets/14.png`,
+  },
+  {
     id: 1,
     slug: "tasmania-state-nomination-invitations-released-16-april-2026",
     title: "Tasmania State Nomination Invitations Released 16 April 2026",
@@ -17,13 +24,7 @@ const blogs = [
     date: "April 15, 2026",
     image: `${import.meta.env.BASE_URL}assets/12.png`,
   },
-   {
-    id: 3,
-    slug: "victoria-skilled-visa-closing-soon-roi-deadline-28-april-2026",
-    title: "Victoria Skilled Visa Closing Soon | ROI Deadline 28 April 2026",
-    date: "April 13, 2026",
-    image: `${import.meta.env.BASE_URL}assets/13.png`,
-  },
+   
 ];
 
 const BlogSection = () => {
