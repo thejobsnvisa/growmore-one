@@ -1,6 +1,13 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
+    {
+    id: 25,
+    slug: "parent-visa-paper-applications-to-shift-online-from-22-april-2026",
+    title: "Major Change in Parents Visa Application - Now You Can Apply Online",
+    date: "April 16, 2026",
+    image: `${base}assets/25.png`,
+  },
   {
     id: 24,
     slug: "nsw-190-invitation-round-selective-invites-issued-16-april",
