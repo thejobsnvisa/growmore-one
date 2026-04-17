@@ -6,7 +6,7 @@ export const blogs = [
     slug: "australia-opens-subclass-192-tuvalu-ballot-on-1-may-with-280-places",
     title: "Australia Opens Subclass 192 Tuvalu Ballot on 1 May With 280 Places",
     date: "April 17, 2026",
-    image: `${base}assets/26.png`,
+    image: `${base}assets/26.jpg`,
   },  
   {
     id: 25,
