@@ -2,9 +2,10 @@
 <html>
   <head>
     <script>
-      // prevent loop
+      const path = window.location.pathname;
+
+      // Only redirect if not already processed
       if (!window.location.search.includes("p=")) {
-        const path = window.location.pathname;
         window.location.replace(
           "/?p=" + path.replace(/\//g, "~and~")
         );
