@@ -112,10 +112,11 @@ Strong connections with Australian employers</li>
           <p className="text-[#727272] mb-3 text-justify">
          Stay connected with Growmore Immigration for the latest tips, news, and expert insights on migrating to Australia. Follow us on social media and be a valuable part of our community.
           </p>
-
+<Link to="/book-consultation">
             <button className="bg-[#6dc7d1] text-white  rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
-            Book Consultation →
-          </button>
+              Book Consultation →
+            </button>
+          </Link>
         </div>
       </section>
     </div>

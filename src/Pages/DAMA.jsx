@@ -109,9 +109,11 @@ const DAMA = () => {
             us on social media and get the reliable tips that you can trust.
           </p>
 
-          <button className="bg-[#6dc7d1] text-white  rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
-            Book Consultation →
-          </button>
+          <Link to="/book-consultation">
+            <button className="bg-[#6dc7d1] text-white  rounded-full  hover:bg-black transition whitespace-nowrap px-7 py-4 font-base text-sm">
+              Book Consultation →
+            </button>
+          </Link>
         </div>
       </section>
     </div>

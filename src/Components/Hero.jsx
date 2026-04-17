@@ -4,8 +4,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 // 1. Added Toast Imports
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Hero = () => {
   const recaptchaRef = useRef(null);
@@ -72,16 +72,14 @@ const Hero = () => {
         captchaToken: token,
         source: "Website Hero Form",
       };
- const BASE_URL = "https://growmore-1.vercel.app";
-     const response = await fetch(`${BASE_URL}/api/lead`,
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  }
-);
+      const BASE_URL = "https://growmore-1.vercel.app";
+      const response = await fetch(`${BASE_URL}/api/lead`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
       const result = await response.json();
 
       if (result.success) {
@@ -100,26 +98,25 @@ const Hero = () => {
   };
 
   return (
-  <section
-  style={{
-    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img2.png)`
-  }}
->
+    <section
+      style={{
+        backgroundImage: `url(${import.meta.env.BASE_URL}assets/img2.png)`,
+      }}
+    >
       {/* Dark Overlay */}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-8 xl:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
         {/* LEFT CONTENT */}
-        <div className="text-white text-center lg:text-left lg:w-[1200px]">
+        <div className="text-white text-center lg:text-left lg:w-full xl:w-[1200px] ">
+          {" "}
           <h2 className="text-xs sm:text-sm font-bold tracking-widest text-[#5DC2D3] uppercase mb-4">
             Welcome to Growmore Immigration
           </h2>
-
           <h1 className="text-3xl sm:text-4xl lg:text-4xl font-semibold leading-tight mb-6">
             The Best Immigration Consulting Services{" "}
             <br className="hidden sm:block" />
             for a Smooth Move to Australia
           </h1>
-
           <p className="text-base sm:text-lg mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
             Start your journey to a new life in Australia with{" "}
             <span className="text-[#8fd07c] font-semibold underline decoration-white">
@@ -134,12 +131,10 @@ const Hero = () => {
               Registered Migration Agents.
             </span>
           </p>
-
           <h3 className="text-[#8fd07c] font-bold text-xl sm:text-2xl mb-8 min-h-[40px]">
             {displayText}
             <span className="border-r-3 border-[#8fd07c] animate-pulse ml-1"></span>
           </h3>
-
           <div>
             <Link to="/who-we-are">
               <button className="bg-[#6dc7d1] px-8 py-3 rounded-full text-sm sm:text-base hover:bg-black transition duration-300">
