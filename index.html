@@ -15,20 +15,18 @@
     <title>
       Best Australia PR Immigration Consultant & Migration Agents Melbourne
     </title>
- <script>
-  (function () {
-    const url = new URL(window.location.href);
+    <script>
+      (function () {
+        const url = new URL(window.location.href);
 
-    // ✅ Only run if p exists AND we haven't already cleaned URL
-    if (url.searchParams.has("p") && !sessionStorage.getItem("redirected")) {
-      sessionStorage.setItem("redirected", "true");
+        if (url.searchParams.has("p")) {
+          const path = url.searchParams.get("p").replace(/~and~/g, "/");
 
-      const path = url.searchParams.get("p").replace(/~and~/g, "/");
-
-      window.history.replaceState(null, "", path || "/");
-    }
-  })();
-</script>
+          // Clean URL immediately
+          window.history.replaceState(null, "", path || "/");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
