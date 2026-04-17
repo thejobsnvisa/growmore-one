@@ -2,6 +2,13 @@ const base = import.meta.env.BASE_URL;
 
 export const blogs = [
    {
+    id: 26,
+    slug: "australia-opens-subclass-192-tuvalu-ballot-on-1-may-with-280-places",
+    title: "Australia Opens Subclass 192 Tuvalu Ballot on 1 May With 280 Places",
+    date: "April 17, 2026",
+    image: `${base}assets/26.png`,
+  }, 
+  {
     id: 25,
     slug: "parent-visa-paper-applications-to-shift-online-from-22-april-2026",
     title: "Major Change in Parents Visa Application - Now You Can Apply Online",
