@@ -15,48 +15,23 @@
     <title>
       Best Australia PR Immigration Consultant & Migration Agents Melbourne
     </title>
-    <script type="text/javascript">
-      {""}
-      (function (l) {
-        // This checks if the redirect parameter 'p=/' exists anywhere in the URL search string
-        if (l.search.indexOf("p=/") !== -1) {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .filter(function (s) {
-              return s.slice(0, 2) === "p=";
-            })[0];
+ <script>
+  (function () {
+    const url = new URL(window.location.href);
 
-          if (decoded) {
-            var newPath = decoded.slice(2);
+    // ✅ Only run if p exists AND we haven't already cleaned URL
+    if (url.searchParams.has("p") && !sessionStorage.getItem("redirected")) {
+      sessionStorage.setItem("redirected", "true");
 
-            // This is the magic: it wipes the '?p=' and restores the clean URL
-            // before React Router even starts.
-            window.history.replaceState(
-              null,
-              null,
-              l.pathname.slice(0, -1) +
-                newPath +
-                (
-                  l.search.split("&").filter(function (s) {
-                    return s.slice(0, 2) === "q=";
-                  })[0] || ""
-                )
-                  .slice(2)
-                  .replace(/~and~/g, "&") +
-                l.hash,
-            );
-          }
-        }
-      })(window.location);
-    </script>
+      const path = url.searchParams.get("p").replace(/~and~/g, "/");
+
+      window.history.replaceState(null, "", path || "/");
+    }
+  })();
+</script>
     <script type="module" crossorigin src="/assets/index-ex_DHa4_.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-4F2Df0qd.css">
   </head>
-
   <body>
     <div id="root"></div>
   </body>
