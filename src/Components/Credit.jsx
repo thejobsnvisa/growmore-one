@@ -35,8 +35,8 @@ export default function Credit({ updateScore, nextStep, prevStep }) {
         <input
           type="CHECKBOX"
           name="community"
-          checked={selected === "10"}
-          onChange={() => selectCommunity("10", 10)}
+          checked={selected === "5"}
+          onChange={() => selectCommunity("5", 5)}
         />
         <span>Yes</span>
       </label>
