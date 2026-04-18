@@ -25,99 +25,99 @@ const IndividualVisaHoliday = () => {
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Left Column */}
-             <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 md:h-240 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
-              <div className="space-y-5">
-                <Link to="/our-services/employers/standard-business-sponsorship/">
-                  <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      Employer Sponsored Visa Australia Requirements
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B] transition-colors duration-300" />
-                  </div>
-                </Link>
-
-                <Link to="/our-services/individual/general-skilled-visa/">
-                  <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      General Skilled Migration Visa (GSM Visa) & Skilled Worker
-                      Visa Australia
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-
-                <Link to="/our-services/individual/student-guardian-visa/">
-                  <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      How to Apply Student Guardian Visa in Australia
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-
-                <Link to="/our-services/individual/family-visa/">
-                  {" "}
-                  <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      What is a Family Visa?
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-
-                <Link to="/our-services/individual/temporary-work-short-stay-visa/">
-                  <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      Temporary Work Visa (Subclass 400) and Short Stay Visa
-                      Specialist
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-
-                <Link to="/our-services/individual/global-talent-visa/">
-                  <div className="group flex  mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      Apply For the Global Talent Visa
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-
-                <Link to="/our-services/individual/visitor-evisitor-eta-visa/">
-                  <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      What is the Electronic Travel Authority ETA for e-Visa?
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-                <Link to="/our-services/employers/labour-market-testing-lmt-for-sc494-and-sc482-visas/">
-                  <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      Business Investment Visa & Innovation Visa
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-                <Link to="/our-services/employers/labour-market-testing-lmt-for-sc494-and-sc482-visas/">
-                  <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      Refugee & Humanitarian Visa Program
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-                <Link to="/our-services/individual/student-guardian-visa/">
-                  <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
-                    <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
-                      Working Holiday Visa Australia (Subclasses 462)
-                    </span>
-                    <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
-                  </div>
-                </Link>
-              </div>
-            </div>
+                 <div className="bg-[#eff9fb] p-6 rounded-3xl md:col-span-1 w-full sm:h-100 md:h-240 lg:h-220 md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
+                         <div className="space-y-5">
+                           <Link to="/our-services/individual/employer-sponsored-visa/">
+                             <div className="group flex  items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 Employer Sponsored Visa Australia Requirements
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B] transition-colors duration-300" />
+                             </div>
+                           </Link>
+           
+                           <Link to="/our-services/individual/general-skilled-visa/">
+                             <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 General Skilled Migration Visa (GSM Visa) & Skilled Worker
+                                 Visa Australia
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+           
+                           <Link to="/our-services/individual/student-guardian-visa/">
+                             <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 How to Apply Student Guardian Visa in Australia
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+           
+                           <Link to="/our-services/individual/family-visa/">
+                             {" "}
+                             <div className="group flex mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 What is a Family Visa?
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+           
+                           <Link to="/our-services/individual/temporary-work-short-stay-visa/">
+                             <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 Temporary Work Visa (Subclass 400) and Short Stay Visa
+                                 Specialist
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+           
+                           <Link to="/our-services/individual/global-talent-visa/">
+                             <div className="group flex  mt-3 items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 Apply For the Global Talent Visa
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+           
+                           <Link to="/our-services/individual/visitor-evisitor-eta-visa/">
+                             <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 What is the Electronic Travel Authority ETA for e-Visa?
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+                           <Link to="/our-services/individual/business-investor-visa/">
+                             <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 Business Investment Visa & Innovation Visa
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+                           <Link to="/our-services/individual/refugee-visa/">
+                             <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 Refugee & Humanitarian Visa Program
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+                           <Link to="/our-services/individual/working-holiday-work-holiday-visa/">
+                             <div className="group mt-3 flex items-center justify-between gap-6 bg-white px-5 py-4  rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-md">
+                               <span className="flex-1 text-[#28535B]  font-semibold group-hover:text-[#5dc2d3] transition-colors duration-300">
+                                 Working Holiday Visa Australia (Subclasses 462)
+                               </span>
+                               <IoIosArrowDroprightCircle className="text-green-500 text-3xl group-hover:text-[#28535B]" />
+                             </div>
+                           </Link>
+                         </div>
+                       </div>
             {/* Right Column */}
  <div className="md:col-span-2 pl-6 sm:pl-40 lg:pl-45">              {" "}
               <h3 className="text-xl sm:text-2xl font-semibold text-[#28535B] ">
