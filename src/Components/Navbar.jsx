@@ -334,7 +334,7 @@ const Navbar = () => {
                   Videos
                 </Link>
                 <Link to="/news" onClick={closeAll} className="block px-4 py-2 rounded-lg hover:bg-[#8FD07D] hover:text-white">
-                  Blogs
+                  News
                 </Link>
                 <Link to="/blogs" onClick={closeAll} className="block px-4 py-2 rounded-lg hover:bg-[#8FD07D] hover:text-white">
                   Blogs
