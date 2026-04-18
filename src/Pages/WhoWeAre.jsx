@@ -3,18 +3,35 @@ import { Check } from "lucide-react";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import Teams from "../Components/Teams";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
-
+import { Helmet } from "react-helmet-async";
 const WhoWeAre = () => {
   return (
     <>
       <Helmet>
         <title>Who we are - GrowMore Immigration</title>
+
         <meta
           name="description"
           content="GrowMore Immigration — your trusted partner for Australian visa and migration services. Learn about our mission, expert team, and commitment to client success."
         />
+
         <link rel="canonical" href="https://www.growmore.one/who-we-are" />
+
+        {/* ✅ Open Graph */}
+        <meta property="og:title" content="Who we are - GrowMore Immigration" />
+        <meta
+          property="og:description"
+          content="Learn about GrowMore Immigration, our mission, expert team, and commitment to helping clients achieve their migration goals."
+        />
+        <meta property="og:url" content="https://www.growmore.one/who-we-are" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.growmore.one/assets/g1.png"
+        />
+
+        {/* ✅ Twitter (optional but good) */}
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="w-full bg-white">
         {/* ================= HEADER BANNER ================= */}
