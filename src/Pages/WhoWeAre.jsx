@@ -4,31 +4,37 @@ import WhyChooseUs from "../Components/WhyChooseUs";
 import Teams from "../Components/Teams";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+
 const WhoWeAre = () => {
-    const url = window.location.href;
+  const url = "https://www.growmore.one/who-we-are"; // ✅ clean canonical
 
   return (
     <>
-       <Helmet>
+      <Helmet>
+        {/* ✅ Title */}
         <title>Who We Are - Growmore Immigration</title>
 
+        {/* ✅ Description (shortened for SEO) */}
         <meta
           name="description"
           content="GrowMore Immigration — your trusted partner for Australian visa and migration services. Learn about our mission, expert team, and commitment to client success."
         />
 
-        {/* ✅ Dynamic Canonical */}
+        {/* ✅ Canonical */}
         <link rel="canonical" href={url} />
 
         {/* ✅ Open Graph */}
-        <meta property="og:title" content="Who We Are | Growmore Immigration" />
+        <meta property="og:title" content="Who We Are - Growmore Immigration" />
         <meta
           property="og:description"
-          content="Discover Growmore Immigration's mission, leadership, and expertise in Australian visa and PR services."
+          content="GrowMore Immigration — your trusted partner for Australian visa and migration services. Learn about our mission, expert team, and commitment to client success."
         />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.growmore.one/assets/g1.png" />
+        <meta
+          property="og:image"
+          content="https://www.growmore.one/assets/g1.png"
+        />
 
         {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
