@@ -17,7 +17,7 @@ const WhoWeAre = () => {
         {/* ✅ Meta Description */}
         <meta
           name="description"
-          content="Learn about Growmore Immigration, Australia PR consultants in Melbourne offering expert guidance for skilled migration, PR visas, and visa services."
+          content="GrowMore Immigration — your trusted partner for Australian visa and migration services. Learn about our mission, expert team, and commitment to client success."
         />
 
         {/* ✅ Canonical */}
