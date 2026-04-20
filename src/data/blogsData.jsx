@@ -1,12 +1,5 @@
 export const blogs = [
   {
-    id: 17,
-    slug: "which-australian-visa-should-you-choose-3-questions-to-decide",
-    title: "Which Australian Visa Is Right? 3 Questions to Decide",
-    date: "March 31, 2026",
-    image: `${import.meta.env.BASE_URL}assets/bg.jpg`,
-  }, 
-  {
     id: 16,
     slug: "which-australian-visa-should-you-choose-3-questions-to-decide",
     title: "Which Australian Visa Is Right? 3 Questions to Decide",
