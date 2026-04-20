@@ -42,11 +42,11 @@ Before you begin preparing your skills assessment application, it is important t
 IML evaluates applicants based on multiple factors, which include leadership and strategic decision-making capability, level of managerial responsibility, organisational impact, reporting structure, and career progression.
 
 Applicants must demonstrate these capabilities through:
-•	Relevant academic qualifications 
-•	Detailed employment reference letters 
-•	Organisational charts 
-•	Position descriptions 
-•	IML Management Competency Framework Written Responses
+- Relevant academic qualifications 
+- Detailed employment reference letters 
+- Organisational charts 
+- Position descriptions 
+- IML Management Competency Framework Written Responses
 
 This is the stage when mainly weak or unclear evidence can significantly reduce your chances of approval.
 
@@ -55,40 +55,42 @@ This is the stage when mainly weak or unclear evidence can significantly reduce 
 A strong IML application depends heavily on clear, detailed, and consistent documentation.
 
 Commonly required documents include:
-•	Passport and identity documents 
-•	Updated Curriculum Vitae (CV) 
-•	Academic qualifications 
-•	Academic transcripts 
-•	Employment reference letters 
-•	Detailed position descriptions 
-•	Two referees 
-•	Organisational charts showing reporting structure 
-•	IML Management Competency Framework Written Responses 
+
+- Passport and identity documents 
+- Updated Curriculum Vitae (CV) 
+- Academic qualifications 
+- Academic transcripts 
+- Employment reference letters 
+- Detailed position descriptions 
+- Two referees 
+- Organisational charts showing reporting structure 
+- IML Management Competency Framework Written Responses 
 
 ## IML Management Competency Framework Written Response
 
 As part of the IML skills assessment, applicants must complete a Management Competency Framework written response. This is a key requirement where you need to showcase your leadership experience using real examples from your professional career.
 
-•	Managing and Leading Self
-•	Managing and Leading Others
-•	Managing and Leading the Business
+- Managing and Leading Self
+- Managing and Leading Others
+- Managing and Leading the Business
 
 Each response must be based on actual workplace situations that clearly highlight your leadership role and decision-making involvement. Typically, each example should not exceed 500 words and should focus on demonstrating how you operated in a senior management capacity.
 
 IML also recommends using a structured format such as the STAR method:
-•	Situation 
-•	Task 
-•	Action 
-•	Result 
-•	Reflection
+
+- Situation 
+- Task 
+- Action 
+- Result 
+- Reflection
 
 ## Lodge the Application
 
 Once all documents are prepared, you can submit your application online through the IML portal, and the authority will review it.  After reviewing, IML may issue one of the following outcomes:
 
-•	Positive skills assessment
-•	Negative outcome
-•	Request for further information
+- Positive skills assessment
+- Negative outcome
+- Request for further information
 
 A positive skills assessment is generally valid for three years and can be used to proceed with your Australian visa application.
 
@@ -110,10 +112,10 @@ Here is the detailed breakdown for IML skills assessment fees, which are non-ref
 
 **Based on common application challenges, the most frequent issues include:**
 
-•	Overstating managerial responsibilities without evidence 
-•	Weak or generic employment reference letters 
-•	Misalignment between the ANZSCO occupation and duties 
-•	Limited evidence of senior-level decision-making
+- Overstating managerial responsibilities without evidence 
+- Weak or generic employment reference letters 
+- Misalignment between the ANZSCO occupation and duties 
+- Limited evidence of senior-level decision-making
 
 ## Need Expert Help with Your Skills Assessment?
 
