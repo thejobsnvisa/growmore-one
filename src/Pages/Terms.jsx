@@ -1,7 +1,34 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Terms = () => {
+      const url = "https://www.growmore.one/terms-services";
+
   return (
+   <>
+   <Helmet>
+           <title>Terms & Services - GrowMore Immigration</title>
+   
+           <meta
+             name="description"
+             content="The Terms & Services of GrowMore Immigration. Understand our policies, user responsibilities, and legal guidelines for using our migration services and website."
+           />
+   
+           {/* ✅ Canonical for homepage */}
+           <link rel="canonical" href={url} />
+   
+           {/* ✅ OG */}
+           <meta
+             property="og:title"
+             content="Terms & Services - GrowMore Immigration"
+           />
+           <meta
+             property="og:description"
+             content="The Terms & Services of GrowMore Immigration. Understand our policies, user responsibilities, and legal guidelines for using our migration services and website."
+           />
+           <meta property="og:url" content={url} />
+           <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+         </Helmet>
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
       <section className="bg-[#28535B] py-10 md:py-16">
@@ -247,6 +274,7 @@ const Terms = () => {
         </p>
       </section>
     </div>
+   </>
   );
 };
 

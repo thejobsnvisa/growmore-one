@@ -12,8 +12,11 @@ import PartnerQualificationStep from "../Components/PartnerQualificationStep";
 import ProfessionalStep from "../Components/ProfessionalStep";
 import FinalResult from "../Components/FinalResult";
 import ScorePanel from "../Components/ScorePanel";
+import { Helmet } from "react-helmet-async";
 
 export default function PointsCalculator() {
+    const url = "https://www.growmore.one/points-calculator";
+
   /* ---------------- STEP CONTROLLER ---------------- */ const [
     step,
     setStep,
@@ -60,6 +63,30 @@ export default function PointsCalculator() {
   /* ---------------- TOTAL POINTS ---------------- */ const totalScore =
     Object.values(scores).reduce((sum, val) => sum + (val || 0), 0);
   return (
+    <>
+      <Helmet>
+                <title>Skilled Visa (PR) Points Test Calculator | GrowMore Immigration</title>
+        
+                <meta
+                  name="description"
+                  content="Use Growmore Immigration's Points Test Calculator to determine your eligibility for an Australian skilled permanent residence visa. Determine your score right away and look into your migration choices."
+                />
+        
+                {/* ✅ Canonical for homepage */}
+                <link rel="canonical" href={url} />
+        
+                {/* ✅ OG */}
+                <meta
+                  property="og:title"
+                  content="Skilled Visa (PR) Points Test Calculator | GrowMore Immigration"
+                />
+                <meta
+                  property="og:description"
+                  content="Use Growmore Immigration's Points Test Calculator to determine your eligibility for an Australian skilled permanent residence visa. Determine your score right away and look into your migration choices."
+                />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+              </Helmet>
     <div className="w-full">
       {/* ================= HEADER BANNER ================= */}
       <section className="bg-[#28535B] py-16 md:py-20">
@@ -194,5 +221,6 @@ export default function PointsCalculator() {
         </p>
       </div>
     </div>
+    </>
   );
 }
