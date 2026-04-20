@@ -1,9 +1,35 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const IndividualVisaEmployer = () => {
+  const url = "https://www.growmore.one/our-services/individual/employer-sponsored-visa/";
   return (
+  <>
+  <Helmet>
+              <title>Employer Sponsored visas | Working visa Australia | GrowMore Immigration</title>
+      
+              <meta
+                name="description"
+                content="Are you looking for an immigration consultant to help you apply for a temporary or permanent Employer Sponsored visa to work in Australia? Choose GrowMore for expert advice and total peace of mind."
+              />
+      
+              {/* ✅ Canonical for homepage */}
+              <link rel="canonical" href={url} />
+      
+              {/* ✅ OG */}
+              <meta
+                property="og:title"
+                content="Employer Sponsored visas | Working visa Australia | GrowMore Immigration"
+              />
+              <meta
+                property="og:description"
+                content="Are you looking for an immigration consultant to help you apply for a temporary or permanent Employer Sponsored visa to work in Australia? Choose GrowMore for expert advice and total peace of mind."
+              />
+              <meta property="og:url" content={url} />
+              <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+            </Helmet>
     <div>
       <div>
         <section className="bg-[#28535B] py-12 sm:py-16">
@@ -218,6 +244,7 @@ const IndividualVisaEmployer = () => {
         </section>
       </div>
     </div>
+  </>
   );
 };
 
