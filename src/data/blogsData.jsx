@@ -1,5 +1,13 @@
 export const blogs = [
   {
+    id: 17,
+    slug: "iml-skills-assessment-key-step-for-senior-managers-migrating-to-australia",
+    title: "IML Skills Assessment: Key Step for Senior Managers Migrating to Australia",
+    date: "April 20, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg17.png`,
+  }, 
+ 
+  {
     id: 16,
     slug: "which-australian-visa-should-you-choose-3-questions-to-decide",
     title: "Which Australian Visa Is Right? 3 Questions to Decide",
