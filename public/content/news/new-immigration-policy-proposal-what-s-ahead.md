@@ -6,7 +6,7 @@ The proposed changes focus on tighter screening processes, stronger visa conditi
 
 For students, skilled workers, and families planning their migration journey, this information is important to watch closely. It signals a possible shift in how future visa applications and approvals could be assessed.
 
-**What is the Policy Proposal?**
+## **What is the Policy Proposal?**
 
 The Coalition's proposed immigration plan focuses on tighter monitoring, stronger screening, and stricter visa conditions.
 
@@ -17,9 +17,9 @@ However, it's crucial to understand:
 
 This means nothing changes immediately, but the direction of future migration policy could shift.
 
-**Key Highlights of the Proposed Immigration Policy**
+## Key Highlights of the Proposed Immigration Policy**
 
-- **Stronger Australian Values Visa Conditions**
+### **Stronger Australian Values Visa Conditions**
 
 One of the most discussed plans is making the Australian Values Statement a legal visa condition, rather than just a declaration.
 
@@ -31,7 +31,7 @@ Currently, migrants agree to values such as:
 
 If these measures are introduced, breaching these values could potentially make visa cancellation easier. However, what qualifies as a "breach" has not yet been clearly defined.
 
-- **Increased Social Media Screening**
+### **Increased Social Media Screening**
 
 Another proposed change involves expanded social media checks for visa applicants. Authorities already have some powers to review online activity, but the proposal suggests:
 
@@ -39,7 +39,7 @@ Another proposed change involves expanded social media checks for visa applicant
 - Ongoing monitoring in some cases
 - Increased compliance checks
 
-- **"Safe Countries" List for Asylum Applicants**
+### **"Safe Countries" List for Asylum Applicants**
 
 The proposal also suggests creating a safe countries list, where citizens from certain nations may not be eligible to apply for asylum.
 
@@ -49,21 +49,21 @@ However:
 - No criteria have been confirmed
 - No timeline has been announced
 
-- **Temporary Protection Visas Could Return**
+### **Temporary Protection Visas Could Return**
 
 The Coalition also proposes reintroducing Temporary Protection Visas, which were removed in 2023.
 
-- **English Requirements for Visa Holders**
+### **English Requirements for Visa Holders**
 
 Another proposal suggests visa holders may need to learn English when arriving in Australia. This is not entirely new, but enforcement could become stricter under the proposed framework.
 
-**What This Could Mean for Migrants**
+## What This Could Mean for Migrants**
 
 However, this is still only a proposal at this stage. If these measures are implemented in the future, migrants could face a more structured and closely monitored visa system.
 
 Migration intake may become more selective, with stricter assessment of applicants at the entry stage. Visa monitoring could also become stronger, with increased compliance checks and closer oversight of visa conditions after arrival.
 
-**Migrants Should Not Panic**
+## **Migrants Should Not Panic**
 
 The current proposal does not change existing visa rules or migration settings in any way. No new law has been passed, no visa rules have changed yet, no migration caps have been announced, and no new requirements have been introduced.
 
@@ -73,7 +73,7 @@ For migrants, the key takeaway is simple: stay informed, but don't panic. Applic
 
 Until any formal changes are legislated and implemented, existing visa pathways remain valid, and applications will continue to be assessed under the current framework.
 
-**Need Guidance for Australia PR?**
+## **Need Guidance for Australia PR?**
 
 If you are planning to apply for an Australia PR, it is important to understand the right visa pathway, eligibility requirements, and documentation before you proceed. So, contact the best migration agent in Australia now and get proper guidance on your visa application.
 
