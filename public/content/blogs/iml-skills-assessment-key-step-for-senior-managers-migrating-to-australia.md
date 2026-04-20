@@ -124,16 +124,16 @@ If you’re unsure about eligibility, documentation, or how to present your expe
 ## FAQs
 
 ### **1. What is the purpose of an IML Skills Assessment?**
-It verifies whether your qualifications and leadership experience meet Australian standards.
+It is used to check whether your qualifications and leadership experience match Australian standards for senior management roles before you apply for skilled migration.
 
-### **2. Do I qualify just because I am a manager?**
-No. IML evaluates actual responsibilities, not just job titles.
+### **2. Do I qualify for the IML assessment just because I am a manager?**
+Not necessarily. IML looks at your actual duties, decision-making authority, and leadership level; not just your job title.
 
-### **3. How long does it take?**
-Around 10 weeks, with an express option available.
+### **3. How long does the IML assessment take?**
+Standard processing usually takes around 10 weeks, with an express option available for faster results.
 
-### **4. What if my application is incomplete?**
-IML may request more information or reject the application.
+### **4. What happens if my application is not complete or unclear?**
+IML may ask for more information, delay your assessment, or, in some cases, refuse the application if the evidence is not strong enough.
 
-### **5. Can I use it for PR?**
-Yes. A positive assessment is valid for 3 years and can be used for PR pathways.
+### **5. Can I use my assessment for PR applications?**
+Yes. A positive IML skills assessment is generally valid for 3 years and can be used for eligible Australian visa pathways.
