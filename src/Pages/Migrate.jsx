@@ -9,7 +9,7 @@ import States from "../Components/States";
 import { Helmet } from "react-helmet-async";
 
 const Migrate = () => {
-  const url = "https://growmore.one/migrate-to-australia/";
+  const url = "https://www.growmore.one/migrate-to-australia";
   const recaptchaRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [dialCode, setDialCode] = useState("61"); // Australia default
