@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const EmployerVisaTraining = () => {
-  const url = "https://www.growmore.one/our-services/employers/regional-certifying-body-approval/";
+  const url = "https://www.growmore.one/our-services/employers/training-plan/";
    return (
      <>
        <Helmet>
          <title>Subclass 407 Training Visa Plan | GrowMore Immigration</title>
- 
+    
          <meta
            name="description"
            content="Apply for the Subclass 407 Training Visa with a tailored plan from GrowMore Immigration. Get expert help with eligibility, documentation, and program development."

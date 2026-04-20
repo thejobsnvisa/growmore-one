@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const IndividualVisaGurdian = () => {
-  const url ="https://www.growmore.one/our-services/individual/general-skilled-visa/";
+  const url ="https://www.growmore.one/our-services/individual/student-guardian-visa/";
   return (
     <>
       <Helmet>
