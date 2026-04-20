@@ -1,9 +1,37 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const EmployerVisaRegional = () => {
-  return (
+   const url ="https://www.growmore.one/our-services/employers/regional-certifying-body-approval/";
+     return (
+       <>
+         <Helmet>
+           <title>
+            Regional Certifying Body Approval | GrowMore Immigration
+           </title>
+   
+           <meta
+             name="description"
+             content="For skilled migration or employer sponsorship, do you require approval from the Regional Certifying Body (RCB)? Growmore Immigration provides knowledgeable advice on eligibility, paperwork, and the application procedure."
+           />
+   
+           {/* ✅ Canonical for homepage */}
+           <link rel="canonical" href={url} />
+   
+           {/* ✅ OG */}
+           <meta
+             property="og:title"
+             content="Employer Nomination Visa | Skills in Demand Visa | GrowMore Immigration"
+           />
+           <meta
+             property="og:description"
+             content="For skilled migration or employer sponsorship, do you require approval from the Regional Certifying Body (RCB)? Growmore Immigration provides knowledgeable advice on eligibility, paperwork, and the application procedure."
+           />
+           <meta property="og:url" content={url} />
+           <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+         </Helmet>
     <div>
       <div>
         <div>
@@ -182,6 +210,7 @@ const EmployerVisaRegional = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

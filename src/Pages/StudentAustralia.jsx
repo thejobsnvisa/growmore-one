@@ -1,15 +1,41 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const StudentAustralia = () => {
-  return (
+    const url = "https://www.growmore.one/our-services/student-visa/student-visa-australia/";
+     return (
+       <>
+         <Helmet>
+           <title>Student Visa Australia | Study Abroad with GrowMore Immigration</title>
+   
+           <meta
+             name="description"
+             content="Apply for a Student Visa to Australia with expert help from GrowMore Immigration. Get guidance on eligibility, courses, visa process, and post-study options."
+           />
+   
+           {/* ✅ Canonical for homepage */}
+           <link rel="canonical" href={url} />
+   
+           {/* ✅ OG */}
+           <meta
+             property="og:title"
+             content="Employer Nomination Visa | Skills in Demand Visa | GrowMore Immigration"
+           />
+           <meta
+             property="og:description"
+             content="Apply for a Student Visa to Australia with expert help from GrowMore Immigration. Get guidance on eligibility, courses, visa process, and post-study options."
+           />
+           <meta property="og:url" content={url} />
+           <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+         </Helmet>
     <div>
       {/* Hero Section */}
       <section className="bg-[#28535B] py-12 sm:py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
-Student Visa Australia
+            Student Visa Australia
           </h1>
 
           <p className="text-white font-medium mt-3 text-sm sm:text-base">
@@ -446,6 +472,7 @@ Student Visa Australia
         </div>
       </section>
     </div>
+    </>
   );
 };
 

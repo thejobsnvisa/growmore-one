@@ -1,9 +1,37 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const EmployerVisaLMT = () => {
-  return (
+  const url ="https://www.growmore.one/our-services/employers/labour-market-testing-lmt-for-sc494-and-sc482-visas/";
+    return (
+      <>
+        <Helmet>
+          <title>
+           Labour Market Testing (LMT) for SC494 and SC482 Visas - GrowMore Immigration
+          </title>
+  
+          <meta
+            name="description"
+            content="Labour Market Testing (LMT) is a mandatory requirement for SC494 (Skilled Employer Sponsored Regional) and SC482 (Temporary Skill Shortage) visa applications."
+          />
+  
+          {/* ✅ Canonical for homepage */}
+          <link rel="canonical" href={url} />
+  
+          {/* ✅ OG */}
+          <meta
+            property="og:title"
+            content="Employer Nomination Visa | Skills in Demand Visa | GrowMore Immigration"
+          />
+          <meta
+            property="og:description"
+            content="Labour Market Testing (LMT) is a mandatory requirement for SC494 (Skilled Employer Sponsored Regional) and SC482 (Temporary Skill Shortage) visa applications."
+          />
+          <meta property="og:url" content={url} />
+          <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+        </Helmet>
     <div>
       <div>
         <section className="bg-[#28535B] py-12 sm:py-16">
@@ -160,6 +188,7 @@ const EmployerVisaLMT = () => {
         </section>
       </div>
     </div>
+  </>
   );
 };
 

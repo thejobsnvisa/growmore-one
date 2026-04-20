@@ -1,9 +1,35 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const EmployerVisaTraining = () => {
-  return (
+  const url = "https://www.growmore.one/our-services/employers/regional-certifying-body-approval/";
+   return (
+     <>
+       <Helmet>
+         <title>Subclass 407 Training Visa Plan | GrowMore Immigration</title>
+ 
+         <meta
+           name="description"
+           content="Apply for the Subclass 407 Training Visa with a tailored plan from GrowMore Immigration. Get expert help with eligibility, documentation, and program development."
+         />
+ 
+         {/* ✅ Canonical for homepage */}
+         <link rel="canonical" href={url} />
+ 
+         {/* ✅ OG */}
+         <meta
+           property="og:title"
+           content="Employer Nomination Visa | Skills in Demand Visa | GrowMore Immigration"
+         />
+         <meta
+           property="og:description"
+           content="Apply for the Subclass 407 Training Visa with a tailored plan from GrowMore Immigration. Get expert help with eligibility, documentation, and program development."
+         />
+         <meta property="og:url" content={url} />
+         <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+       </Helmet>
     <div>
       <section className="bg-[#28535B] py-12 sm:py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,6 +167,7 @@ const EmployerVisaTraining = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
