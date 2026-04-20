@@ -17,7 +17,7 @@ However, it's crucial to understand:
 
 This means nothing changes immediately, but the direction of future migration policy could shift.
 
-## Key Highlights of the Proposed Immigration Policy**
+## **Key Highlights of the Proposed Immigration Policy**
 
 ### **Stronger Australian Values Visa Conditions**
 
@@ -57,7 +57,7 @@ The Coalition also proposes reintroducing Temporary Protection Visas, which were
 
 Another proposal suggests visa holders may need to learn English when arriving in Australia. This is not entirely new, but enforcement could become stricter under the proposed framework.
 
-## What This Could Mean for Migrants**
+## **What This Could Mean for Migrants**
 
 However, this is still only a proposal at this stage. If these measures are implemented in the future, migrants could face a more structured and closely monitored visa system.
 
@@ -77,4 +77,4 @@ Until any formal changes are legislated and implemented, existing visa pathways 
 
 If you are planning to apply for an Australia PR, it is important to understand the right visa pathway, eligibility requirements, and documentation before you proceed. So, contact the best migration agent in Australia now and get proper guidance on your visa application.
 
-_Source:_ [_What is in Angus Taylor's new immigration plan and is it inspired by Trump's approach in the US?_](https://www.theguardian.com/australia-news/2026/apr/14/angus-taylor-immigration-australia-donald-trump-inspiration)
+Source: [_What is in Angus Taylor's new immigration plan and is it inspired by Trump's approach in the US?_](https://www.theguardian.com/australia-news/2026/apr/14/angus-taylor-immigration-australia-donald-trump-inspiration)
