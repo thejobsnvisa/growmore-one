@@ -4,7 +4,7 @@ If you are planning to [apply for an Australia PR](https://www.growmore.one/how-
 
 ## What is the IML?
 
-The Institute of Managers and Leaders Australia and New Zealand (IML) is the official assessing authority responsible for evaluating senior management professionals applying for Australian skilled migration.
+The Institute of Managers and Leaders Australia and New Zealand (IML) is the official assessing authority that is responsible for evaluating senior management professionals applying for Australian skilled migration.
 
 This assessment is commonly required for major migration pathways, including:
 
@@ -29,97 +29,97 @@ This assessment is commonly required for major migration pathways, including:
 | Supply and Distribution Manager    | 133611 |
 | Procurement Manager                | 133612 |
 
-However, having a managerial job title alone is not enough. IML carefully reviews the actual duties performed, level of authority, and business impact.
+However, having a managerial job title alone is not enough. IML carefully reviews the actual duties performed, level of authority, and business impact to determine whether your experience aligns with Australian senior management standards.
+
+Once you confirm that your occupation falls under IML, the next step is understanding how the assessment process works and what you need to prepare.
 
 ## Confirm Your Assessing Authority Before You Apply
 
-Before preparing your application, confirm that your occupation falls under IML’s scope. If not, your application may need to be assessed by a different authority.
+Before you begin preparing your skills assessment application, it is important to confirm that your occupation falls within IML’s assessment scope, because if your role does not clearly fall within it, then your application may need to be assessed by a different authority. You can verify the designated assessing authority for your occupation through this Skilled Occupation List page.
 
 ## Understand How IML Assesses Your Profile
 
-IML evaluates applicants based on:
+IML evaluates applicants based on multiple factors, which include leadership and strategic decision-making capability, level of managerial responsibility, organisational impact, reporting structure, and career progression.
 
-- Leadership and strategic decision-making  
-- Level of managerial responsibility  
-- Organisational impact  
-- Reporting structure  
-- Career progression  
+Applicants must demonstrate these capabilities through:
+•	Relevant academic qualifications 
+•	Detailed employment reference letters 
+•	Organisational charts 
+•	Position descriptions 
+•	IML Management Competency Framework Written Responses
 
-Applicants must demonstrate these through:
-
-- Academic qualifications  
-- Employment reference letters  
-- Organisational charts  
-- Position descriptions  
-- Management Competency Framework responses  
+This is the stage when mainly weak or unclear evidence can significantly reduce your chances of approval.
 
 ## Prepare Supporting Documentation
 
-A strong application requires clear and consistent documentation:
+A strong IML application depends heavily on clear, detailed, and consistent documentation.
 
-- Passport and identity documents  
-- Updated CV  
-- Academic qualifications and transcripts  
-- Employment reference letters  
-- Position descriptions  
-- Two referees  
-- Organisational charts  
-- Management Competency Framework responses  
+Commonly required documents include:
+•	Passport and identity documents 
+•	Updated Curriculum Vitae (CV) 
+•	Academic qualifications 
+•	Academic transcripts 
+•	Employment reference letters 
+•	Detailed position descriptions 
+•	Two referees 
+•	Organisational charts showing reporting structure 
+•	IML Management Competency Framework Written Responses 
 
 ## IML Management Competency Framework Written Response
 
-Applicants must complete written responses demonstrating leadership experience in:
+As part of the IML skills assessment, applicants must complete a Management Competency Framework written response. This is a key requirement where you need to showcase your leadership experience using real examples from your professional career.
 
-- Managing and Leading Self  
-- Managing and Leading Others  
-- Managing and Leading the Business  
+•	Managing and Leading Self
+•	Managing and Leading Others
+•	Managing and Leading the Business
 
-Each example should be based on real workplace situations and typically should not exceed 500 words.
+Each response must be based on actual workplace situations that clearly highlight your leadership role and decision-making involvement. Typically, each example should not exceed 500 words and should focus on demonstrating how you operated in a senior management capacity.
 
-Recommended format:
-
-- Situation  
-- Task  
-- Action  
-- Result  
-- Reflection  
+IML also recommends using a structured format such as the STAR method:
+•	Situation 
+•	Task 
+•	Action 
+•	Result 
+•	Reflection
 
 ## Lodge the Application
 
-Once all documents are ready, submit your application online through the IML portal.
+Once all documents are prepared, you can submit your application online through the IML portal, and the authority will review it.  After reviewing, IML may issue one of the following outcomes:
 
-Possible outcomes:
+•	Positive skills assessment
+•	Negative outcome
+•	Request for further information
 
-- Positive skills assessment  
-- Negative outcome  
-- Request for further information  
+A positive skills assessment is generally valid for three years and can be used to proceed with your Australian visa application.
 
-A positive assessment is generally valid for **3 years**.
+## What Does the IML Skills Assessment Cost?
 
-## IML Skills Assessment Fees
+Here is the detailed breakdown for IML skills assessment fees, which are non-refundable and must be paid at the time of application lodgement.
 
 | Service                                      | Fee (Excl. GST) | Fee (Incl. GST) |
 |---------------------------------------------|----------------|----------------|
 | Migration Skills Assessment                  | A$788          | A$866          |
 | Express Fee                                  | A$210          | A$231          |
-| Review of Assessment                         | A$578          | A$635          |
-| Appeal Against Outcome                       | A$788          | A$866          |
-| Outcome Extension Request                    | A$158          | A$173          |
-| Access to Old Paper Record                   | A$53           | A$58           |
-| Qualification Assessment (Subclass 485)      | A$536          | A$589          |
+| Review of Migration Skills Assessment Outcome| A$578          | A$635          |
+| Appeal Against Migration Skills Assessment Outcome | A$788          | A$866          |
+| Migration Skills Assessment Outcome Extension Request| A$158          | A$173          |
+| Access to Old Paper Application Record       | A$53           | A$58           |
+| Qualification Assessment for Temporary Graduate (Subclass 485) Visa| A$536          | A$589          |
 
 ## Key Considerations for a Strong Application
 
-**Common issues include:**
+**Based on common application challenges, the most frequent issues include:**
 
-- Overstating managerial responsibilities  
-- Weak or generic reference letters  
-- Misalignment between ANZSCO occupation and duties  
-- Limited evidence of senior-level decision-making  
+•	Overstating managerial responsibilities without evidence 
+•	Weak or generic employment reference letters 
+•	Misalignment between the ANZSCO occupation and duties 
+•	Limited evidence of senior-level decision-making
 
 ## Need Expert Help with Your Skills Assessment?
 
-If you’re unsure about eligibility, documentation, or how to present your experience effectively, it’s best to seek professional guidance before applying. Growmore Immigration helps applicants prepare accurate and complete skills assessment applications.
+If you’re unsure about eligibility, documents, or how to present your experience in the right way, it’s better to get clarity before you apply.
+
+At Growmore Immigration, we help applicants across different occupations to prepare well-structured, accurate, and complete skills assessment applications so that you can move to Australia with confidence.
 
 ## FAQs
 
