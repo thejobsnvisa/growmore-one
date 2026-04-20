@@ -6,8 +6,10 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import PathwaySection from "../Components/PathwaySection";
 import States from "../Components/States";
+import { Helmet } from "react-helmet-async";
 
 const Migrate = () => {
+  const url = "https://growmore.one/migrate-to-australia/";
   const recaptchaRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [dialCode, setDialCode] = useState("61"); // Australia default
@@ -62,7 +64,32 @@ const Migrate = () => {
       setLoading(false);
     }
   };
+
   return (
+    <>
+    <Helmet>
+            <title>Migrate to Australia | Skilled Occupation List with GrowMore Immigration</title>
+    
+            <meta
+              name="description"
+              content="Growmore Immigration can assist you in migrating to Australia. Check the latest Skilled Occupation List, eligibility criteria, and expert migration support to start your journey today."
+            />
+    
+            {/* ✅ Canonical for homepage */}
+            <link rel="canonical" href={url} />
+    
+            {/* ✅ OG */}
+            <meta
+              property="og:title"
+              content="Migrate to Australia | Skilled Occupation List with GrowMore Immigration"
+            />
+            <meta
+              property="og:description"
+              content="Growmore Immigration can assist you in migrating to Australia. Check the latest Skilled Occupation List, eligibility criteria, and expert migration support to start your journey today."
+            />
+            <meta property="og:url" content={url} />
+            <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+          </Helmet>
     <div>
       <section className="bg-[#28535B] py-16 md:py-20">
         <div className="max-w-[1400px] mx-auto px-6 md:px-15">
@@ -345,6 +372,7 @@ const Migrate = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
