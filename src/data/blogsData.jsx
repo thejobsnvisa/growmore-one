@@ -1,5 +1,12 @@
 export const blogs = [
   {
+    id: 19,
+    slug: "a-reminder-to-the-immigration-minister-the-ground-reality-is-different",
+    title: "A Reminder to the Immigration Minister: The Ground Reality is Different",
+    date: "April 21, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg19.png`,
+  }, 
+  {
     id: 18,
     slug: "from-temporary-stay-to-australia-pr-environmental-engineer-secures-subclass-186",
     title: "From Temporary Stay to Australia PR: Environmental Engineer Secures Subclass 186",
