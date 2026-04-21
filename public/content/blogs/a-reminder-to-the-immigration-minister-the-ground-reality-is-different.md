@@ -47,7 +47,7 @@ Family reunification is a fundamental pillar of any migration system. When delay
 
 Regional Australia, in particular, relies heavily on migration to sustain local economies.
 
-## **Employers in these areas are:**
+**Employers in these areas are:**
 
 - Struggling to find suitable local candidates
 - Waiting extended periods for visa outcomes
