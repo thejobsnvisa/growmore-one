@@ -1,9 +1,35 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const IndividualVisa = () => {
-  return (
+ const url = "https://www.growmore.one/our-services/individual";
+   return (
+     <>
+       <Helmet>
+         <title>Australian Visa Services for Individuals | Growmore Immigration</title>
+ 
+         <meta
+           name="description"
+           content="Expert visa assistance for individuals: Skilled Migration, Student Visas, Partner Visas, and PR pathways. Start your Australian journey with Growmore today."
+         />
+ 
+         {/* ✅ Canonical for homepage */}
+         <link rel="canonical" href={url} />
+ 
+         {/* ✅ OG */}
+         <meta
+           property="og:title"
+           content="Migrate to Australia | Skilled Occupation List with GrowMore Immigration"
+         />
+         <meta
+           property="og:description"
+           content="Expert visa assistance for individuals: Skilled Migration, Student Visas, Partner Visas, and PR pathways. Start your Australian journey with Growmore today."
+         />
+         <meta property="og:url" content={url} />
+         <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+       </Helmet>
     <div>
       <div>
         <section className="bg-[#28535B] py-12 sm:py-16">
@@ -253,6 +279,7 @@ const IndividualVisa = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

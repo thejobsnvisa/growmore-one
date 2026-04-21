@@ -1,8 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const DAMA = () => {
-  return (
+ const url ="https://www.growmore.one/our-services/dama";
+   return (
+     <>
+       <Helmet>
+         <title>
+            Australian Labour Agreement Visa Services | Growmore Immigration
+         </title>
+ 
+         <meta
+           name="description"
+           content="The DAMA pathway to Australian PR. We specialize in regional migration agreements with age and English concessions. Check your eligibility for DAMA today!"
+         />
+ 
+         {/* ✅ Canonical for homepage */}
+         <link rel="canonical" href={url} />
+ 
+         {/* ✅ OG */}
+         <meta
+           property="og:title"
+           content="Australian Labour Agreement Visa Services | Growmore Immigration"
+         />
+         <meta
+           property="og:description"
+           content="The DAMA pathway to Australian PR. We specialize in regional migration agreements with age and English concessions. Check your eligibility for DAMA today!"
+         />
+         <meta property="og:url" content={url} />
+         <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+       </Helmet>
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
       <section className="bg-[#28535B] py-10 md:py-16">
@@ -117,6 +145,7 @@ const DAMA = () => {
         </div>
       </section>
     </div>
+   </>
   );
 };
 
