@@ -1,5 +1,12 @@
 export const blogs = [
   {
+    id: 18,
+    slug: "from-temporary-stay-to-australia-pr-environmental-engineer-secures-subclass-186",
+    title: "From Temporary Stay to Australia PR: Environmental Engineer Secures Subclass 186",
+    date: "April 21, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg18.png`,
+  }, 
+  {
     id: 17,
     slug: "iml-skills-assessment-key-step-for-senior-managers-migrating-to-australia",
     title: "IML Skills Assessment: Key Step for Senior Managers Migrating to Australia",
