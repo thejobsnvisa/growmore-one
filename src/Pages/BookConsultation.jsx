@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { PopupModal } from "react-calendly";
+import { Helmet } from "react-helmet-async";
 
 const BookConsultation = () => {
+  const url = "https://www.growmore.one/book-consultation";
   const [isOpen, setIsOpen] = useState(false);
   const [selectedUrl, setSelectedUrl] = useState("");
 
@@ -26,200 +28,229 @@ const BookConsultation = () => {
   }, [isOpen]);
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-[#28535B] py-16 md:py-20">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-15">
-          <h1 className="text-[22px] md:text-5xl font-semibold text-white mb-3">
-            Book Consultation
-          </h1>
-          <p className="text-white font-semibold">
-            Home &gt; Book Consultation
-          </p>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>
+          Book Your Australian Visa Consultation | Growmore Immigration
+        </title>
 
-      {/* Cards Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
-          {/* Card 1 */}
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
-            <div className="h-[350px] overflow-hidden rounded-t-3xl">
-              <img
-                src={`${import.meta.env.BASE_URL}assets/c2.jpg`}
-                alt="Standard Consultation"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-
-            <div className="p-4">
-              <h2 className="text-[22px] font-bold text-[#042325]">$299</h2>
-
-              <h3 className="mt-3 text-lg font-bold">
-                Standard Consultation with Krunal Nayak (30 Mins)
-              </h3>
-
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
-                Book your online Standard consultation with our Principal
-                Migration Agents specialised in Australian visas — appointments
-                available in approximately 3 weeks.
-              </p>
-              <a
-                href="https://6fvy.short.gy/icfactsheet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 text-[15px] mt-4 block"
-              >
-                {" "}
-                View Factsheet{" "}
-              </a>
-              <button
-                onClick={() =>
-                  openCalendly("https://calendly.com/krunalnayak/regular")
-                }
-                className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
-            <div className="h-[350px] overflow-hidden rounded-t-3xl">
-              <img
-                src={`${import.meta.env.BASE_URL}assets/c1.jpg`}
-                alt="Rapid Consultation"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-
-            <div className="p-4">
-              <h2 className="text-[22px] font-bold text-[#042325]">$149</h2>
-
-              <h3 className="mt-3 text-lg font-bold">
-                15-Minute Express Online Consultation with Mr. Krunal Nayak
-              </h3>
-
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
-                This short consultation is ideal if you have 2–3 quick questions
-                and need clear, professional direction from a Registered
-                Migration Agent.
-              </p>
-              <a
-                href="https://6fvy.short.gy/icfactsheet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 text-[15px] mt-10 block"
-              >
-                {" "}
-                View Factsheet{" "}
-              </a>
-              <button
-                onClick={() =>
-                  openCalendly("https://calendly.com/krunalnayak/rapid?month=2026-03")
-                }
-                className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-          {/* Card 3 */}
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
-            <div className="h-[350px] overflow-hidden rounded-t-3xl">
-              <img
-                src={`${import.meta.env.BASE_URL}assets/c.png`}
-                alt="Urgent Consultation"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-
-            <div className="p-4">
-              <h2 className="text-[22px] font-bold text-[#042325]">$500</h2>
-
-              <h3 className="mt-3 text-lg font-bold">
-                Urgent Consultation with Krunal Nayak (60 Mins)
-              </h3>
-
-              <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed ">
-                Book your urgent online consultation with our Principal
-                Migration Agents, who specialise in Australian visas and
-                applications, and receive priority expert guidance .
-              </p>
-              <a
-                href="https://6fvy.short.gy/icfactsheet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 text-[15px] mt-4 block"
-              >
-                {" "}
-                View Factsheet{" "}
-              </a>
-              <button
-                onClick={() =>
-                  openCalendly("https://calendly.com/krunalnayak/urgent")
-                }
-                className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
-            {" "}
-            <div className="h-[350px] overflow-hidden rounded-t-3xl">
-              {" "}
-              <img
-                src={`${import.meta.env.BASE_URL}assets/c3.jpg`}
-                alt="Urgent Consultation"
-                className="w-full h-full object-cover object-top"
-              />{" "}
-            </div>{" "}
-            <div className="p-4">
-              {" "}
-              <h2 className="text-[22px] font-bold text-[#042325]">
-                Free
-              </h2>{" "}
-              <h3 className="mt-3 text-lg font-semibold">
-                {" "}
-                Free Information Session with one of our Migration Expert{" "}
-              </h3>{" "}
-              <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
-                {" "}
-                Book your online session with our Migration Support Expert,
-                specializing in Australian visa pathways{" "}
-              </p>{" "}
-              <a
-                href="https://6fvy.short.gy/icfactsheet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 text-[15px] mt-4 block"
-              >
-                {" "}
-                View Factsheet{" "}
-              </a>{" "}
-              <a
-                href="https://case.growmore.one/add/company-website"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-block bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
-              >
-                Book Now
-              </a>
-            </div>{" "}
-          </div>
-        </div>
-      </div>
-
-      {/* Calendly Popup */}
-      {isOpen && (
-        <PopupModal
-          url={selectedUrl}
-          open={isOpen}
-          onModalClose={closeCalendly}
-          rootElement={document.getElementById("root")}
+        <meta
+          name="description"
+          content="Secure your future in Australia. Book a professional consultation for PR, Student, or Partner visas with our expert migration team. Start your journey today!"
         />
-      )}
-    </div>
+
+        {/* ✅ Canonical for homepage */}
+        <link rel="canonical" href={url} />
+
+        {/* ✅ OG */}
+        <meta
+          property="og:title"
+          content="Migrate to Australia | Skilled Occupation List with GrowMore Immigration"
+        />
+        <meta
+          property="og:description"
+          content="Secure your future in Australia. Book a professional consultation for PR, Student, or Partner visas with our expert migration team. Start your journey today!"
+        />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+      </Helmet>
+      <div>
+        {/* Hero Section */}
+        <section className="bg-[#28535B] py-16 md:py-20">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-15">
+            <h1 className="text-[22px] md:text-5xl font-semibold text-white mb-3">
+              Book Consultation
+            </h1>
+            <p className="text-white font-semibold">
+              Home &gt; Book Consultation
+            </p>
+          </div>
+        </section>
+
+        {/* Cards Section */}
+        <div className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
+            {/* Card 1 */}
+            <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
+              <div className="h-[350px] overflow-hidden rounded-t-3xl">
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/c2.jpg`}
+                  alt="Standard Consultation"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              <div className="p-4">
+                <h2 className="text-[22px] font-bold text-[#042325]">$299</h2>
+
+                <h3 className="mt-3 text-lg font-bold">
+                  Standard Consultation with Krunal Nayak (30 Mins)
+                </h3>
+
+                <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
+                  Book your online Standard consultation with our Principal
+                  Migration Agents specialised in Australian visas —
+                  appointments available in approximately 3 weeks.
+                </p>
+                <a
+                  href="https://6fvy.short.gy/icfactsheet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 text-[15px] mt-4 block"
+                >
+                  {" "}
+                  View Factsheet{" "}
+                </a>
+                <button
+                  onClick={() =>
+                    openCalendly("https://calendly.com/krunalnayak/regular")
+                  }
+                  className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
+              <div className="h-[350px] overflow-hidden rounded-t-3xl">
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/c1.jpg`}
+                  alt="Rapid Consultation"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              <div className="p-4">
+                <h2 className="text-[22px] font-bold text-[#042325]">$149</h2>
+
+                <h3 className="mt-3 text-lg font-bold">
+                  15-Minute Express Online Consultation with Mr. Krunal Nayak
+                </h3>
+
+                <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
+                  This short consultation is ideal if you have 2–3 quick
+                  questions and need clear, professional direction from a
+                  Registered Migration Agent.
+                </p>
+                <a
+                  href="https://6fvy.short.gy/icfactsheet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 text-[15px] mt-10 block"
+                >
+                  {" "}
+                  View Factsheet{" "}
+                </a>
+                <button
+                  onClick={() =>
+                    openCalendly(
+                      "https://calendly.com/krunalnayak/rapid?month=2026-03",
+                    )
+                  }
+                  className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+            {/* Card 3 */}
+            <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
+              <div className="h-[350px] overflow-hidden rounded-t-3xl">
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/c.png`}
+                  alt="Urgent Consultation"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              <div className="p-4">
+                <h2 className="text-[22px] font-bold text-[#042325]">$500</h2>
+
+                <h3 className="mt-3 text-lg font-bold">
+                  Urgent Consultation with Krunal Nayak (60 Mins)
+                </h3>
+
+                <p className="text-[#042325] text-[15px] mt-4  mb-3 leading-relaxed ">
+                  Book your urgent online consultation with our Principal
+                  Migration Agents, who specialise in Australian visas and
+                  applications, and receive priority expert guidance .
+                </p>
+                <a
+                  href="https://6fvy.short.gy/icfactsheet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 text-[15px] mt-4 block"
+                >
+                  {" "}
+                  View Factsheet{" "}
+                </a>
+                <button
+                  onClick={() =>
+                    openCalendly("https://calendly.com/krunalnayak/urgent")
+                  }
+                  className="mt-6 bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl shadow-lg overflow-hidden text-center hover:shadow-2xl transition duration-300">
+              {" "}
+              <div className="h-[350px] overflow-hidden rounded-t-3xl">
+                {" "}
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/c3.jpg`}
+                  alt="Urgent Consultation"
+                  className="w-full h-full object-cover object-top"
+                />{" "}
+              </div>{" "}
+              <div className="p-4">
+                {" "}
+                <h2 className="text-[22px] font-bold text-[#042325]">
+                  Free
+                </h2>{" "}
+                <h3 className="mt-3 text-lg font-semibold">
+                  {" "}
+                  Free Information Session with one of our Migration Expert{" "}
+                </h3>{" "}
+                <p className="text-[#042325] text-[15px] mt-4 leading-relaxed ">
+                  {" "}
+                  Book your online session with our Migration Support Expert,
+                  specializing in Australian visa pathways{" "}
+                </p>{" "}
+                <a
+                  href="https://6fvy.short.gy/icfactsheet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 text-[15px] mt-4 block"
+                >
+                  {" "}
+                  View Factsheet{" "}
+                </a>{" "}
+                <a
+                  href="https://case.growmore.one/add/company-website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-block bg-[#5aa7ad] hover:bg-[#4b9398] text-white px-8 py-3 rounded-full transition duration-300"
+                >
+                  Book Now
+                </a>
+              </div>{" "}
+            </div>
+          </div>
+        </div>
+
+        {/* Calendly Popup */}
+        {isOpen && (
+          <PopupModal
+            url={selectedUrl}
+            open={isOpen}
+            onModalClose={closeCalendly}
+            rootElement={document.getElementById("root")}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,9 +1,36 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const StudentVisa = () => {
-  return (
+ 
+   const url = "https://www.growmore.one/our-services/student-visa";
+   return (
+     <>
+       <Helmet>
+         <title>Australian Student Visa (Subclass 500) Services | Growmore</title>
+ 
+         <meta
+           name="description"
+           content="Study in Australia with confidence. We provide expert help with Subclass 500 applications, GS requirements, and university admissions. Start your journey today!"
+         />
+ 
+         {/* ✅ Canonical for homepage */}
+         <link rel="canonical" href={url} />
+ 
+         {/* ✅ OG */}
+         <meta
+           property="og:title"
+           content="Migrate to Australia | Skilled Occupation List with GrowMore Immigration"
+         />
+         <meta
+           property="og:description"
+           content="Study in Australia with confidence. We provide expert help with Subclass 500 applications, GS requirements, and university admissions. Start your journey today!"
+         />
+         <meta property="og:url" content={url} />
+         <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+       </Helmet>
     <div>
       {/* Hero Section */}
       <section className="bg-[#28535B] py-12 sm:py-16">
@@ -216,6 +243,7 @@ const StudentVisa = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

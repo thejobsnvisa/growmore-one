@@ -1,8 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const LabourAgreement = () => {
+ const url ="https://www.growmore.one/our-services/labour-agreement";
   return (
+    <>
+      <Helmet>
+        <title>
+           Australian Labour Agreement Visa Services | Growmore Immigration
+        </title>
+
+        <meta
+          name="description"
+          content="Navigate Australian Labour Agreements with ease. Expert help with Industry, Company-specific, and DAMA agreements. Secure visa concessions and PR pathways today."
+        />
+
+        {/* ✅ Canonical for homepage */}
+        <link rel="canonical" href={url} />
+
+        {/* ✅ OG */}
+        <meta
+          property="og:title"
+          content="Australian Labour Agreement Visa Services | Growmore Immigration"
+        />
+        <meta
+          property="og:description"
+          content="Navigate Australian Labour Agreements with ease. Expert help with Industry, Company-specific, and DAMA agreements. Secure visa concessions and PR pathways today."
+        />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
+      </Helmet>
     <div className="bg-white">
       {/* ================= HERO SECTION ================= */}
       <section className="bg-[#28535B] py-10 md:py-16">
@@ -112,6 +140,7 @@ const LabourAgreement = () => {
         </div>
       </section>
     </div>
+   </>
   );
 };
 
