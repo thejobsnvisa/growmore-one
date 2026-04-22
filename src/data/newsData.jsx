@@ -8,7 +8,7 @@ export const blogs = [
     metaTitle: "AHPRA English Requirements Change from 23 April 2026",
     metaDescription: " AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
     date: "April 22, 2026",
-    image: `${base}assets/27.jpg`,
+    image: `${base}assets/27.png`,
   },
   {
     id: 26,
