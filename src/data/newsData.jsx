@@ -2,6 +2,15 @@ const base = import.meta.env.BASE_URL;
 
 export const blogs = [
   {
+    id: 27,
+    slug: " planning-ahpra-registration-english-requirements-change-from-23-april-2026",
+    title: " Planning AHPRA Registration? English Requirements Change from 23 April 2026",
+    metaTitle: "AHPRA English Requirements Change from 23 April 2026",
+    metaDescription: " AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
+    date: "April 22, 2026",
+    image: `${base}assets/27.jpg`,
+  },
+  {
     id: 26,
     slug: "australia-opens-subclass-192-tuvalu-ballot-on-1-may-with-280-places",
     title: "Australia Opens Subclass 192 Tuvalu Ballot on 1 May With 280 Places",
