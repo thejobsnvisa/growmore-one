@@ -12,6 +12,7 @@ import {
 import { blogs } from "../data/newsData";
 import CommentSection from "../Components/CommentSection";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const NewsArticle = () => {
   const { slug } = useParams();
@@ -64,6 +65,29 @@ const NewsArticle = () => {
     );
 
   return (
+    <>
+    <Helmet>
+  <title>{article.metaTitle || article.title}</title>
+
+  <meta
+    name="description"
+    content={article.metaDescription || article.title}
+  />
+
+  <link rel="canonical" href={`https://www.growmore.one/news/${slug}/`} />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={article.metaTitle || article.title} />
+  <meta property="og:description" content={article.metaDescription || article.title} />
+  <meta property="og:image" content={article.image} />
+  <meta property="og:url" content={`https://www.growmore.one/news/${slug}/`} />
+
+  {/* Fix Publisher */}
+  <meta name="publisher" content="Growmore Immigration" />
+
+  {/* Robots (optional explicit) */}
+  <meta name="robots" content="index, follow" />
+</Helmet>
     <div className="min-h-screen bg-white font-jakarta text-[#042325]">
       
       {/* HEADER */}
@@ -218,6 +242,7 @@ const NewsArticle = () => {
        <CommentSection/>
       </section>
     </div>
+    </>
   );
 };
 
