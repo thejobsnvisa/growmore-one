@@ -11,7 +11,7 @@ This reflects the state’s controlled allocation strategy across both subclass 
 | **Total** | **42** | - | - |
 
 ### What stands out in this round:
-
+&nbsp;
 * Just like the previous round, Subclass 190 remains extremely restricted, with invitations limited to Gold Pass candidates at 1000 points.
 * Subclass 491 remains more accessible as an invitation issued at 57 points in the orange-plus pass category.
 
@@ -30,7 +30,7 @@ This reflects the state’s controlled allocation strategy across both subclass 
 
 ## Comparison with Previous Round (16 April 2026)
 
-You can see it clearly here that the trend is getting tighter: 
+**You can see it clearly here that the trend is getting tighter:**
 
 * Total invitations have dropped from 54 to 42, showing a clear reduction in volume. 
 * Subclass 190 continues to be locked at Gold Pass only, with no flexibility at all. 
@@ -41,7 +41,7 @@ You can see it clearly here that the trend is getting tighter:
 
 ## What This Means
 
-If you are sitting in the ROI pool thinking your profile is “decent enough,” it’s time to rethink that:
+**If you are sitting in the ROI pool thinking your profile is “decent enough,” it’s time to rethink that:**
 * Tasmania is not inviting average profiles anymore. 
 * 190 is tougher unless you are in the top-tier category.
 * Even for 491, a basic score won’t guarantee anything because your occupation must align with Tasmania’s workforce demand. 
@@ -50,9 +50,9 @@ If you are sitting in the ROI pool thinking your profile is “decent enough,”
 
 ## Get Expert Guidance for Your Next Move
 
-Tasmania’s current trend makes one thing clear: now strategic moves matter more than ever. With fewer invitations, tighter selection, and increasing competition, relying on assumptions or waiting passively in the ROI pool is not a smart approach anymore.
+**Tasmania’s current trend makes one thing clear:** now strategic moves matter more than ever. With fewer invitations, tighter selection, and increasing competition, relying on assumptions or waiting passively in the ROI pool is not a smart approach anymore. This is where getting guidance from a Skilled migration consultant in Australia becomes critical. 
 
-This is where getting guidance from a Skilled migration consultant in Australia becomes critical. You need a clear strategy for:
+**You need a clear strategy for:**
 
 * Accurate profile assessment based on the latest invitation trends.
 * Right pathway selection (Subclass 190 vs Subclass 491). 

@@ -7,6 +7,7 @@ export const blogs = [
     title: "Tasmania Weekly Invitation Round: 42 Invitations Issued in Latest Round",
     metaTitle: "Tasmania Weekly Invitation Round 23 April 2026 Update",
     metaDescription: "Tasmania issued 42 invitations in the 23 April 2026 round. Subclass 190 remains restricted to Gold Pass, while 491 invitations continue.",
+     date: "April 23, 2026",
     image: `${base}assets/28.png`,
   },
   {
