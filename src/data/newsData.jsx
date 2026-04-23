@@ -2,11 +2,19 @@ const base = import.meta.env.BASE_URL;
 
 export const blogs = [
   {
+    id: 28,
+    slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
+    title: "Tasmania Weekly Invitation Round: 42 Invitations Issued in Latest Round",
+    metaTitle: "Tasmania Weekly Invitation Round 23 April 2026 Update",
+    metaDescription: "Tasmania issued 42 invitations in the 23 April 2026 round. Subclass 190 remains restricted to Gold Pass, while 491 invitations continue.",
+    image: `${base}assets/28.png`,
+  },
+  {
     id: 27,
     slug: "planning-ahpra-registration-english-requirements-change-from-23-april-2026",
     title: "Planning AHPRA Registration? English Requirements Change from 23 April 2026",
     metaTitle: "AHPRA English Requirements Change from 23 April 2026",
-    metaDescription: " AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
+    metaDescription: "AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
     date: "April 22, 2026",
     image: `${base}assets/27.png`,
   },
