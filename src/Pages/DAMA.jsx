@@ -8,7 +8,7 @@ const DAMA = () => {
      <>
        <Helmet>
          <title>
-            Australian Labour Agreement Visa Services | Growmore Immigration
+           DAMA Visa Australia: Regional Migration Pathways | Growmore
          </title>
  
          <meta
@@ -22,7 +22,7 @@ const DAMA = () => {
          {/* ✅ OG */}
          <meta
            property="og:title"
-           content="Australian Labour Agreement Visa Services | Growmore Immigration"
+           content="DAMA Visa Australia: Regional Migration Pathways | Growmore"
          />
          <meta
            property="og:description"
