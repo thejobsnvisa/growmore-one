@@ -2,29 +2,36 @@ import React from "react";
 import { FaCalendar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+const base = import.meta.env.BASE_URL;
+
 const blogs = [
  {
-    id: 0,
-    slug: "nsw-190-invitation-round-selective-invites-issued-16-april",
-    title: "NSW 190 Invitation Round: Selective Invites Issued 16 April",
-    date: "April 16, 2026",
-    image: `${import.meta.env.BASE_URL}assets/14.png`,
+    id: 1,
+    slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
+    title: "Tasmania Weekly Invitation Round: 42 Invitations Issued in Latest Round",
+    metaTitle: "Tasmania Weekly Invitation Round 23 April 2026 Update",
+    metaDescription: "Tasmania issued 42 invitations in the 23 April 2026 round. Subclass 190 remains restricted to Gold Pass, while 491 invitations continue.",
+     date: "April 23, 2026",
+    image: `${base}assets/28.png`,
   },
   {
-    id: 1,
-    slug: "tasmania-state-nomination-invitations-released-16-april-2026",
-    title: "Tasmania State Nomination Invitations Released 16 April 2026",
-    date: "April 16, 2026",
-    image: `${import.meta.env.BASE_URL}assets/11.png`,
-  },
-   {
     id: 2,
-    slug: "new-immigration-policy-proposal-what-s-ahead",
-    title: "New Immigration Policy Proposal: What’s Ahead?",
-    date: "April 15, 2026",
-    image: `${import.meta.env.BASE_URL}assets/12.png`,
+    slug: "planning-ahpra-registration-english-requirements-change-from-23-april-2026",
+    title: "Planning AHPRA Registration? English Requirements Change from 23 April 2026",
+    metaTitle: "AHPRA English Requirements Change from 23 April 2026",
+    metaDescription: "AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
+    date: "April 22, 2026",
+    image: `${base}assets/27.png`,
   },
-   
+  {
+    id: 3,
+    slug: "australia-opens-subclass-192-tuvalu-ballot-on-1-may-with-280-places",
+    title: "Australia Opens Subclass 192 Tuvalu Ballot on 1 May With 280 Places",
+    metaTitle: "Australia Opens Subclass 192 Tuvalu Ballot From 1 May 2026",
+    metaDescription: "AAustralia opens Subclass 192 Tuvalu ballot from 1 May to 1 June 2026 with 280 PR places. Learn eligibility, process, and how to apply.",
+    date: "April 17, 2026",
+    image: `${base}assets/26.jpg`,
+  },
 ];
 
 const BlogSection = () => {
