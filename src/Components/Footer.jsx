@@ -45,23 +45,23 @@ const Footer = () => {
             </h2>
           </div>
           <div className="flex sm:flex-row items-start gap-4 mt-4 md:mt-0">
-  {[
-    { Icon: FaEnvelope, href: "mailto:india@growmore.one" },
-    { Icon: FaWhatsapp, href: "https://wa.me/+61434202021" },
-    { Icon: FaPhoneAlt, href: "tel:(03)87643334" }
-  ].map(({ Icon, href }, i) => (
-    <a
-      key={i}
-      href={href}
-      target={href.startsWith("http") ? "_blank" : "_self"}
-      rel="noopener noreferrer"
-      className="bg-[#6dc7d1] p-3 sm:p-4 rounded-full text-white hover:bg-white hover:text-[#28535B] transition shadow-sm cursor-pointer flex items-center justify-center"
-    >
-      {/* ✅ Rendering the component here tells ESLint the variable is being used */}
-      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
-    </a>
-  ))}
-</div>
+            {[
+              { Icon: FaEnvelope, href: "mailto:india@growmore.one" },
+              { Icon: FaWhatsapp, href: "https://wa.me/+61434202021" },
+              { Icon: FaPhoneAlt, href: "tel:(03)87643334" },
+            ].map(({ Icon, href }, i) => (
+              <a
+                key={i}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                className="bg-[#6dc7d1] p-3 sm:p-4 rounded-full text-white hover:bg-white hover:text-[#28535B] transition shadow-sm cursor-pointer flex items-center justify-center"
+              >
+                {/* ✅ Rendering the component here tells ESLint the variable is being used */}
+                <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
       {/* MAIN FOOTER */}
@@ -78,27 +78,42 @@ const Footer = () => {
             individuals, students, and employers looking to make Australia their
             home.
           </p>
-         <div className="flex gap-3 mb-4 sm:mb-6 text-lg">
-  {[
-    { icon: FaFacebookF, link: "https://www.facebook.com/growmore.one" },
-    { icon: FaInstagram, link: "https://www.instagram.com/growmore.one/" },
-    { icon: FaLinkedinIn, link: "https://www.linkedin.com/company/growmore-immigration/" },
-    { icon: FaTiktok, link: "https://tiktok.com/@growmore.immigration" },
-    { icon: FaYoutube, link: "https://www.youtube.com/@growmoreimmigration" },
-  ].map((item, i) => {
-    const Icon = item.icon;
-    return (
-      <a
-        key={i}
-        href={item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon className="hover:text-gray-400 cursor-pointer transition" />
-      </a>
-    );
-  })}
-</div>
+          <div className="flex gap-3 mb-4 sm:mb-6 text-lg">
+            {[
+              {
+                icon: FaFacebookF,
+                link: "https://www.facebook.com/growmore.one",
+              },
+              {
+                icon: FaInstagram,
+                link: "https://www.instagram.com/growmore.one/",
+              },
+              {
+                icon: FaLinkedinIn,
+                link: "https://www.linkedin.com/company/growmore-immigration/",
+              },
+              {
+                icon: FaTiktok,
+                link: "https://tiktok.com/@growmore.immigration",
+              },
+              {
+                icon: FaYoutube,
+                link: "https://www.youtube.com/@growmoreimmigration",
+              },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={i}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon className="hover:text-gray-400 cursor-pointer transition" />
+                </a>
+              );
+            })}
+          </div>
           <Link to="/brochures" className="w-full sm:w-auto">
             <button className="bg-[#6dc7d1] px-4 sm:px-5 py-2 sm:py-3 rounded-full font-medium hover:bg-black transition w-full sm:w-auto">
               Download Brochures →
@@ -162,8 +177,11 @@ const Footer = () => {
               <Link
                 to="https://www.youtube.com/@growmoreimmigration"
                 className="hover:text-gray-400 transition"
-              > <span className="text-white font-semibold ">›</span> YouTube
-              Channel</Link>
+              >
+                {" "}
+                <span className="text-white font-semibold ">›</span> YouTube
+                Channel
+              </Link>
             </li>
           </ul>
         </div>
@@ -175,22 +193,36 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 sm:space-y-3 text-[15px] text-white font-semibold">
             <li>
-              <Link to="/terms-services" className="hover:text-gray-400 transition">
+              <Link
+                to="/terms-services"
+                className="hover:text-gray-400 transition"
+              >
                 Terms & Services
               </Link>
             </li>
             <li>
-              <Link to="/privacy-policy" className="hover:text-gray-400 transition">
+              <Link
+                to="/privacy-policy"
+                className="hover:text-gray-400 transition"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="https://www.legislation.gov.au/F2021L01856/latest/text" className="hover:text-gray-400 transition">
+              <a
+                href="https://www.legislation.gov.au/F2021L01856/latest/text"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-400 transition"
+              >
                 Code of Conduct
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/cancellation-and-refund-policy" className="hover:text-gray-400">
+              <Link
+                to="/cancellation-and-refund-policy"
+                className="hover:text-gray-400"
+              >
                 Cancellation & Refund Policy
               </Link>
             </li>
@@ -207,25 +239,24 @@ const Footer = () => {
         </div>
       </div>
       {/* COPYRIGHT */}
-    <div className="border-t border-white/20 py-6 px-4 relative z-10">
-  <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between text-[15px] text-white gap-4">
-    
-    {/* Left Side */}
-    <p className="text-center sm:text-left">
-      © {new Date().getFullYear()} Growmore Immigration | All Rights Reserved
-    </p>
+      <div className="border-t border-white/20 py-6 px-4 relative z-10">
+        <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between text-[15px] text-white gap-4">
+          {/* Left Side */}
+          <p className="text-center sm:text-left">
+            © {new Date().getFullYear()} Growmore Immigration | All Rights
+            Reserved
+          </p>
 
-    {/* Right Side */}
-    <div className="flex items-center gap-2">
-      <img
-        src={`${import.meta.env.BASE_URL}assets/logo2.png`}
-        alt="WebMotion"
-        className="h-5 object-contain"
-      />
-    </div>
-
-  </div>
-</div>
+          {/* Right Side */}
+          <div className="flex items-center gap-2">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/logo2.png`}
+              alt="WebMotion"
+              className="h-5 object-contain"
+            />
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
