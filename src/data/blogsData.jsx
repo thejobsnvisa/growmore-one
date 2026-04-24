@@ -1,5 +1,14 @@
 export const blogs = [
   {
+    id: 20,
+    slug: "building-skills-in-australia-how-the-subclass-407-visa-works",
+    title: "Building Skills in Australia: How the Subclass 407 Visa Works",
+    metaTitle: "Subclass 407 Visa Australia: Training Visa Guide",
+    metaDescription: "how the Subclass 407 Training Visa works, eligibility, training types, sponsorship requirements, and how it can support your future Australia PR.",
+    date: "April 24, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg20.png`,
+  },
+  {
     id: 19,
     slug: "a-reminder-to-the-immigration-minister-the-ground-reality-is-different",
     title: "A Reminder to the Immigration Minister: The Ground Reality is Different",
