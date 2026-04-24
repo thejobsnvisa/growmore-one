@@ -226,14 +226,14 @@ const Footer = () => {
                 Cancellation And <br/> Refund Policy
               </Link>
             </li>
-              {/* <li>
+              <li>
               <Link
                 to="/artificial-intelligence-use-policy"
                 className="hover:text-gray-400"
               >
                Artificial Intelligence <br/> Use Policy
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
 
