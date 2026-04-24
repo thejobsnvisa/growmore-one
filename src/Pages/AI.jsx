@@ -44,11 +44,7 @@ const AI = () => {
         </section>
 
         {/* CONTENT */}
-        <section className="max-w-[1100px] mx-auto px-6 md:px-10 py-12 text-[#042325]">
-          <h2 className="text-3xl font-bold mt-16 mb-6">
-            Artificial Intelligence Use Policy
-          </h2>
-
+        <section className="max-w-[1400px] mx-auto px-6 py-10 md:px-15 py-16">
           <div className="space-y-6 text-[15px] leading-relaxed">
             <p>
               Growmore Immigration is committed to the ethical, responsible, and
