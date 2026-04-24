@@ -11,7 +11,7 @@ const AI = () => {
 
         <meta
           name="description"
-          content="GrowMore Immigration’s Artificial Intelligence Use Policy outlining ethical AI use, legal compliance, and client data protection."
+          content="Learn how Growmore Immigration uses AI responsibly, safeguards your data, and ensures all migration advice is reviewed by a Registered Migration Agent."
         />
 
         {/* Canonical */}
@@ -22,7 +22,7 @@ const AI = () => {
 
         {/* Open Graph */}
         <meta property="og:title" content="Artificial Intelligence Use Policy - GrowMore Immigration" />
-        <meta property="og:description" content="Understand how GrowMore Immigration uses AI responsibly, ethically, and in compliance with Australian laws." />
+        <meta property="og:description" content="Learn how GrowMore Immigration uses AI responsibly, safeguards your data, and ensures all migration advice is reviewed by a Registered Migration Agent." />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
