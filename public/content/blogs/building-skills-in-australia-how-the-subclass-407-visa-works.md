@@ -40,15 +40,15 @@ This visa helps you improve your skills for a job, gain experience in an area of
 There are three types of occupational training available under the **Subclass 407 visa**:
 
 ### **1. Occupational Training Required for Registration** 
-
-
+\
 This type is for professionals who must complete training to become registered, licensed, or certified in their occupation. The training is workplace-based and is required to legally work either in Australia or your home country. This option is suitable when the training is mandatory, not just for skill improvement.
 
 
 ### **2. Occupational Training to Improve Skills in an Eligible Occupation**
-
+\
 This is the most common Subclass 407 training type. It is designed for individuals who already have some experience but want to improve their skills through structured workplace training in Australia. 
-To qualify, you must:
+
+**To qualify, you must:**
 
 * Be nominated in an eligible skilled occupation
 * Have at least 12 months of relevant experience
@@ -56,8 +56,8 @@ To qualify, you must:
 * Training must be structured and tailored to your skills
 
 ### **3. Occupational Training for Capacity Building Overseas**
-&nbsp;
-This type focuses on building skills that benefit your home country. It includes:
+\
+**This type focuses on building skills that benefit your home country. It includes:**
 
 * **Overseas Qualification:** For students studying overseas who need practical training in Australia to complete their qualification (usually up to 6 months).
 * **Government-Supported Training:** Training supported by an Australian government agency or the home country government.
@@ -70,8 +70,9 @@ One of the most important parts of the [Subclass 407 visa](https://www.growmore.
 This means you cannot apply independently for this visa. Your sponsor must be approved as a Temporary Activities Sponsor before the visa application is submitted.
 
 ### **Eligibility Requirements for Subclass 407 Visa**
+\
+**To apply for this visa, you must:**
 
-To apply for this visa, you must:
 * Have an approved sponsor
 * Have an approved nomination
 * Usually be 18 years or older
@@ -84,16 +85,16 @@ To apply for this visa, you must:
 
 ## Important Considerations
 
-### **Can You Include Family Members?**
-
+### **1. Can You Include Family Members?**
+\
 Yes, you can include family members such as spouse/partner or dependent children under this subclass 407. Your family members must also meet health and character requirements. Additionally, your dependent can also apply later as a subsequent entrant.
 
-### **Can You Change Sponsor?**
-
+### **2. Can You Change Sponsor?**
+\
 Yes, you can change your sponsor while on a Subclass 407 visa, but there are a few important things to understand. If you decide to continue your training with a different organisation, the new organisation must first become your sponsor and submit a new nomination for your training. Once the new nomination is approved, you can continue your occupational training with the new sponsor for the remaining time on your current visa.
 
-### **Does A Subclass 407 Visa Lead to an Australia PR?**
-
+### **3. Does A Subclass 407 Visa Lead to an Australia PR?**
+\
 The Subclass 407 visa does not directly lead to permanent residency, but it can help strengthen your future migration opportunities. So, if your long-term goal is an [Australia PR](https://www.growmore.one/), then you can later move to employer-sponsored visas or skilled migration visas. These pathways depend on your occupation, experience, and the opportunities you gain during your training in Australia.
 
 
