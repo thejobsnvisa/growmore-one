@@ -6,8 +6,8 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 
 const certifications = [
-  { id: 1, image: `${import.meta.env.BASE_URL}assets/bg18.svg` },
-  { id: 2, image: `${import.meta.env.BASE_URL}assets/mara-card.png` },
+  { id: 1, image: `${import.meta.env.BASE_URL}assets/mara-card.png` },
+  { id: 2, image: `${import.meta.env.BASE_URL}assets/bg18.svg` },
   { id: 3, image: `${import.meta.env.BASE_URL}assets/icef.png` },
   { id: 4, image: `${import.meta.env.BASE_URL}assets/qeac.svg` },
   { id: 5, image: `${import.meta.env.BASE_URL}assets/isana.svg` },
