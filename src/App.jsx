@@ -26,6 +26,7 @@ import Brochures from "./Pages/Brochures";
 import Terms from "./Pages/Terms";
 import Policy from "./Pages/Policy";
 import Refund from "./Pages/Refund";
+import AI from "./Pages/AI";
 
 // Articles
 import NewsArticle from "./Pages/NewsArtical";
@@ -114,6 +115,7 @@ function App() {
 
         {/* Policies */}
         <Route path="/terms-services" element={<Terms />} />
+        <Route path="/artificial-intelligence-use-policy" element={<AI/>} />
         <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/cancellation-and-refund-policy" element={<Refund />} />
 
