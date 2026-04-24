@@ -10,6 +10,7 @@ import Member from "../Components/Member";
 import Testimonials from "../Components/Testimonials"; // Removed .jsx and ensured Capital T
 import GoogleReviews from "../Components/GoogleReviews";
 import { Helmet } from "react-helmet-async";
+import CertificationSection from "../Components/Certificate";
 
 const Home = () => {
   const url = window.location.href;
@@ -46,6 +47,7 @@ const Home = () => {
         <Process />
         <Member />
         <Labour />
+        <CertificationSection />
         <BlogSection />
         <Testimonials />
         <FAQ />
