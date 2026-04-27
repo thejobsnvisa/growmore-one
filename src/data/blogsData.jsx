@@ -1,4 +1,13 @@
 export const blogs = [
+     {
+    id: 21,
+    slug: "avoid-482-visa-refusal-what-employers-and-applicants-should-do",
+    title: "Avoid 482 Visa Refusal: What Employers and Applicants Should Do",
+    metaTitle: "Subclass 407 Visa Australia: Training Visa Guide",
+    metaDescription: "how the Subclass 407 Training Visa works, eligibility, training types, sponsorship requirements, and how it can support your future Australia PR.",
+    date: "April 27, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg21.jpg`,
+  },
   {
     id: 20,
     slug: "building-skills-in-australia-how-the-subclass-407-visa-works",
