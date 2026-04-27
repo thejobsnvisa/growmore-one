@@ -8,7 +8,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 /* ---------- Lazy Load Pages ---------- */
 
-// Main Pages
+/* Main Pages */
 const Home = lazy(() => import("./Pages/Home"));
 const WhoWeAre = lazy(() => import("./Pages/WhoWeAre"));
 const Migrate = lazy(() => import("./Pages/Migrate"));
@@ -32,21 +32,21 @@ const Policy = lazy(() => import("./Pages/Policy"));
 const Refund = lazy(() => import("./Pages/Refund"));
 const AI = lazy(() => import("./Pages/AI"));
 
-// Articles
+/* Articles */
 const NewsArticle = lazy(() => import("./Pages/NewsArtical"));
 const BlogsArtical = lazy(() => import("./Pages/BlogsArtical"));
 
-// Checklist
+/* Checklist */
 const Checklist = lazy(() => import("./Components/Checklist"));
 const Checklistgsm = lazy(() => import("./Components/Checklistgsm"));
 const Checklistlabour = lazy(() => import("./Components/Checklistlabour"));
 
-// Student
+/* Student */
 const StudentAustralia = lazy(() => import("./Pages/StudentAustralia"));
 const StudentDubai = lazy(() => import("./Pages/StudentDubai"));
 const StudentUk = lazy(() => import("./Pages/StudentUk"));
 
-// Employer
+/* Employer */
 const EmployerVisaBusiness = lazy(() =>
   import("./Pages/EmployerVisaBusiness")
 );
@@ -69,7 +69,7 @@ const EmployerVisaLMT = lazy(() =>
   import("./Pages/EmployerVisaLMT")
 );
 
-// Individual
+/* Individual */
 const IndividualVisaEmployer = lazy(() =>
   import("./Pages/IndividualVisaEmployer")
 );
@@ -105,7 +105,8 @@ const IndividualVisaGurdian = lazy(() =>
 
 function Loader() {
   return (
-    <div className="min-h-screen flex items-center justify-center text-lg font-semibold">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="w-10 h-10 border-4 border-[#6dc7d1] border-t-transparent rounded-full animate-spin"></div>
     </div>
   );
 }
@@ -115,8 +116,8 @@ function Loader() {
 function App() {
   return (
     <Router>
-      <Navbar />
       <ScrollToTop />
+      <Navbar />
 
       <Suspense fallback={<Loader />}>
         <Routes>
