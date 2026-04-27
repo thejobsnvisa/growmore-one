@@ -66,9 +66,6 @@ function App() {
     <Router>
       <Navbar />
       <ScrollToTop />
-
-      {/* ✅ Suspense loader */}
-      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/who-we-are" element={<WhoWeAre />} />
@@ -125,7 +122,6 @@ function App() {
           <Route path="/our-services/individual/visitor-evisitor-eta-visa" element={<IndividualVisaETA />} />
           <Route path="/our-services/individual/student-guardian-visa" element={<IndividualVisaGurdian />} />
         </Routes>
-      </Suspense>
 
       <Footer />
     </Router>
