@@ -1,11 +1,21 @@
-import { useRef, useState, useEffect } from "react";
-import PhoneInput from "react-phone-input-2";
-import ReCAPTCHA from "react-google-recaptcha";
-import "react-phone-input-2/lib/style.css";
+import {
+  useRef,
+  useState,
+  useEffect,
+  lazy,
+  Suspense,
+} from "react";
+
 import { Link } from "react-router-dom";
-// 1. Added Toast Imports
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+// Lazy Load Heavy Components
+const PhoneInput = lazy(() => import("react-phone-input-2"));
+const ReCAPTCHA = lazy(() => import("react-google-recaptcha"));
+
+// Load CSS
+import "react-phone-input-2/lib/style.css";
 
 const Hero = () => {
   const recaptchaRef = useRef(null);
