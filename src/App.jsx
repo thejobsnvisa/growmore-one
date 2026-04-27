@@ -108,8 +108,6 @@ function App() {
     <Router>
       <Navbar />
       <ScrollToTop />
-
-      <Suspense fallback={<Loader />}>
         <Routes>
           {/* Main */}
           <Route path="/" element={<Home />} />
@@ -257,7 +255,6 @@ function App() {
             element={<IndividualVisaGurdian />}
           />
         </Routes>
-      </Suspense>
 
       <Footer />
     </Router>
