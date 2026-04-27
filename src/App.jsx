@@ -101,14 +101,6 @@ const IndividualVisaGurdian = lazy(() =>
   import("./Pages/IndividualVisaGurdian")
 );
 
-/* ---------- Loader ---------- */
-
-function Loader() {
-  return (
-    <div className="min-h-screen flex items-center justify-center"></div>
-  );
-}
-
 /* ---------- App ---------- */
 
 function App() {
@@ -116,8 +108,6 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
-
-      <Suspense fallback={<Loader />}>
         <Routes>
           {/* Main */}
           <Route path="/" element={<Home />} />
@@ -265,8 +255,6 @@ function App() {
             element={<IndividualVisaGurdian />}
           />
         </Routes>
-      </Suspense>
-
       <Footer />
     </Router>
   );
