@@ -6,7 +6,7 @@ export const blogs = [
     metaTitle: "Subclass 407 Visa Australia: Training Visa Guide",
     metaDescription: "how the Subclass 407 Training Visa works, eligibility, training types, sponsorship requirements, and how it can support your future Australia PR.",
     date: "April 27, 2026",
-    image: `${import.meta.env.BASE_URL}assets/bg21.png`,
+    image: `${import.meta.env.BASE_URL}assets/bg21.jpg`,
   },
   {
     id: 17,
