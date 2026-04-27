@@ -1,91 +1,57 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Riddhi Upadhyay" />
+    <meta name="copyright" content="Growmore Immigration" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="author" content="Riddhi Upadhyay" />
-  <meta name="copyright" content="Growmore Immigration" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#042325" />
-
-  <title>
-    Best Australia PR Immigration Consultant & Migration Agents Melbourne
-  </title>
-
-  <!-- DNS Prefetch -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Preload Hero Image -->
-  <link rel="preload" as="image" href="/assets/img2.webp" />
-
-  <!-- Optimized Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Font Awesome Async -->
-  <link
-    rel="preload"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </noscript>
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/logo.webp" />
-
-  <!-- Google Analytics Delayed -->
-  <script>
-    window.addEventListener("load", function () {
-      const script = document.createElement("script");
-      script.src =
-        "https://www.googletagmanager.com/gtag/js?id=G-3DV6ZX6W9M";
-      script.async = true;
-      document.head.appendChild(script);
-
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DV6ZX6W9M"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-
       gtag("js", new Date());
       gtag("config", "G-3DV6ZX6W9M");
-    });
-  </script>
-</head>
+    </script>
 
-<body>
-  <div id="root"></div>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Main React App -->
-  <script type="module" src="/src/main.jsx"></script>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Clean URL Script moved bottom -->
-  <script>
-    (function () {
-      const url = new URL(window.location.href);
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="https://www.growmore.one/logo.jpg" />
 
-      if (url.searchParams.has("p")) {
-        const path = url.searchParams.get("p").replace(/~and~/g, "/");
-        window.history.replaceState(null, "", path || "/");
-      }
-    })();
-  </script>
-</body>
+    <!-- ✅ SEO (Homepage default only) -->
+    <title>Best Australia PR Immigration Consultant & Migration Agents Melbourne</title>
+
+    <meta name="robots" content="index, follow" />
+
+
+    <!-- Clean URL Script -->
+    <script>
+      (function () {
+        const url = new URL(window.location.href);
+        if (url.searchParams.has("p")) {
+          const path = url.searchParams.get("p").replace(/~and~/g, "/");
+          window.history.replaceState(null, "", path || "/");
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
