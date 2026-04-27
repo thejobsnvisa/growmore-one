@@ -102,13 +102,19 @@ const Hero = () => {
 
   {/* Optimized Hero Image */}
   <img
-    src={`${import.meta.env.BASE_URL}assets/img2.png`}
-    alt="Growmore Immigration"
-    loading="eager"
-    fetchPriority="high"
-    decoding="async"
-    className="absolute inset-0 w-full h-full object-cover"
-  />
+  src={`${import.meta.env.BASE_URL}assets/img2.png`}
+  srcSet={`
+    ${import.meta.env.BASE_URL}assets/img2.png 480w,
+    ${import.meta.env.BASE_URL}assets/img2.png 768w,
+    ${import.meta.env.BASE_URL}assets/img2.png 1280w
+  `}
+  sizes="(max-width: 768px) 100vw, 100vw"
+  alt="Growmore Immigration"
+  loading="eager"
+  fetchPriority="high"
+  decoding="async"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
       {/* Dark Overlay */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-8 xl:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
