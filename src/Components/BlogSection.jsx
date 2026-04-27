@@ -6,6 +6,15 @@ const base = import.meta.env.BASE_URL;
 
 const blogs = [
  {
+    id: 0,
+    slug: "australia-migration-reality-nominations-backlogs-and-trends",
+    title: "Australia Migration Reality: Nominations, Backlogs, and Trends ",
+    metaTitle: "Australia Migration Reality: Nominations & Backlogs",
+    metaDescription: "Home Affairs data shows state nomination usage, skilled visa backlogs and employer-sponsored trends for 2025–26. See how competitive PR pathways are.",
+     date: "April 25, 2026",
+    image: `${base}assets/29.png`,
+  },
+  {
     id: 1,
     slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
     title: "Tasmania Weekly Invitation Round: 42 Invitations Issued in Latest Round",
@@ -22,15 +31,6 @@ const blogs = [
     metaDescription: "AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
     date: "April 22, 2026",
     image: `${base}assets/27.png`,
-  },
-  {
-    id: 3,
-    slug: "australia-opens-subclass-192-tuvalu-ballot-on-1-may-with-280-places",
-    title: "Australia Opens Subclass 192 Tuvalu Ballot on 1 May With 280 Places",
-    metaTitle: "Australia Opens Subclass 192 Tuvalu Ballot From 1 May 2026",
-    metaDescription: "AAustralia opens Subclass 192 Tuvalu ballot from 1 May to 1 June 2026 with 280 PR places. Learn eligibility, process, and how to apply.",
-    date: "April 17, 2026",
-    image: `${base}assets/26.jpg`,
   },
 ];
 

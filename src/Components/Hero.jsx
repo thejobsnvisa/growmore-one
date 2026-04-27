@@ -3,7 +3,6 @@ import PhoneInput from "react-phone-input-2";
 import ReCAPTCHA from "react-google-recaptcha";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
-// 1. Added Toast Imports
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,20 +23,25 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // ✅ Fixed Typing Effect Logic
+  /* PERFORMANCE FIXED TYPING EFFECT */
   useEffect(() => {
     const currentWord = texts[currentWordIndex];
-    const typingSpeed = isDeleting ? 40 : 80;
+
+    const typingSpeed = isDeleting ? 90 : 160;
 
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        setDisplayText(currentWord.substring(0, displayText.length + 1));
-        if (displayText === currentWord) {
-          setTimeout(() => setIsDeleting(true), 2000);
+        const nextText = currentWord.substring(0, displayText.length + 1);
+        setDisplayText(nextText);
+
+        if (nextText === currentWord) {
+          setTimeout(() => setIsDeleting(true), 1800);
         }
       } else {
-        setDisplayText(currentWord.substring(0, displayText.length - 1));
-        if (displayText === "") {
+        const nextText = currentWord.substring(0, displayText.length - 1);
+        setDisplayText(nextText);
+
+        if (nextText === "") {
           setIsDeleting(false);
           setCurrentWordIndex((prev) => (prev + 1) % texts.length);
         }
@@ -45,10 +49,11 @@ const Hero = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentWordIndex, texts]);
+  }, [displayText, isDeleting, currentWordIndex]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const token = recaptchaRef.current?.getValue();
 
     if (!token) {
@@ -61,6 +66,7 @@ const Hero = () => {
     try {
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
+
       const finalPhone = `+${dialCode}${phoneNumber}`;
 
       const payload = {
@@ -72,7 +78,9 @@ const Hero = () => {
         captchaToken: token,
         source: "Website Hero Form",
       };
+
       const BASE_URL = "https://growmore-1.vercel.app";
+
       const response = await fetch(`${BASE_URL}/api/lead`, {
         method: "POST",
         headers: {
@@ -80,6 +88,7 @@ const Hero = () => {
         },
         body: JSON.stringify(payload),
       });
+
       const result = await response.json();
 
       if (result.success) {
@@ -99,24 +108,24 @@ const Hero = () => {
 
   return (
     <section
+      className="bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url(${import.meta.env.BASE_URL}assets/img2.png)`,
       }}
     >
-      {/* Dark Overlay */}
-
       <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-8 xl:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
         {/* LEFT CONTENT */}
-        <div className="text-white text-center lg:text-left lg:w-full xl:w-[1200px] ">
-          {" "}
+        <div className="text-white text-center lg:text-left lg:w-full xl:w-[1200px]">
           <h2 className="text-xs sm:text-sm font-bold tracking-widest text-[#5DC2D3] uppercase mb-4">
             Welcome to Growmore Immigration
           </h2>
+
           <h1 className="text-3xl sm:text-4xl lg:text-4xl font-semibold leading-tight mb-6">
-            The Best Immigration Consulting Services{" "}
+            The Best Immigration Consulting Services
             <br className="hidden sm:block" />
             for a Smooth Move to Australia
           </h1>
+
           <p className="text-base sm:text-lg mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
             Start your journey to a new life in Australia with{" "}
             <span className="text-[#8fd07c] font-semibold underline decoration-white">
@@ -131,20 +140,19 @@ const Hero = () => {
               Registered Migration Agents.
             </span>
           </p>
+
           <h3 className="text-[#8fd07c] font-bold text-xl sm:text-2xl mb-8 min-h-[40px]">
             {displayText}
-            <span className="border-r-3 border-[#8fd07c] animate-pulse ml-1"></span>
+            <span className="border-r-2 border-[#8fd07c] animate-pulse ml-1"></span>
           </h3>
-          <div>
-            <Link to="/who-we-are">
-              <button className="bg-[#6dc7d1] px-8 py-3 rounded-full text-sm sm:text-base hover:bg-black transition duration-300">
-                Read More →
-              </button>
-            </Link>
-          </div>
+
+          <Link to="/who-we-are">
+            <button className="bg-[#6dc7d1] px-8 py-3 rounded-full text-sm sm:text-base hover:bg-black transition duration-300">
+              Read More →
+            </button>
+          </Link>
         </div>
 
-        {/* RIGHT FORM */}
         {/* RIGHT FORM */}
         <div className="flex justify-center lg:justify-end px-4 sm:px-6">
           <div className="bg-black rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-lg">
@@ -160,7 +168,6 @@ const Hero = () => {
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Name + Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     name="name"
@@ -168,6 +175,7 @@ const Hero = () => {
                     required
                     className="bg-white rounded-lg px-4 py-2 w-full border border-gray-300"
                   />
+
                   <input
                     type="email"
                     name="email"
@@ -177,9 +185,7 @@ const Hero = () => {
                   />
                 </div>
 
-                {/* Split Phone Input */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  {/* Country Code */}
                   <div className="w-full sm:w-28 bg-white rounded-lg border border-gray-300">
                     <PhoneInput
                       country={"au"}
@@ -200,7 +206,6 @@ const Hero = () => {
                     />
                   </div>
 
-                  {/* Phone Number */}
                   <input
                     type="tel"
                     placeholder="Contact Number"
@@ -211,7 +216,6 @@ const Hero = () => {
                   />
                 </div>
 
-                {/* Visa Type */}
                 <select
                   name="visaType"
                   required
@@ -226,7 +230,6 @@ const Hero = () => {
                   <option>PR Inquiries</option>
                 </select>
 
-                {/* Message */}
                 <textarea
                   rows="4"
                   name="message"
@@ -234,8 +237,7 @@ const Hero = () => {
                   className="bg-white rounded-lg px-4 py-3 w-full border border-gray-300"
                 ></textarea>
 
-                {/* reCAPTCHA */}
-                <div className="flex justify-center sm:justify-start w-full sm:w-auto max-w-sm sm:max-w-md lg:max-w-lg">
+                <div className="flex justify-center sm:justify-start">
                   <ReCAPTCHA
                     sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                     ref={recaptchaRef}

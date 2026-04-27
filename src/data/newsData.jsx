@@ -1,6 +1,15 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
+   {
+    id: 29,
+    slug: "australia-migration-reality-nominations-backlogs-and-trends",
+    title: "Australia Migration Reality: Nominations, Backlogs, and Trends ",
+    metaTitle: "Australia Migration Reality: Nominations & Backlogs",
+    metaDescription: "Home Affairs data shows state nomination usage, skilled visa backlogs and employer-sponsored trends for 2025–26. See how competitive PR pathways are.",
+     date: "April 25, 2026",
+    image: `${base}assets/29.png`,
+  },
   {
     id: 28,
     slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
