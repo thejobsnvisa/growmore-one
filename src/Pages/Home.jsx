@@ -1,74 +1,57 @@
-import React, { lazy, Suspense } from "react";
-import { Helmet } from "react-helmet-async";
-
-/* Above Fold */
+import React from "react";
 import Hero from "../Components/Hero";
 import Card from "../Components/Card";
-
-/* Lazy Load Below Fold Components */
-const Famliy = lazy(() => import("../Components/Famliy"));
-const Labour = lazy(() => import("../Components/Labour"));
-const Process = lazy(() => import("../Components/Process"));
-const FAQ = lazy(() => import("../Components/FAQ"));
-const BlogSection = lazy(() => import("../Components/BlogSection"));
-const Member = lazy(() => import("../Components/Member"));
-const Testimonials = lazy(() => import("../Components/Testimonials"));
-const CertificationSection = lazy(() =>
-  import("../Components/Certificate")
-);
-
-/* Removed unused GoogleReviews import */
-
-const Loader = () => <div className="py-8"></div>;
+import Famliy from "../Components/Famliy";
+import Labour from "../Components/Labour";
+import Process from "../Components/Process";
+import FAQ from "../Components/FAQ";
+import BlogSection from "../Components/BlogSection";
+import Member from "../Components/Member";
+import Testimonials from "../Components/Testimonials"; // Removed .jsx and ensured Capital T
+import GoogleReviews from "../Components/GoogleReviews";
+import { Helmet } from "react-helmet-async";
+import CertificationSection from "../Components/Certificate";
 
 const Home = () => {
-  const url = typeof window !== "undefined" ? window.location.href : "";
+  const url = window.location.href;
 
   return (
     <>
       <Helmet>
-        <title>
-          Best Australia PR Immigration Consultant & Migration Agents Melbourne
-        </title>
+        <title>Best Australia PR Immigration Consultant & Migration Agents Melbourne</title>
 
         <meta
           name="description"
           content="Best Australia PR Immigration Consultants & Migration Agents in Melbourne. Expert Support for Skilled Migration, PR Visas, Employer-Sponsored Visas & All type Documentation."
         />
 
+        {/* ✅ Canonical for homepage */}
         <link rel="canonical" href={url} />
 
+        {/* ✅ OG */}
         <meta
           property="og:title"
           content="Best Australia PR Immigration Consultant & Migration Agents Melbourne"
         />
-
         <meta
           property="og:description"
           content="Best Australia PR Immigration Consultants & Migration Agents in Melbourne. Expert Support for Skilled Migration, PR Visas, Employer-Sponsored Visas & All type Documentation."
         />
-
         <meta property="og:url" content={url} />
-        <meta property="og:image" content="/logo.webp" />
+        <meta property="og:image" content="https://www.growmore.one/logo.jpg" />
       </Helmet>
-
-      <main className="bg-white">
-        {/* First Paint Priority */}
+      <div className="bg-white">
         <Hero />
         <Card />
-
-        {/* Lazy Sections */}
-        <Suspense fallback={<Loader />}>
-          <Famliy />
-          <Process />
-          <Member />
-          <Labour />
-          <CertificationSection />
-          <BlogSection />
-          <Testimonials />
-          <FAQ />
-        </Suspense>
-      </main>
+        <Famliy />
+        <Process />
+        <Member />
+        <Labour />
+        <CertificationSection />
+        <BlogSection />
+        <Testimonials />
+        <FAQ />
+      </div>
     </>
   );
 };
