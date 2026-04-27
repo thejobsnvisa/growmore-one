@@ -98,11 +98,17 @@ const Hero = () => {
   };
 
   return (
-    <section
-      style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}assets/img2.png)`,
-      }}
-    >
+   <section className="relative overflow-hidden">
+
+  {/* Optimized Hero Image */}
+  <img
+    src={`${import.meta.env.BASE_URL}assets/img2.png`}
+    alt="Growmore Immigration"
+    loading="eager"
+    fetchPriority="high"
+    decoding="async"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
       {/* Dark Overlay */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-2 lg:px-8 xl:px-2 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
