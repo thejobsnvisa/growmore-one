@@ -1,5 +1,14 @@
 export const blogs = [
-     {
+   {
+    id: 21,
+    slug: "avoid-482-visa-refusal-what-employers-and-applicants-should-do",
+    title: "Avoid 482 Visa Refusal: What Employers and Applicants Should Do",
+    metaTitle: "Subclass 407 Visa Australia: Training Visa Guide",
+    metaDescription: "how the Subclass 407 Training Visa works, eligibility, training types, sponsorship requirements, and how it can support your future Australia PR.",
+    date: "April 27, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg21.png`,
+  },
+  {
     id: 17,
     slug: "iml-skills-assessment-key-step-for-senior-managers-migrating-to-australia",
     title: "IML Skills Assessment: Key Step for Senior Managers Migrating to Australia",
