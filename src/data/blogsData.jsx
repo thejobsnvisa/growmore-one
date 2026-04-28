@@ -1,5 +1,14 @@
 export const blogs = [
-     {
+  {
+    id: 22,
+    slug: "vetassess-skills-assessment-for-australia-pr-stepbystep-guide",
+    title: "VETASSESS Skills Assessment for Australia PR: Step-by-Step Guide",
+    metaTitle: "VETASSESS Skills Assessment Guide for Australia PR",
+    metaDescription: "Step-by-step VETASSESS skills assessment guide for Australia PR. Learn requirements, documents, process, fees, and outcome details clearly.",
+    date: "April 28, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg22.png`,
+  },   
+  {
     id: 21,
     slug: "avoid-482-visa-refusal-what-employers-and-applicants-should-do",
     title: "Avoid 482 Visa Refusal: What Employers and Applicants Should Do",
