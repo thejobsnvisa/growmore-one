@@ -10,45 +10,45 @@ That is why it is important to approach your application with clarity. In this b
 
 VETASSESS is an authorised skills assessment body that evaluates whether your education and work experience meet Australian standards for your nominated occupation. It covers over 341 professional and other non-trade occupations.
 
-You will typically need a VETASSESS skills assessment if you are applying for a Skilled Independent Visa (Subclass 189), Skilled Nominated Visa (Subclass 190), or Skilled Work Regional Visa (Subclass 491).
+You will typically need a VETASSESS skills assessment if you are applying for a [Skilled Independent Visa (Subclass 189)](https://www.growmore.one/points-calculator/), Skilled Nominated Visa (Subclass 190), or Skilled Work Regional Visa (Subclass 491).
 
-If you’re unsure whether your occupation is assessed by VETASSESS, check the [official occupation list](https://www.vetassess.com.au/check-my-occupation){:rel="nofollow"}.
+If you’re unsure whether your occupation is assessed by VETASSESS, check the [official occupation list](https://www.vetassess.com.au/check-my-occupation).
 
 ## Documents Required for VETASSESS Skills Assessment
 
 To complete your VETASSESS application, you need to submit the following:
 
 ### **1. Personal Documents**
-\
+
 - Updated CV / Resume  
 - Recent passport-size photograph  
 
 ### **2. Identity Proof**
-&nbsp;
+
 - 3 ID documents (1 primary + 2 secondary)  
 - Name change documents (if applicable)  
 
 ### **3. Qualification Evidence**
-&nbsp;
+
 - Award certificate  
 - Academic transcripts  
 - Additional course details (if required)  
 
 ### **4. Employment Evidence**
-&nbsp;
+
 - Statement of Service (job role, duties, dates, salary)  
 - Payment proof (payslips / tax / bank statements)  
 
 ### **5. Self-Employment (if applicable)**
-&nbsp;
+
 - Business registration + income proof + client evidence  
 
 ### **6. Occupation-Specific Documents (if required)**
-&nbsp;
+
 - Organisational chart / project list / portfolio  
 
 ### **7. Supporting Documents**
-&nbsp;
+
 - Licences, certifications, or additional proof  
 
 ### **8. Proof of Application Fee Payment**
@@ -143,6 +143,8 @@ Processing time varies, but priority applications are faster. Delays usually occ
 
 Common reasons include job role mismatch, weak reference letters, insufficient proof of experience, or non-relevant qualifications.
 
+```{r, echo=FALSE}
+plot(cars)
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
