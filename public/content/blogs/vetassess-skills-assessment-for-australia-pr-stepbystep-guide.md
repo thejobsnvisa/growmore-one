@@ -19,29 +19,36 @@ If you’re unsure whether your occupation is assessed by VETASSESS, check the [
 To complete your VETASSESS application, you need to submit the following:
 
 ### **1. Personal Documents**
+\
 - Updated CV / Resume  
 - Recent passport-size photograph  
 
 ### **2. Identity Proof**
+&nbsp;
 - 3 ID documents (1 primary + 2 secondary)  
 - Name change documents (if applicable)  
 
 ### **3. Qualification Evidence**
+&nbsp;
 - Award certificate  
 - Academic transcripts  
 - Additional course details (if required)  
 
 ### **4. Employment Evidence**
+&nbsp;
 - Statement of Service (job role, duties, dates, salary)  
 - Payment proof (payslips / tax / bank statements)  
 
 ### **5. Self-Employment (if applicable)**
+&nbsp;
 - Business registration + income proof + client evidence  
 
 ### **6. Occupation-Specific Documents (if required)**
+&nbsp;
 - Organisational chart / project list / portfolio  
 
 ### **7. Supporting Documents**
+&nbsp;
 - Licences, certifications, or additional proof  
 
 ### **8. Proof of Application Fee Payment**
