@@ -1,5 +1,3 @@
-# VETASSESS Skills Assessment for Australia PR: Step-by-Step Guide
-
 If your plan is to apply for Australia PR under any occupation or stream that requires skills assessment, you need to know that different occupations are assessed by different authorities. Each authority has its own criteria, and your application is evaluated strictly based on those specific requirements.
 
 For many professional occupations, VETASSESS is the authority that is responsible for assessing your profile. This means your qualification and work experience need to match how VETASSESS evaluates your application.
