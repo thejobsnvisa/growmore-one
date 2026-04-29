@@ -5,8 +5,16 @@ import { Link } from "react-router-dom";
 const base = import.meta.env.BASE_URL;
 
 const blogs = [
- {
+      {
     id: 0,
+    slug: "national-innovation-visa-selection-update-146-invitations-issued-jan-to-mar-2026",
+    title: "National Innovation Visa Selection Update: 146 Invitations Issued (Jan–Mar 2026)",
+    metaTitle: "NIV Invitation Round: 146 Invitations Issued",
+    metaDescription: "National Innovation Visa 2026 update: 146 invitations issued from 1,815 EOIs. Explore priority trends, sector demand, and Australia PR selection insights.",
+     date: "April 29, 2026",
+    image: `${base}assets/30.png`,
+  },{
+    id: 1,
     slug: "australia-migration-reality-nominations-backlogs-and-trends",
     title: "Australia Migration Reality: Nominations, Backlogs, and Trends ",
     metaTitle: "Australia Migration Reality: Nominations & Backlogs",
@@ -15,22 +23,13 @@ const blogs = [
     image: `${base}assets/29.png`,
   },
   {
-    id: 1,
+    id: 2,
     slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
     title: "Tasmania Weekly Invitation Round: 42 Invitations Issued in Latest Round",
     metaTitle: "Tasmania Weekly Invitation Round 23 April 2026 Update",
     metaDescription: "Tasmania issued 42 invitations in the 23 April 2026 round. Subclass 190 remains restricted to Gold Pass, while 491 invitations continue.",
      date: "April 23, 2026",
     image: `${base}assets/28.png`,
-  },
-  {
-    id: 2,
-    slug: "planning-ahpra-registration-english-requirements-change-from-23-april-2026",
-    title: "Planning AHPRA Registration? English Requirements Change from 23 April 2026",
-    metaTitle: "AHPRA English Requirements Change from 23 April 2026",
-    metaDescription: "AHPRA English requirements change from 23 April 2026. Speaking scores increase while overall scores reduce across PTE, TOEFL, OET and Cambridge tests.",
-    date: "April 22, 2026",
-    image: `${base}assets/27.png`,
   },
 ];
 
