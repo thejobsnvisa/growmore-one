@@ -120,8 +120,7 @@ This stage usually involves submitting your EOI and checking eligibility for Sub
 
 So, if you’re unsure how to move forward, speaking with a Skilled migration consultant in Australia can help you understand your options clearly and choose the right PR pathway without unnecessary delays.
 
-
-## FAQs
+## Frequently Asked Questions
 
 ### **1. What is VETASSESS skills assessment?**
 
@@ -143,4 +142,10 @@ Processing time varies, but priority applications are faster. Delays usually occ
 
 Common reasons include job role mismatch, weak reference letters, insufficient proof of experience, or non-relevant qualifications.
 
-{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": \[ { "@type": "Question", "name": "What is VETASSESS skills assessment?", "acceptedAnswer": { "@type": "Answer", "text": "VETASSESS evaluates if your qualifications and work experience meet Australian standards for your nominated occupation for skilled migration visas." } }, { "@type": "Question", "name": "Who needs a VETASSESS assessment?", "acceptedAnswer": { "@type": "Answer", "text": "Applicants applying for skilled visas like Subclass 189, 190, or 491 in occupations listed under VETASSESS must get this assessment." } }, { "@type": "Question", "name": "What documents are required?", "acceptedAnswer": { "@type": "Answer", "text": "You need ID documents, qualifications, a CV, and employment evidence like reference letters, payslips, and tax records." } }, { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "Processing time varies, but priority applications are faster. Delays usually occur due to incomplete or unclear documents." } }, { "@type": "Question", "name": "Why do applications get rejected?", "acceptedAnswer": { "@type": "Answer", "text": "Common reasons include job role mismatch, weak reference letters, insufficient proof of experience, or non-relevant qualifications." } } \] }
+[//]: # (This is a comment — hidden from rendered output)
+
+[//]: # "This also works as a comment"
+
+[comment]: # (Another valid comment syntax)
+
+[//]: # ({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": \[ { "@type": "Question", "name": "What is VETASSESS skills assessment?", "acceptedAnswer": { "@type": "Answer", "text": "VETASSESS evaluates if your qualifications and work experience meet Australian standards for your nominated occupation for skilled migration visas." } }, { "@type": "Question", "name": "Who needs a VETASSESS assessment?", "acceptedAnswer": { "@type": "Answer", "text": "Applicants applying for skilled visas like Subclass 189, 190, or 491 in occupations listed under VETASSESS must get this assessment." } }, { "@type": "Question", "name": "What documents are required?", "acceptedAnswer": { "@type": "Answer", "text": "You need ID documents, qualifications, a CV, and employment evidence like reference letters, payslips, and tax records." } }, { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "Processing time varies, but priority applications are faster. Delays usually occur due to incomplete or unclear documents." } }, { "@type": "Question", "name": "Why do applications get rejected?", "acceptedAnswer": { "@type": "Answer", "text": "Common reasons include job role mismatch, weak reference letters, insufficient proof of experience, or non-relevant qualifications." } } \] })
