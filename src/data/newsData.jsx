@@ -1,7 +1,16 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
-     {
+  {
+    id: 31,
+    slug: "asqa-cancellation-alert-which-training-centre-is-affected",
+    title: "ASQA Cancellation Alert: Which Training Centre Is Affected?",
+    metaTitle: "ASQA Cancels RTO 45579: Qualification Review Alert",
+    metaDescription: "ASQA cancels Melbourne Training Centre (RTO 45579). Qualifications from 2023–2025 under review may affect skills assessment, jobs, and PR pathways.",
+     date: "April 29, 2026",
+    image: `${base}assets/31.png`,
+  }, 
+  {
     id: 30,
     slug: "national-innovation-visa-selection-update-146-invitations-issued-jan-to-mar-2026",
     title: "National Innovation Visa Selection Update: 146 Invitations Issued (Jan–Mar 2026)",
