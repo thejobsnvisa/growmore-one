@@ -1,4 +1,13 @@
 export const blogs = [
+   {
+    id: 22,
+    slug: "australian-visa-processing-times-update-february-2026-vs-april-2026",
+    title: "Australian Visa Processing Times Update (February 2026 vs April 2026)",
+    metaTitle: "Australia Visa Processing Times Update 2026",
+    metaDescription: "Compare Australia visa processing times Feb vs Apr 2026. See GSM improvements, employer-sponsored delays, and updated visa trends.",
+    date: "April 29, 2026",
+    image: `${import.meta.env.BASE_URL}assets/bg23.png`,
+  }, 
   {
     id: 22,
     slug: "vetassess-skills-assessment-for-australia-pr-stepbystep-guide",
