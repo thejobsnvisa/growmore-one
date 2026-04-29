@@ -1,5 +1,3 @@
-# Australian Visa Processing Times Update (February 2026 vs April 2026)
-
 The Department of Home Affairs has recently updated processing times across several visa subclasses. There are notable improvements, particularly within the General Skilled Migration (GSM) program. However, trends across other visa categories remain mixed.
 
 Below is a structured comparison of processing times based on the latest available data.
