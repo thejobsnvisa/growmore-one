@@ -5,8 +5,17 @@ import { Link } from "react-router-dom";
 const base = import.meta.env.BASE_URL;
 
 const blogs = [
-      {
+      
+   {
     id: 0,
+    slug: "asqa-cancellation-alert-which-training-centre-is-affected",
+    title: "ASQA Cancellation Alert: Which Training Centre Is Affected?",
+    metaTitle: "ASQA Cancels RTO 45579: Qualification Review Alert",
+    metaDescription: "ASQA cancels Melbourne Training Centre (RTO 45579). Qualifications from 2023–2025 under review may affect skills assessment, jobs, and PR pathways.",
+     date: "April 29, 2026",
+    image: `${base}assets/31.png`,
+  }, {
+    id: 1,
     slug: "national-innovation-visa-selection-update-146-invitations-issued-jan-to-mar-2026",
     title: "National Innovation Visa Selection Update: 146 Invitations Issued (Jan–Mar 2026)",
     metaTitle: "NIV Invitation Round: 146 Invitations Issued",
@@ -14,22 +23,13 @@ const blogs = [
      date: "April 29, 2026",
     image: `${base}assets/30.png`,
   },{
-    id: 1,
+    id: 2,
     slug: "australia-migration-reality-nominations-backlogs-and-trends",
     title: "Australia Migration Reality: Nominations, Backlogs, and Trends ",
     metaTitle: "Australia Migration Reality: Nominations & Backlogs",
     metaDescription: "Home Affairs data shows state nomination usage, skilled visa backlogs and employer-sponsored trends for 2025–26. See how competitive PR pathways are.",
      date: "April 25, 2026",
     image: `${base}assets/29.png`,
-  },
-  {
-    id: 2,
-    slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
-    title: "Tasmania Weekly Invitation Round: 42 Invitations Issued in Latest Round",
-    metaTitle: "Tasmania Weekly Invitation Round 23 April 2026 Update",
-    metaDescription: "Tasmania issued 42 invitations in the 23 April 2026 round. Subclass 190 remains restricted to Gold Pass, while 491 invitations continue.",
-     date: "April 23, 2026",
-    image: `${base}assets/28.png`,
   },
 ];
 
