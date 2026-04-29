@@ -1,6 +1,15 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
+    {
+    id: 29,
+    slug: "national-innovation-visa-selection-update-146-invitations-issued-jan-to-mar-2026",
+    title: "National Innovation Visa Selection Update: 146 Invitations Issued (Jan–Mar 2026)",
+    metaTitle: "NIV Invitation Round: 146 Invitations Issued",
+    metaDescription: "National Innovation Visa 2026 update: 146 invitations issued from 1,815 EOIs. Explore priority trends, sector demand, and Australia PR selection insights.",
+     date: "April 29, 2026",
+    image: `${base}assets/29.png`,
+  },
   {
     id: 28,
     slug: "tasmania-weekly-invitation-round-42-invitations-issued-in-latest-round",
