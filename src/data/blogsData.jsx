@@ -1,6 +1,6 @@
 export const blogs = [
    {
-    id: 22,
+    id: 23,
     slug: "australian-visa-processing-times-update-february-2026-vs-april-2026",
     title: "Australian Visa Processing Times Update (February 2026 vs April 2026)",
     metaTitle: "Australia Visa Processing Times Update 2026",
