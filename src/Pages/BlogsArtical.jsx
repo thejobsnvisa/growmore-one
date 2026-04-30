@@ -149,7 +149,7 @@ useEffect(() => {
         <a
           className="text-[#2ED09B] underline"
           target="_blank"
-          rel="noreferrer"
+          
           {...props}
         />
       ),

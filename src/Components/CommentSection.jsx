@@ -39,7 +39,7 @@ export default function CommentSection() {
       setFormData({ fullName: "", phone: "", email: "", message: "" });
       setToken(null);
       recaptchaRef.current.reset();
-    } catch (error) {
+    } catch {
       alert("Submission error. Please try again.");
     }
   };
@@ -55,7 +55,6 @@ export default function CommentSection() {
           <a
             href={`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`}
             target="_blank"
-            rel="noreferrer"
             className="hover:text-blue-600"
           >
             <i className="fab fa-facebook-f"></i>
@@ -63,7 +62,7 @@ export default function CommentSection() {
           <a
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`}
             target="_blank"
-            rel="noreferrer"
+            
             className="hover:text-blue-700"
           >
             <i className="fab fa-linkedin-in"></i>
@@ -71,7 +70,7 @@ export default function CommentSection() {
           <a
             href={`https://api.whatsapp.com/send?text=${pageUrl}`}
             target="_blank"
-            rel="noreferrer"
+            
             className="hover:text-green-500"
           >
             <i className="fab fa-whatsapp"></i>
@@ -79,7 +78,7 @@ export default function CommentSection() {
           <a
             href={`https://t.me/share/url?url=${pageUrl}&text=${text}`}
             target="_blank"
-            rel="noreferrer"
+            
             className="hover:text-blue-700"
           >
             <i className="fab fa-telegram-plane"></i>
@@ -87,7 +86,7 @@ export default function CommentSection() {
           <a
             href={`https://pinterest.com/pin/create/button/?url=${pageUrl}`}
             target="_blank"
-            rel="noreferrer"
+            
             className="hover:text-green-500"
           >
             {" "}

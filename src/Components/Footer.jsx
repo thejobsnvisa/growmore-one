@@ -212,7 +212,6 @@ const Footer = () => {
               <a
                 href="https://www.legislation.gov.au/F2021L01856/latest/text"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="hover:text-gray-400 transition"
               >
                 Code of Conduct
