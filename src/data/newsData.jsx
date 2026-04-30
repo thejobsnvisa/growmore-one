@@ -1,6 +1,15 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
+   {
+    id: 33,
+    slug: "nsw-491-pathway-2-invitation-round-latest-results-are-out",
+    title: "NSW 491 Pathway 2 Invitation Round Latest Results Are Out",
+    metaTitle: "NSW 491 Pathway 2 Latest Invitation Round Results 2026",
+    metaDescription: "Latest NSW 491 Pathway 2 invitation round results released on 30 April 2026. Check occupation-wise scores, onshore trends, and PR insights.",
+     date: "April 30, 2026",
+    image: `${base}assets/33.png`,
+  },
   {
     id: 32,
     slug: "tasmania-weekly-invitation-round-results-30-april-2026",
