@@ -1,7 +1,16 @@
 const base = import.meta.env.BASE_URL;
 
 export const blogs = [
-    {
+  {
+    id: 32,
+    slug: "tasmania-weekly-invitation-round-results-30-april-2026",
+    title: "Tasmania Weekly Invitation Round Results: 30 April 2026",
+    metaTitle: "Tasmania Invitation Round Results – 30 April 2026 Update",
+    metaDescription: "Latest Tasmania invitation round results for 30 April 2026. Breakdown of Subclass 190 & 491 invitations, scores, and nomination trends.",
+     date: "April 30, 2026",
+    image: `${base}assets/32.jpg`,
+  },   
+  {
     id: 31,
     slug: "asqa-cancellation-alert-which-training-centre-is-affected",
     title: "ASQA Cancellation Alert: Which Training Centre Is Affected?",
